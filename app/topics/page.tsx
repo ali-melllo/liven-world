@@ -45,8 +45,8 @@ export default function TopicsPage() {
   const router = useRouter()
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <Card className="w-full max-w-sm bg-white h-[600px] flex flex-col">
+    <div className="h-[100dvh] bg-gray-100 flex items-center justify-center">
+      <Card className="w-full max-w-sm bg-white h-full flex flex-col border-transparent shadow-none pb-20">
         <div className="flex items-center gap-4 p-4 border-b">
           <Button variant="ghost" size="icon" onClick={() => router.back()}>
             <ArrowLeft className="h-5 w-5" />

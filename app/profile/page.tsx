@@ -23,8 +23,8 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-sm bg-card h-[600px] flex flex-col">
+    <div className="h-[100dvh] bg-background flex items-center justify-center">
+      <Card className="w-full max-w-sm bg-card h-full pb-20 shadow-none border-transparent flex flex-col">
         <div className="flex items-center gap-4 p-4 border-b">
           <Button variant="ghost" size="icon" onClick={() => router.back()}>
             <ArrowLeft className="h-5 w-5" />

@@ -90,20 +90,20 @@ export default function LandingPage() {
           </div>
           <div className="flex items-center gap-4">
             <ThemeToggle />
-            <Button variant="outline" onClick={() => router.push("/chat")}>
+            <Button className="hidden" variant="outline" onClick={() => router.push("/chat")}>
               {t("logIn")}
             </Button>
-            <Button onClick={() => router.push("/onboarding")}>{t("signUp")}</Button>
+            <Button  onClick={() => router.push("/onboarding")}>{t("signUp")}</Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="py-14 md:py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">{t("heroTitle")}</h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{t("heroSubtitle")}</p>
+            <p className="text-sm md:text-xl text-muted-foreground max-w-2xl mx-auto">{t("heroSubtitle")}</p>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{t("heroDescription")}</p>
           </div>
 

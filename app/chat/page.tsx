@@ -31,8 +31,8 @@ export default function ChatPage() {
   const router = useRouter()
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-sm bg-card h-[600px] flex flex-col">
+    <div className="h-[100dvh] bg-background flex items-center justify-center ">
+      <Card className="w-full max-w-sm bg-card h-full flex flex-col shadow-none border-transparent pb-20">
         <div className="flex items-center justify-between p-4 border-b">
           <h1 className="text-xl font-semibold">{t("appTitle")}</h1>
           <div className="flex items-center gap-2">

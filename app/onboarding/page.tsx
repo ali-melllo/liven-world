@@ -81,8 +81,8 @@ export default function OnboardingPage() {
 
   if (showInstructions) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <Card className="w-full max-w-sm bg-card relative">
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Card className="w-full max-w-sm bg-card relative shadow-none border-transparent p-0">
           <Button variant="ghost" size="icon" className="absolute top-4 right-4" onClick={() => router.push("/chat")}>
             <X className="h-5 w-5" />
           </Button>
@@ -96,10 +96,10 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-sm bg-card">
+    <div className={`min-h-screen bg-background flex ${currentStep !== "welcome" ? "" : "py-5"}  justify-center`}>
+      <Card className="w-full md:max-w-sm bg-card p-0 shadow-none border-transparent">
         {currentStep !== "welcome" && (
-          <CardHeader className="pb-4">
+          <CardHeader className="">
             <div className="flex items-center gap-4">
               <Button variant="ghost" size="icon" onClick={prevStep}>
                 <ArrowLeft className="h-5 w-5" />
@@ -112,7 +112,7 @@ export default function OnboardingPage() {
           </CardHeader>
         )}
 
-        <CardContent className={`space-y-6 ${currentStep === "welcome" ? "p-8 text-center" : ""}`}>
+        <CardContent className={`space-y-6 ${currentStep === "welcome" ? " text-center" : ""}`}>
           {currentStep === "welcome" && (
             <>
               <div className="space-y-4">
