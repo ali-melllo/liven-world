@@ -13,6 +13,7 @@ import { useLanguage } from "@/contexts/language-context"
 import { languages, type Language } from "@/lib/i18n"
 import { useRouter } from "next/navigation"
 import { GuideSlider } from "@/components/guide-slider"
+import OTPVerificationPage from "./components/otp-verfication"
 
 interface FormData {
   language: Language
@@ -20,16 +21,16 @@ interface FormData {
   nationality: string
   municipality: string
   email: string
-  password: string
   gender: string
   status: string
 }
 
-const steps = ["welcome", "language", "profile", "instructions"] as const
+const steps = ["welcome", "language", "profile", "verify", "instructions"] as const
 type Step = (typeof steps)[number]
 
 export default function OnboardingPage() {
   const [currentStep, setCurrentStep] = useState<Step>("welcome")
+  const [userData, setUSerData] = useState<any>(null);
   const [showInstructions, setShowInstructions] = useState(false)
   const { language, setLanguage, t } = useLanguage()
   const router = useRouter()
@@ -47,7 +48,6 @@ export default function OnboardingPage() {
       nationality: "",
       municipality: "",
       email: "",
-      password: "",
       gender: "",
       status: "",
     },
@@ -56,8 +56,9 @@ export default function OnboardingPage() {
   const watchedLanguage = watch("language")
 
   const onSubmit = (data: FormData) => {
-    console.log("Form submitted:", data)
-    setShowInstructions(true)
+    setUSerData(data);
+    setCurrentStep("verify");
+    // setShowInstructions(true)
   }
 
   const nextStep = () => {
@@ -96,8 +97,8 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className={`min-h-screen bg-background flex ${currentStep !== "welcome" ? "" : "py-5"}  justify-center`}>
-      <Card className="w-full md:max-w-sm bg-card p-0 shadow-none border-transparent">
+    <div className={`h-dvh bg-background flex ${currentStep !== "welcome" ? "" : "py-5"}  justify-center`}>
+      <Card className="w-full h-full md:max-w-sm bg-card p-0 shadow-none border-transparent">
         {currentStep !== "welcome" && (
           <CardHeader className="">
             <div className="flex items-center gap-4">
@@ -112,23 +113,22 @@ export default function OnboardingPage() {
           </CardHeader>
         )}
 
-        <CardContent className={`space-y-6 ${currentStep === "welcome" ? " text-center" : ""}`}>
+        <CardContent className={` h-full space-y-6 ${currentStep === "welcome" ? " text-center" : ""}`}>
           {currentStep === "welcome" && (
-            <>
+            <div className="h-full flex flex-col justify-between">
               <div className="space-y-4">
                 <h1 className="text-2xl font-bold">{t("welcomeTitle")}</h1>
                 <p className="text-muted-foreground text-sm leading-relaxed">{t("welcomeSubtitle")}</p>
               </div>
 
-              <div className="flex-1 min-h-[400px]" />
 
               <Button
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full py-3"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-5"
                 onClick={nextStep}
               >
                 {t("getStarted")}
               </Button>
-            </>
+            </div>
           )}
 
           {currentStep === "language" && (
@@ -204,22 +204,6 @@ export default function OnboardingPage() {
                 </div>
 
                 <div>
-                  <Input
-                    placeholder={t("password")}
-                    type="password"
-                    className="bg-muted border-0 rounded-lg py-3"
-                    {...register("password", {
-                      required: t("passwordRequired"),
-                      minLength: {
-                        value: 6,
-                        message: t("passwordMinLength"),
-                      },
-                    })}
-                  />
-                  {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
-                </div>
-
-                <div>
                   <Select onValueChange={(value) => setValue("gender", value)}>
                     <SelectTrigger className="bg-muted border-0 rounded-lg py-3">
                       <SelectValue placeholder={t("gender")} />
@@ -257,6 +241,10 @@ export default function OnboardingPage() {
               </Button>
             </form>
           )}
+
+          {currentStep === "verify" &&
+            <OTPVerificationPage data={userData} isForLogin={false} />
+          }
         </CardContent>
       </Card>
     </div>
