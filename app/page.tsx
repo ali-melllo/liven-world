@@ -16,7 +16,15 @@ import {
   Clock,
   Shield,
   Users,
+  LogOut,
+  LogIn,
 } from "lucide-react"
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { RootState } from "@/lib/store/store"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { setUser } from "@/lib/store/slices/userSlice"
+import Link from "next/link"
 
 const features = [
   {
@@ -78,6 +86,39 @@ const topics = [
 export default function LandingPage() {
   const { t } = useLanguage()
   const router = useRouter()
+  const [token, setToken] = useState<string>("")
+  const [fullName, setFullName] = useState("")
+  const [email, setEmail] = useState("")
+
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false) // For demo purposes
+
+  const user = useSelector((state: RootState) => state.user || []);
+  const dispatch = useDispatch();
+
+
+  useEffect(() => {
+    if (user.email && user.fullName) {
+      setIsAuthenticated(true);
+      setEmail(user.email);
+      setFullName(user.fullName);
+    }
+  }, [user])
+
+  const handleLogOut = () => {
+    localStorage.removeItem("user")
+    dispatch(setUser({
+      id: "",
+      fullName: "",
+      email: "",
+      avatar: ""
+    }));
+    setIsAuthenticated(false)
+    setFullName("")
+    setEmail("")
+    setToken("")
+    router.replace("/")
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -88,12 +129,36 @@ export default function LandingPage() {
             <MessageCircle className="h-6 w-6 text-orange-500" />
             <span className="text-xl font-bold">{t("appTitle")}</span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 justify-end">
             <ThemeToggle />
             <Button className="hidden" variant="outline" onClick={() => router.push("/chat")}>
               {t("logIn")}
             </Button>
-            <Button  onClick={() => router.push("/onboarding")}>{t("signUp")}</Button>
+            {isAuthenticated ? (
+              <div className=" py-2 space-y-3">
+                <Link href={"/profile"} className="flex items-center space-x-3">
+                  <Avatar className="w-10 h-10">
+                    <AvatarFallback className="bg-gradient-to-br from-orange-500 to-orange-600 text-white">
+                      {fullName.charAt(0)}{fullName.charAt(1)}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <p className="font-medium">{fullName}</p>
+                    <p className="text-xs text-muted-foreground">{email}</p>
+                  </div>
+                </Link>
+              </div>
+            ) : (
+              <div className="py-2">
+                <Button
+                  onClick={() => router.push("/")}
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700"
+                >
+                  <LogIn className="w-4 h-4" />
+                  Sign In
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </header>
@@ -108,7 +173,7 @@ export default function LandingPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600" onClick={() => router.push("/onboarding")}>
+            <Button size="lg" className="bg-orange-500 hover:bg-orange-600" onClick={() => router.push("/chat")}>
               {t("getStartedNow")}
             </Button>
             <Button variant="outline" size="lg">

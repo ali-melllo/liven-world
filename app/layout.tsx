@@ -27,7 +27,7 @@ export default function RootLayout({
       <Providers>
           <AppInitializer>
             <Toaster />
-            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
               <LanguageProvider>
                 <div className="w-full relative flex flex-col">
                   {children}
