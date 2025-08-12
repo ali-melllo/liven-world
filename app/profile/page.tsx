@@ -5,21 +5,35 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Switch } from "@/components/ui/switch"
-import { ArrowLeft, ChevronRight } from "lucide-react"
+import { ArrowLeft, ChevronRight, LogOut } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { Navigation } from "@/components/navigation"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useRouter } from "next/navigation"
 import { languages } from "@/lib/i18n"
+import { setUser } from "@/lib/store/slices/userSlice"
+import { useDispatch } from "react-redux"
 
 export default function ProfilePage() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
   const { t, language, setLanguage } = useLanguage()
-  const router = useRouter()
+  const router = useRouter();
+  const dispatch = useDispatch();
 
   const getCurrentLanguageName = () => {
     const currentLang = languages.find((lang) => lang.code === language)
     return currentLang?.name || "English"
+  }
+
+  const handleLogOut = () => {
+    localStorage.removeItem("user")
+    dispatch(setUser({
+      id: "",
+      fullName: "",
+      email: "",
+      avatar: ""
+    }));
+    router.replace("/")
   }
 
   return (
@@ -108,6 +122,11 @@ export default function ProfilePage() {
               <div className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
                 <div className="font-medium">{t("about")}</div>
                 <ChevronRight className="h-5 w-5 text-muted-foreground" />
+              </div>
+
+              <div className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+                <button onClick={handleLogOut} className="font-medium">Log Out</button>
+                <LogOut className="h-5 w-5 text-muted-foreground" />
               </div>
             </div>
           </div>
