@@ -151,7 +151,7 @@ export default function LandingPage() {
             ) : (
               <div className="py-2">
                 <Button
-                  onClick={() => router.push("/")}
+                  onClick={() => router.push("/signin")}
                   className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700"
                 >
                   <LogIn className="w-4 h-4" />
