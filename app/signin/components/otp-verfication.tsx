@@ -16,7 +16,7 @@ import { setUser } from "@/lib/store/slices/userSlice"
 import { useDispatch } from "react-redux"
 
 export default function OTPVerificationPage({ data, isForLogin }: { data: any, isForLogin: boolean }) {
-  
+
   const dispatch = useDispatch();
 
   const [otp, setOtp] = useState(["", "", "", ""])
@@ -65,6 +65,8 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
       const response = await loginUser({ ...data, otp: "1111" }).unwrap();
       await setAuthToken(response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
+      localStorage.setItem("token", response.token);
+      localStorage.setItem("userId", response.user.id);
       dispatch(setUser(response.user));
       toast("Logged In Successfully")
       router.replace("/");
@@ -72,6 +74,8 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
       const response = await signUpUser({ ...data, otp: "1111" }).unwrap();
       await setAuthToken(response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
+      localStorage.setItem("token", response.token);
+      localStorage.setItem("userId", response.user.id);
       dispatch(setUser(response.user));
       toast("Account Created Successfully");
       router.replace("/");
@@ -89,7 +93,7 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
     <div className="bg-gradient-to-br pt-10 from-background via-background to-muted/20 flex items-center justify-center">
       <Card className="w-full ">
         <CardHeader className="text-center space-y-4">
-          
+
           <div className="mx-auto w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center neo-card">
             <Shield className="w-8 h-8 text-primary" />
           </div>

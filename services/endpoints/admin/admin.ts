@@ -10,38 +10,45 @@ export const adminApi = api.injectEndpoints({
     signUpUser: builder.mutation<
       AdminAttributesResponse,
       Partial<AdminAttributesLoginParamsType>>({
-      query: (newUser) => ({
-        url: 'auth/signup',
-        method: 'POST',
-        body: newUser,
+        query: (newUser) => ({
+          url: 'auth/signup',
+          method: 'POST',
+          body: newUser,
+        }),
       }),
-    }),
     loginUser: builder.mutation<
       AdminAttributesResponse,
       Partial<AdminAttributesLoginParamsType>>({
-      query: (newUser) => ({
-        url: 'auth/login',
-        method: 'POST',
-        body: newUser,
+        query: (newUser) => ({
+          url: 'auth/login',
+          method: 'POST',
+          body: newUser,
+        }),
+        async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+          try {
+            const { data } = await queryFulfilled;
+
+            dispatch(
+              setUser({
+                ...data.user,
+              })
+            );
+          } catch {
+            // Optional: handle error
+          }
+        },
       }),
-      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
-        try {
-          const { data } = await queryFulfilled;
-          
-          dispatch(
-            setUser({
-              ...data.user,
-            })
-          );
-        } catch {
-          // Optional: handle error
-        }
-      },
+    getProfile: builder.query<unknown, unknown>({
+      query: ({ id }) => ({
+        url: `user/fetch/${id}`,
+        method: 'GET',
+      }),
     }),
   }),
 });
 
 export const {
   useSignUpUserMutation,
-  useLoginUserMutation
+  useLoginUserMutation,
+  useGetProfileQuery
 } = adminApi;

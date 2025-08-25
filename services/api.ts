@@ -45,10 +45,10 @@ const customBaseQuery: BaseQueryFn<
 
     toast(`${status} : ${errorMessage}`);
 
-    if (Number(status) === 401 || Number(status) === 403) {
-      toast('Session Expired. Please Login');
-      window.location.href = '/login';
-    }
+    // if (Number(status) === 401 || Number(status) === 403) {
+    //   toast('Session Expired. Please Login');
+    //   window.location.href = '/login';
+    // }
   }
 
   return result;

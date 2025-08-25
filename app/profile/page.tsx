@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation"
 import { languages } from "@/lib/i18n"
 import { setUser } from "@/lib/store/slices/userSlice"
 import { useDispatch } from "react-redux"
+import { useGetProfileQuery } from "@/services/endpoints/admin/admin"
 
 export default function ProfilePage() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
@@ -20,6 +21,20 @@ export default function ProfilePage() {
   const router = useRouter();
   const dispatch = useDispatch();
 
+  const [userId, setUserId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const storedId = localStorage.getItem("userId");
+    setUserId(storedId);
+  }, []);
+
+  const { data, refetch } = useGetProfileQuery(
+    { id: userId ?? "" },
+    { skip: !userId, refetchOnMountOrArgChange: true }
+  );
+
+  console.log(userId)
+  
   const getCurrentLanguageName = () => {
     const currentLang = languages.find((lang) => lang.code === language)
     return currentLang?.name || "English"
