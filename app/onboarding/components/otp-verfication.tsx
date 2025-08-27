@@ -7,13 +7,14 @@ import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, ArrowLeft, RefreshCw } from "lucide-react"
+import { Shield, ArrowLeft, RefreshCw, X } from "lucide-react"
 import Link from "next/link"
 import { useLoginUserMutation, useSignUpUserMutation } from "@/services/endpoints/admin/admin"
 import { setAuthToken } from "@/services/auth/action"
 import { toast } from "sonner"
 import { setUser } from "@/lib/store/slices/userSlice"
 import { useDispatch } from "react-redux"
+import { GuideSlider } from "@/components/guide-slider"
 
 export default function OTPVerificationPage({ data, isForLogin }: { data: any, isForLogin: boolean }) {
   
@@ -21,6 +22,7 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
 
   const [otp, setOtp] = useState(["", "", "", ""])
   const [resendTimer, setResendTimer] = useState(30)
+  const [showInstructions, setShowInstructions] = useState(false)
   const [canResend, setCanResend] = useState(false)
   const inputRefs = useRef<(HTMLInputElement | null)[]>([])
   const router = useRouter()
@@ -65,16 +67,20 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
       const response = await loginUser({ ...data, otp: "1111" }).unwrap();
       await setAuthToken(response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
+      localStorage.setItem("token", response.token);
+      localStorage.setItem("userId", response.user.id);
       dispatch(setUser(response.user));
-      toast("Logged In Successfully")
-      router.replace("/");
+      toast("Logged In Successfully");
+      setShowInstructions(true);
     } else {
       const response = await signUpUser({ ...data, otp: "1111" }).unwrap();
       await setAuthToken(response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
+      localStorage.setItem("token", response.token);
+      localStorage.setItem("userId", response.user.id);
       dispatch(setUser(response.user));
       toast("Account Created Successfully");
-      router.replace("/");
+      setShowInstructions(true);
     }
 
   }
@@ -83,6 +89,23 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
     setResendTimer(30)
     setCanResend(false)
     // Simulate resend
+  }
+
+
+  if (showInstructions) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Card className="w-full max-w-sm bg-card relative shadow-none border-transparent p-0">
+          <Button variant="ghost" size="icon" className="absolute top-4 right-4" onClick={() => router.push("/chat")}>
+            <X className="h-5 w-5" />
+          </Button>
+
+          <CardContent className="p-8">
+            <GuideSlider onComplete={() => router.push("/")} />
+          </CardContent>
+        </Card>
+      </div>
+    )
   }
 
   return (

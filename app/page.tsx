@@ -18,6 +18,7 @@ import {
   Users,
   LogOut,
   LogIn,
+  Settings,
 } from "lucide-react"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
@@ -25,6 +26,7 @@ import { RootState } from "@/lib/store/store"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { setUser } from "@/lib/store/slices/userSlice"
 import Link from "next/link"
+import Image from "next/image"
 
 const features = [
   {
@@ -124,48 +126,55 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <MessageCircle className="h-6 w-6 text-orange-500" />
-            <span className="text-xl font-bold">{t("appTitle")}</span>
+        <div className="pl-5 relative flex h-16 items-center justify-between">
+          <div className="flex mx-auto items-center gap-2">
+            <span className="text-lg font-bold">{t("appTitle")}</span>
           </div>
-          <div className="flex items-center gap-2 justify-end">
+          <div className="absolute right-0 flex items-center justify-end">
             <ThemeToggle />
-            <Button className="hidden" variant="outline" onClick={() => router.push("/chat")}>
-              {t("logIn")}
-            </Button>
-            {isAuthenticated ? (
-              <div className=" py-2 space-y-3">
-                <Link href={"/profile"} className="flex items-center space-x-3">
-                  <Avatar className="w-10 h-10">
-                    <AvatarFallback className="bg-gradient-to-br from-orange-500 to-orange-600 text-white">
-                      {fullName.charAt(0)}{fullName.charAt(1)}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <p className="font-medium">{fullName}</p>
-                    <p className="text-xs text-muted-foreground">{email}</p>
-                  </div>
-                </Link>
-              </div>
-            ) : (
-              <div className="py-2">
-                <Button
-                  onClick={() => router.push("/signin")}
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700"
-                >
-                  <LogIn className="w-4 h-4" />
-                  Sign In
-                </Button>
-              </div>
-            )}
+            <div className="py-2">
+              <Button
+                onClick={() => router.push("/profile")}
+                className="w-full hover:bg-transparent bg-transparent"
+              >
+                <Settings className="w-4 h-4 stroke-foreground" />
+              </Button>
+            </div>
+
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-14 md:py-20 px-4">
-        
+      <section className="py-10 flex flex-col gap-5 md:py-20 px-4">
+        <Link href={"/chat"} className="w-full flex flex-col">
+          <div className="w-full h-48 flex">
+            <Image
+              src={'/hero-one.png'}
+              alt={"chat"}
+              className="rounded-lg object-cover"
+              width={1000}
+              height={500}
+            />
+          </div>
+          <p className="font-semibold mt-2">Start a new Chat</p>
+          <p className="text-gray-500 text-sm">Connect With a Support Agent</p>
+        </Link>
+
+        <Link href={"/topics"} className="w-full flex flex-col">
+          <div className="w-full h-48 flex">
+            <Image
+              src={'/hero-two.png'}
+              alt={"chat"}
+              className="rounded-lg object-cover"
+              width={1000}
+              height={500}
+            />
+          </div>
+          <p className="font-semibold mt-2">Common Topics</p>
+          <p className="text-gray-500 text-sm">Find Answers to Frequently asked questions</p>
+        </Link>
+
       </section>
 
       {/* Features Section */}

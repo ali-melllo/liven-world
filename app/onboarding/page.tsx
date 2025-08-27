@@ -31,7 +31,6 @@ type Step = (typeof steps)[number]
 export default function OnboardingPage() {
   const [currentStep, setCurrentStep] = useState<Step>("welcome")
   const [userData, setUSerData] = useState<any>(null);
-  const [showInstructions, setShowInstructions] = useState(false)
   const { language, setLanguage, t } = useLanguage()
   const router = useRouter()
 
@@ -80,32 +79,18 @@ export default function OnboardingPage() {
     setLanguage(lang)
   }
 
-  if (showInstructions) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <Card className="w-full max-w-sm bg-card relative shadow-none border-transparent p-0">
-          <Button variant="ghost" size="icon" className="absolute top-4 right-4" onClick={() => router.push("/chat")}>
-            <X className="h-5 w-5" />
-          </Button>
-
-          <CardContent className="p-8">
-            <GuideSlider onComplete={() => router.push("/chat")} />
-          </CardContent>
-        </Card>
-      </div>
-    )
-  }
+  
 
   return (
     <div className={`h-dvh bg-background flex ${currentStep !== "welcome" ? "" : "py-5"}  justify-center`}>
       <Card className="w-full h-full md:max-w-sm bg-card p-0 shadow-none border-transparent">
         {currentStep !== "welcome" && (
           <CardHeader className="">
-            <div className="flex items-center gap-4">
-              <Button variant="ghost" size="icon" onClick={prevStep}>
+            <div className="flex relative items-center gap-4">
+              <Button className="absolute -left-3" variant="ghost" size="icon" onClick={prevStep}>
                 <ArrowLeft className="h-5 w-5" />
               </Button>
-              <h1 className="text-xl font-semibold">
+              <h1 className="text-xl mx-auto font-semibold">
                 {currentStep === "language" && t("language")}
                 {currentStep === "profile" && t("profileSetup")}
               </h1>

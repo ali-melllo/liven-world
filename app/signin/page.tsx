@@ -84,11 +84,11 @@ export default function OnboardingPage() {
       <Card className="w-full h-full md:max-w-sm bg-card p-0 shadow-none border-transparent">
         {currentStep !== "welcome" && (
           <CardHeader className="">
-            <div className="flex items-center gap-4">
-              <Button variant="ghost" size="icon" onClick={prevStep}>
+            <div className="flex relative items-center gap-4">
+              <Button className="absolute -left-3" variant="ghost" size="icon" onClick={prevStep}>
                 <ArrowLeft className="h-5 w-5" />
               </Button>
-              <h1 className="text-xl font-semibold">
+              <h1 className="text-xl mx-auto font-semibold">
                 {currentStep === "profile" && t("profileLogin")}
               </h1>
             </div>
@@ -105,7 +105,7 @@ export default function OnboardingPage() {
 
 
               <Button
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-5"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6"
                 onClick={nextStep}
               >
                 {t("getStarted")}
@@ -114,7 +114,7 @@ export default function OnboardingPage() {
           )}
 
           {currentStep === "profile" && (
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 mt-5 h-5/6 relative flex flex-col">
               <h2 className="text-lg font-semibold">{t("enterEmail")}</h2>
 
               <div className="space-y-4">
@@ -138,7 +138,7 @@ export default function OnboardingPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full py-3 mt-8"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6 absolute bottom-5 "
               >
                 {t("next")}
               </Button>

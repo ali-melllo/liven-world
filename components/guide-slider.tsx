@@ -20,7 +20,7 @@ export function GuideSlider({ onComplete }: GuideSliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   // Get guides from translations
-  const guides = (t("guides") as Guide[]) || []
+  const guides = (t("guides") as unknown as Guide[]) || []
 
   const nextSlide = () => {
     if (currentSlide < guides.length - 1) {
@@ -75,7 +75,7 @@ export function GuideSlider({ onComplete }: GuideSliderProps) {
 
       {/* Guide content */}
       <div className="space-y-6 min-h-[300px] flex flex-col justify-center">
-        <div className="text-4xl mb-4">{currentGuide.icon}</div>
+        {/* <div className="text-4xl mb-4">{currentGuide.icon}</div> */}
         <h1 className="text-xl font-bold">{currentGuide.title}</h1>
         <p className="text-sm text-muted-foreground leading-relaxed px-4">{currentGuide.description}</p>
       </div>
