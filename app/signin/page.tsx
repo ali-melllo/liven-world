@@ -89,7 +89,7 @@ export default function OnboardingPage() {
                 <ArrowLeft className="h-5 w-5" />
               </Button>
               <h1 className="text-xl font-semibold">
-                {currentStep === "profile" && t("profileSetup")}
+                {currentStep === "profile" && t("profileLogin")}
               </h1>
             </div>
           </CardHeader>
@@ -115,7 +115,7 @@ export default function OnboardingPage() {
 
           {currentStep === "profile" && (
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <h2 className="text-lg font-semibold">{t("tellUsAbout")}</h2>
+              <h2 className="text-lg font-semibold">{t("enterEmail")}</h2>
 
               <div className="space-y-4">
                 <div>

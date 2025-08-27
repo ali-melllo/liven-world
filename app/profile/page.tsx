@@ -48,7 +48,7 @@ export default function ProfilePage() {
       email: "",
       avatar: ""
     }));
-    router.replace("/")
+    router.replace("/intro");
   }
 
   return (

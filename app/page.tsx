@@ -165,26 +165,11 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section className="py-14 md:py-20 px-4">
-        <div className="container max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">{t("heroTitle")}</h1>
-            <p className="text-sm md:text-xl text-muted-foreground max-w-2xl mx-auto">{t("heroSubtitle")}</p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{t("heroDescription")}</p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600" onClick={() => router.push("/chat")}>
-              {t("getStartedNow")}
-            </Button>
-            <Button variant="outline" size="lg">
-              {t("learnMore")}
-            </Button>
-          </div>
-        </div>
+        
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-muted/50">
+      {/* <section className="py-20 px-4 bg-muted/50">
         <div className="container max-w-6xl mx-auto">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold">{t("featuresTitle")}</h2>
@@ -209,7 +194,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Topics Section */}
       <section className="py-20 px-4">
         <div className="container max-w-6xl mx-auto">
           <div className="text-center space-y-4 mb-16">
@@ -238,7 +222,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 px-4 bg-orange-50 dark:bg-orange-950">
         <div className="container max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4">
@@ -254,7 +237,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t py-12 px-4">
         <div className="container max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -265,7 +247,7 @@ export default function LandingPage() {
             <p className="text-sm text-muted-foreground text-center">{t("termsText")}</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }

@@ -41,6 +41,8 @@ export const translations = {
     // Profile Setup
     profileSetup: "Profile Setup",
     tellUsAbout: "Tell us about yourself",
+    enterEmail: "Enter Your Email Address",
+    profileLogin: "Profile Login",
     fullName: "Full Name",
     nationality: "Nationality",
     municipality: "Municipality",

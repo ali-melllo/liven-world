@@ -90,8 +90,8 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
   }
 
   return (
-    <div className="bg-gradient-to-br pt-10 from-background via-background to-muted/20 flex items-center justify-center">
-      <Card className="w-full ">
+    <div className="bg-gradient-to-br from-background via-background to-muted/20 flex items-center justify-center">
+      <Card className="w-full border-transparent p-0">
         <CardHeader className="text-center space-y-4">
 
           <div className="mx-auto w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center neo-card">
