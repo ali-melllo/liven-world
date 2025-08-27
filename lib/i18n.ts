@@ -26,7 +26,10 @@ export const translations = {
 
     // Welcome & Onboarding
     welcomeTitle: "Welcome to Liven Chat",
+    introTitle:"Liven Chat",
+    welcomeIntro:"Your multilingual guide to navigating life in Netherlands",
     welcomeSubtitle: "Your multilingual assistant for migrants and asylum seekers in the Netherlands.",
+    introRule:"By continuing you agree to our Terms Of Service & Privacy Policy",
     getStarted: "Get Started",
 
     // Language Selection

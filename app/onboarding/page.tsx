@@ -123,7 +123,7 @@ export default function OnboardingPage() {
 
 
               <Button
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-5"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6"
                 onClick={nextStep}
               >
                 {t("getStarted")}

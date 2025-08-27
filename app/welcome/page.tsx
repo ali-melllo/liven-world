@@ -18,7 +18,7 @@ export default function WelcomePage() {
           <div className="flex-1 min-h-[400px]" />
 
           <Button
-            className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full py-3"
+            className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6"
             onClick={() => (window.location.href = "/language")}
           >
             Get Started
