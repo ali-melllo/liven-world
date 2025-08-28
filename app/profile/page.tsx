@@ -33,8 +33,7 @@ export default function ProfilePage() {
     { skip: !userId, refetchOnMountOrArgChange: true }
   );
 
-  console.log(userId)
-  
+  console.log(data)
   const getCurrentLanguageName = () => {
     const currentLang = languages.find((lang) => lang.code === language)
     return currentLang?.name || "English"
@@ -102,7 +101,7 @@ export default function ProfilePage() {
                 <ChevronRight className="h-5 w-5 text-muted-foreground" />
               </div>
 
-              <div
+              {/* <div
                 className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer"
                 onClick={() => router.push("/profile/update-password")}
               >
@@ -111,7 +110,7 @@ export default function ProfilePage() {
                   <div className="text-sm text-muted-foreground">••••••••</div>
                 </div>
                 <ChevronRight className="h-5 w-5 text-muted-foreground" />
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -26,8 +26,8 @@ export default function LanguageSettingsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-sm bg-card">
+    <div className="min-h-screen bg-background flex items-center justify-center">
+      <Card className="w-full max-w-sm bg-card p-0">
         <CardHeader className="pb-4">
           <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon" onClick={() => router.back()}>
