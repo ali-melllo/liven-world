@@ -10,39 +10,6 @@ import { useRouter } from "next/navigation"
 import { useGetSessionListQuery } from "@/services/endpoints/chat/chat"
 import { formatRelativeDateTime } from "@/lib/utils"
 
-const chatHistory = [
-  {
-    id: 1,
-    time: "Today, 10:30 AM",
-    message: "Hi there! How can I help you today?",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 2,
-    time: "Yesterday, 2:45 PM",
-    message: "I'm looking for information about the asylum process.",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 3,
-    time: "2 days ago, 11:15 AM",
-    message: "What are the requirements for applying for asylum?",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 4,
-    time: "3 days ago, 4:30 PM",
-    message: "Can you provide me with a list of legal aid organizations?",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 5,
-    time: "4 days ago, 9:00 AM",
-    message: "I need help with my application form.",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-]
-
 export default function ChatHistoryPage() {
   const { t } = useLanguage()
   const router = useRouter()
@@ -51,6 +18,8 @@ export default function ChatHistoryPage() {
     {},
     { refetchOnMountOrArgChange: true }
   );
+
+  console.log(data);
 
   return (
     <div className="min-h-screen">
@@ -63,11 +32,11 @@ export default function ChatHistoryPage() {
         </div>
 
         <CardContent className="flex-1 p-4 space-y-4 overflow-y-auto">
-          {data.map((chat: any) => (
+          {data?.map((chat: any) => (
             <div
               key={chat.id}
               className="flex gap-3 p-2 hover:bg-gray-50 rounded-lg cursor-pointer"
-              onClick={() => router.push(`/chat/${chat.id}`)}
+              onClick={() => router.push(`/chat/conversation?sessionId=${chat.id}`)}
             >
               <Avatar className="w-10 h-10 flex-shrink-0">
                 <AvatarImage src={chat.avatar || "/placeholder.svg"} />
@@ -79,6 +48,8 @@ export default function ChatHistoryPage() {
               </div>
             </div>
           ))}
+
+          {(data && data.length === 0) && <p className="text-muted-foreground text-center mt-48">No Chat History Yet</p>}
         </CardContent>
 
         <Navigation />

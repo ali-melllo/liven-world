@@ -21,7 +21,8 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
 import { TypingAnimation } from "@/components/magicui/text-animation"
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text"
-import { useSendMessageMutation } from "@/services/endpoints/chat/chat"
+import { useGetSessionDetailQuery, useSendMessageMutation } from "@/services/endpoints/chat/chat"
+import { useRouter, useSearchParams } from "next/navigation"
 
 type Message = {
   role: "assistant" | "user";
@@ -35,6 +36,26 @@ export default function ChatPage() {
   const [isTyping, setIsTyping] = useState(false)
   const scrollAreaRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+  const router = useRouter();
+
+  const searchParams = useSearchParams();
+  const sessionId = searchParams.get("sessionId");
+
+  const { data, isLoading : pastDataLoading ,refetch } = useGetSessionDetailQuery(
+    { id: sessionId ?? "" },
+    { skip: !sessionId, refetchOnMountOrArgChange: true }
+  );
+  
+  useEffect(() => {
+    const formatted: { role: "user" | "assistant"; content: string }[] = [];
+  
+    data?.forEach((item:any) => {
+      formatted.push({ role: "user", content: item.question });
+      formatted.push({ role: "assistant", content: item.answer });
+    });
+
+    setMessages(formatted);
+  }, [data])
 
   const [sendMessage] = useSendMessageMutation();
 
@@ -63,7 +84,14 @@ export default function ChatPage() {
       const data = await sendMessage({
         question: inputValue,
         topic: "work",
+        sessionId: sessionId || ""
       }).unwrap();
+
+      if (data?.sessionId) {
+        const params = new URLSearchParams(searchParams.toString());
+        params.set("sessionId", data.sessionId);
+        router.push(`?${params.toString()}`, { scroll: false });
+      }
 
       const formattedBotResponse = {
         role: "assistant" as const,
@@ -77,7 +105,7 @@ export default function ChatPage() {
       setIsTyping(false);
     }
   };
-console.log(messages)
+
   return (
     <div className="min-h-screen  flex flex-col">
 
@@ -92,7 +120,7 @@ console.log(messages)
                 animate={{ opacity: 1, scale: 1 }}
                 className="text-center py-8 "
               >
-                
+
                 <h2 className="text-xl md:text-2xl font-extrabold mb-2">Welcome to Liven Chat</h2>
                 <p className="text-muted-foreground mb-6 max-w-md mx-auto">
                   I'm here to help you navigate life in the Netherlands. Ask me anything about housing, jobs, government
@@ -137,9 +165,9 @@ console.log(messages)
                   >
                     {(index === messages.length - 1 && message.role === "assistant") ?
                       <TypingAnimation duration={20} className="text-sm leading-relaxed">
-                              {message.content}
-                     </TypingAnimation>
-                    :
+                        {message.content}
+                      </TypingAnimation>
+                      :
                       <p className="text-sm leading-relaxed">{message.content}</p>
                     }
                   </Card>
@@ -155,7 +183,7 @@ console.log(messages)
                     exit={{ opacity: 0 }}
                     className="flex justify-start items-center w-full "
                   >
-                    <div><AnimatedShinyText className="font-semibold">Thinking ...</AnimatedShinyText></div> 
+                    <div><AnimatedShinyText className="font-semibold">Thinking ...</AnimatedShinyText></div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -167,7 +195,7 @@ console.log(messages)
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed inset-x-2 md:inset-x-1/4 bottom-2 md:bottom-4 backdrop-blur-md rounded-3xl pl-0 md:pl-4 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] flex p-4"
+          className="fixed inset-x-0 md:inset-x-1/4 bottom-0 md:bottom-4 backdrop-blur-md rounded-t-3xl pl-0 md:pl-4 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] flex p-4"
         >
           <div className=" mx-auto w-full">
             <div className="flex items-start space-x-3">
