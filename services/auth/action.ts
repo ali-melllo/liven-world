@@ -3,8 +3,8 @@
 import { cookies } from "next/headers";
 
 export async function setAuthToken(token: string) {
-  const cookieStore = await cookies(); 
-  cookieStore.set("accessToken", token, {
+  const cookieStore = await cookies();
+  cookieStore.set("token", token, {
     httpOnly: true,
     secure: process?.env.NODE_ENV === "production",
     maxAge: 60 * 60 * 24 * 7, // 7 days
@@ -15,6 +15,5 @@ export async function setAuthToken(token: string) {
 
 export async function logout() {
   const cookieStore = await cookies();
-  cookieStore.delete("accessToken");
-  cookieStore.delete("permissions");
+  cookieStore.delete("token");
 }

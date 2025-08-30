@@ -9,31 +9,34 @@ import { toast } from 'sonner';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
-type CustomQueryArgs = string | (FetchArgs & { baseUrl?: string }); // 👈 allow optional custom baseUrl
+type CustomQueryArgs = string | (FetchArgs & { baseUrl?: string });
+
+// ✅ Define baseQuery once, not inside customBaseQuery
+const baseQuery = fetchBaseQuery({
+  baseUrl: BASE_URL,
+  prepareHeaders: (headers) => {
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("token");
+      console.log("Token in prepareHeaders:", token);
+      if (token) {
+        headers.set("Authorization", `Bearer ${token}`);
+      }
+    }
+    return headers;
+  },
+});
 
 const customBaseQuery: BaseQueryFn<
   CustomQueryArgs,
   unknown,
   FetchBaseQueryError
 > = async (args, api, extraOptions) => {
-  // Extract baseUrl if provided per-request
   const dynamicBaseUrl =
     typeof args === 'string' ? BASE_URL : args.baseUrl ?? BASE_URL;
 
-  const baseQuery = fetchBaseQuery({
-    baseUrl: dynamicBaseUrl,
-    prepareHeaders: (headers) => {
-      const token = localStorage.getItem('token');
-      if (token) {
-        headers.set('Authorization', `Bearer ${token}`);
-      }
-      return headers;
-    },
-  });
-
-  // Remove baseUrl from args before passing to fetchBaseQuery
+  // ✅ override baseUrl dynamically if needed
   const cleanedArgs =
-    typeof args === 'string' ? args : { ...args, baseUrl: undefined };
+    typeof args === 'string' ? args : { ...args, baseUrl: dynamicBaseUrl };
 
   const result = await baseQuery(cleanedArgs, api, extraOptions);
 

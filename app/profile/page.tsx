@@ -40,7 +40,10 @@ export default function ProfilePage() {
   }
 
   const handleLogOut = () => {
-    localStorage.removeItem("user")
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+
     dispatch(setUser({
       id: "",
       fullName: "",

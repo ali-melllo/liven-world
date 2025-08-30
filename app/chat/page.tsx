@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Settings } from "lucide-react"
+import { List, Settings } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { Navigation } from "@/components/navigation"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -45,10 +45,16 @@ export default function ChatPage() {
 
         <CardContent className="flex-1 p-6 space-y-6 overflow-y-auto">
           <div>
-            <h2 className="text-lg font-semibold mb-2">{t("startNewChat")}</h2>
+
+            <div className="flex items-center justify-between">
+              <h2 className="text-lg font-semibold mb-2">{t("startNewChat")}</h2>
+              <h2
+                onClick={() => router.push("/chat/history")}
+                className="border flex items-center gap-2 text-sm border-muted shadow px-4 py-1 rounded-xl font-medium mb-2">{t("chatHistory")} <List size={15}/> </h2>
+            </div>
 
             <div
-              className="bg-orange-50 dark:bg-orange-950 rounded-lg p-4 flex items-center gap-3 mb-6 cursor-pointer hover:bg-orange-100 dark:hover:bg-orange-900"
+              className="bg-orange-50 mt-2 dark:bg-orange-950 rounded-lg p-4 flex items-center gap-3 mb-6 cursor-pointer hover:bg-orange-100 dark:hover:bg-orange-900"
               onClick={() => router.push("/chat/conversation")}
             >
               <div className="text-sm">
@@ -61,7 +67,7 @@ export default function ChatPage() {
             </div>
           </div>
 
-          <div>
+          <div className="mt-2">
             <h3 className="text-lg font-semibold mb-4">{t("commonTopics")}</h3>
 
             <div className="space-y-4">
