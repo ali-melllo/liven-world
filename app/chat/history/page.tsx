@@ -19,7 +19,6 @@ export default function ChatHistoryPage() {
     { refetchOnMountOrArgChange: true }
   );
 
-  console.log(data);
 
   return (
     <div className="min-h-screen">

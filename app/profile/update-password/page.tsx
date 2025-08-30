@@ -36,7 +36,6 @@ export default function UpdatePasswordPage() {
   const watchNewPassword = watch("newPassword")
 
   const onSubmit = (data: PasswordFormData) => {
-    console.log("Password update:", data)
     setShowSuccess(true)
     setTimeout(() => {
       setShowSuccess(false)

@@ -34,7 +34,6 @@ export default function ProfilePage() {
     { skip: !userId, refetchOnMountOrArgChange: true }
   );
 
-  console.log(data)
   const getCurrentLanguageName = () => {
     const currentLang = languages.find((lang) => lang.code === language)
     return currentLang?.name || "English"

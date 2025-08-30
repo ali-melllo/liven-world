@@ -113,13 +113,14 @@ export default function UpdateEmailPage() {
         otp : otp.join("")
       }).unwrap();
 
-      console.log("User updated:", response);
-      // localStorage.setItem(
-      //   "user",
-      //   JSON.stringify({ ...userData, email: data.newEmail })
-      // );
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ ...userData, email: newEmailValue })
+      );
 
       toast.success("Email updated successfully!");
+      router.push('/profile');
+
     } catch (err) {
       console.error("Failed to update user:", err);
       toast.error("Something went wrong!");

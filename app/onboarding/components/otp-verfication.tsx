@@ -74,7 +74,6 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
       setShowInstructions(true);
     } else {
       const response = await signUpUser({ ...data, otp: "1111" }).unwrap();
-      console.log(response)
       await setAuthToken(response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
       localStorage.setItem("token", response.token);
