@@ -38,6 +38,15 @@ export const adminApi = api.injectEndpoints({
           }
         },
       }),
+    updateUser: builder.mutation<
+      AdminAttributesResponse,
+      Partial<AdminAttributesLoginParamsType>>({
+        query: (newUser) => ({
+          url: `user/update/${newUser._id}`,
+          method: 'PUT',
+          body: newUser,
+        }),
+      }),
     getProfile: builder.query<any, any>({
       query: ({ id }) => ({
         url: `user/fetch/${id}`,
@@ -50,5 +59,6 @@ export const adminApi = api.injectEndpoints({
 export const {
   useSignUpUserMutation,
   useLoginUserMutation,
-  useGetProfileQuery
+  useGetProfileQuery,
+  useUpdateUserMutation
 } = adminApi;

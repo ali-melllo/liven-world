@@ -1,7 +1,7 @@
 export interface AdminAttributesResponse {
 
   user: {
-    _id:string;
+    _id: string;
     id: string;
     fullName: string;
     email: string;
@@ -18,6 +18,8 @@ export interface AdminAttributesLoginParamsType {
   phone?: string
   terms?: boolean
   otp: string;
+  id: string;
+  _id: string;
 }
 
 export interface AdminUpdatePasswordParamsType {

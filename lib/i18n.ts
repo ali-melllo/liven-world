@@ -6,6 +6,7 @@ export const translations = {
     signUp: "Sign Up",
     logIn: "Log In",
     termsText: "By continuing, you agree to our Terms of Service and Privacy Policy.",
+    sendVerificationCode:"Send Verification Code",
 
     // Landing Page
     heroTitle: "Welcome to Liven World",

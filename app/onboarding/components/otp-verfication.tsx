@@ -120,7 +120,7 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
 
           <div>
             <CardTitle className="text-2xl font-bold">Verify Your Account</CardTitle>
-            <CardDescription>We've sent a 4-digit code to your phone number ending in **11</CardDescription>
+            <CardDescription>We've sent a 4-digit code to your email</CardDescription>
           </div>
         </CardHeader>
 

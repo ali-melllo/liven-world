@@ -62,7 +62,7 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
     if (otp.join("").length !== 4) return
 
     if (isForLogin) {
-      const response = await loginUser({ ...data, otp: "1111" }).unwrap();
+      const response = await loginUser({ ...data, otp: otp.join("") }).unwrap();
       await setAuthToken(response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
       localStorage.setItem("token", response.token);
@@ -71,7 +71,7 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
       toast("Logged In Successfully")
       router.replace("/");
     } else {
-      const response = await signUpUser({ ...data, otp: "1111" }).unwrap();
+      const response = await signUpUser({ ...data, otp: otp.join("") }).unwrap();
       await setAuthToken(response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
       localStorage.setItem("token", response.token);
@@ -100,7 +100,7 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
 
           <div>
             <CardTitle className="text-2xl font-bold">Verify Your Account</CardTitle>
-            <CardDescription>We've sent a 4-digit code to your phone number ending in **11</CardDescription>
+            <CardDescription>We've sent a 4-digit code to your email</CardDescription>
           </div>
         </CardHeader>
 

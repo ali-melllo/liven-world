@@ -103,7 +103,7 @@ export default function ProfilePage() {
               >
                 <div>
                   <div className="font-medium">{t("email")}</div>
-                  <div className="text-sm text-muted-foreground">sophia.miller@email.com</div>
+                  <div className="text-sm text-muted-foreground">{data?.data?.user?.email}</div>
                 </div>
                 <ChevronRight className="h-5 w-5 text-muted-foreground" />
               </div>
