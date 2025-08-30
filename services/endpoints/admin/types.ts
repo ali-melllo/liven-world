@@ -1,6 +1,7 @@
 export interface AdminAttributesResponse {
 
   user: {
+    _id:string;
     id: string;
     fullName: string;
     email: string;

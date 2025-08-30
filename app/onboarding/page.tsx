@@ -12,7 +12,6 @@ import { ArrowLeft, X } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { languages, type Language } from "@/lib/i18n"
 import { useRouter } from "next/navigation"
-import { GuideSlider } from "@/components/guide-slider"
 import OTPVerificationPage from "./components/otp-verfication"
 
 interface FormData {

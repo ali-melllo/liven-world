@@ -38,7 +38,7 @@ export const adminApi = api.injectEndpoints({
           }
         },
       }),
-    getProfile: builder.query<unknown, unknown>({
+    getProfile: builder.query<any, any>({
       query: ({ id }) => ({
         url: `user/fetch/${id}`,
         method: 'GET',

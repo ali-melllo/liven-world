@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState, type ReactNode } from "react"
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
 import { type Language, translations, type TranslationKey } from "@/lib/i18n"
 
 interface LanguageContextType {
@@ -14,21 +14,45 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("en")
 
+  useEffect(() => {
+    try {
+      const storedUser = localStorage.getItem("user")
+      if (storedUser) {
+        const parsed = JSON.parse(storedUser)
+        if (parsed?.language) {
+          setLanguage(parsed.language as Language)
+        }
+      }
+    } catch (err) {
+      console.warn("Failed to load user language from localStorage:", err)
+    }
+  }, [])
+
+  const updateLanguage = (lang: Language) => {
+    setLanguage(lang)
+    try {
+      const storedUser = localStorage.getItem("user")
+      const parsed = storedUser ? JSON.parse(storedUser) : {}
+      parsed.language = lang
+      localStorage.setItem("user", JSON.stringify(parsed))
+    } catch (err) {
+      console.warn("Failed to save language to localStorage:", err)
+    }
+  }
+
   const t = (key: TranslationKey): string => {
     try {
-      // First try to get the translation for the current language
       const currentLangTranslations = translations[language]
       if (currentLangTranslations && currentLangTranslations[key]) {
         return currentLangTranslations[key]
       }
 
-      // Fallback to English if key doesn't exist in current language
+      // fallback to English
       const englishTranslations = translations.en
       if (englishTranslations && englishTranslations[key]) {
         return englishTranslations[key]
       }
 
-      // Final fallback: return the key itself
       return key
     } catch (error) {
       console.warn(`Translation error for key "${key}":`, error)
@@ -36,7 +60,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   }
 
-  return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage: updateLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  )
 }
 
 export function useLanguage() {

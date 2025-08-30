@@ -14,6 +14,7 @@ import { languages } from "@/lib/i18n"
 import { setUser } from "@/lib/store/slices/userSlice"
 import { useDispatch } from "react-redux"
 import { useGetProfileQuery } from "@/services/endpoints/admin/admin"
+import { format } from "date-fns"
 
 export default function ProfilePage() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
@@ -72,10 +73,13 @@ export default function ProfilePage() {
               <AvatarImage src="/placeholder.svg?height=80&width=80" />
               <AvatarFallback>S</AvatarFallback>
             </Avatar>
-            <div>
-              <h2 className="text-xl font-semibold">Sophia</h2>
-              <p className="text-sm text-muted-foreground">{t("joined")} 2023</p>
-            </div>
+            {data?.data &&
+              <div>
+                <h2 className="text-xl font-semibold">{data?.data?.user?.fullName}</h2>
+                <p className="text-sm text-muted-foreground">
+                  {t("joined")} {format(new Date(data?.data?.user?.createdAt), "PPP")}
+                </p>
+              </div>}
           </div>
 
           <div className="space-y-4">
