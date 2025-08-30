@@ -11,7 +11,6 @@ const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 type CustomQueryArgs = string | (FetchArgs & { baseUrl?: string });
 
-// ✅ Define baseQuery once, not inside customBaseQuery
 const baseQuery = fetchBaseQuery({
   baseUrl: BASE_URL,
   prepareHeaders: (headers) => {

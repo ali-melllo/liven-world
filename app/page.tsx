@@ -157,8 +157,8 @@ export default function LandingPage() {
               height={500}
             />
           </div>
-          <p className="font-semibold mt-2">Start a new Chat</p>
-          <p className="text-gray-500 text-sm">Connect With a Support Agent</p>
+          <p className="font-semibold mt-2">{t("startNewChat")}</p>
+          <p className="text-gray-500 text-sm">{t("agentConnect")}</p>
         </Link>
 
         <Link href={"/topics"} className="w-full flex flex-col">
@@ -171,8 +171,8 @@ export default function LandingPage() {
               height={500}
             />
           </div>
-          <p className="font-semibold mt-2">Common Topics</p>
-          <p className="text-gray-500 text-sm">Find Answers to Frequently asked questions</p>
+          <p className="font-semibold mt-2">{t("commonTopics")}</p>
+          <p className="text-gray-500 text-sm">{t("findAnswers")}</p>
         </Link>
 
       </section>

@@ -23,6 +23,7 @@ import { TypingAnimation } from "@/components/magicui/text-animation"
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text"
 import { useGetSessionDetailQuery, useSendMessageMutation } from "@/services/endpoints/chat/chat"
 import { useRouter, useSearchParams } from "next/navigation"
+import { useLanguage } from "@/contexts/language-context"
 
 type Message = {
   role: "assistant" | "user";
@@ -37,6 +38,7 @@ export default function Conversation() {
   const scrollAreaRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const router = useRouter();
+  const { t } = useLanguage()
 
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("sessionId");
@@ -59,12 +61,12 @@ export default function Conversation() {
 
   const [sendMessage] = useSendMessageMutation();
 
-  const sampleQuestions = [
-    "How do I apply for housing benefit?",
-    "Where can I find a job in the Netherlands?",
-    "What documents do I need for BSN registration?",
-    "How do I open a Dutch bank account?",
-  ]
+  // const sampleQuestions = [
+  //   "How do I apply for housing benefit?",
+  //   "Where can I find a job in the Netherlands?",
+  //   "What documents do I need for BSN registration?",
+  //   "How do I open a Dutch bank account?",
+  // ]
 
   useEffect(() => {
     if (scrollAreaRef.current) {
@@ -121,14 +123,13 @@ export default function Conversation() {
                 className="text-center py-8 "
               >
 
-                <h2 className="text-xl md:text-2xl font-extrabold mb-2">Welcome to Liven Chat</h2>
+                <h2 className="text-xl md:text-2xl font-extrabold mb-2">{t("welcomeToLivenChat")}</h2>
                 <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-                  I'm here to help you navigate life in the Netherlands. Ask me anything about housing, jobs, government
-                  services, or integration.
+                  {t("chatDescriptionIntro")}
                 </p>
 
                 {/* Sample Questions */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl  mx-auto">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl  mx-auto">
                   {sampleQuestions.map((question, index) => (
                     <motion.button
                       key={index}
@@ -141,7 +142,7 @@ export default function Conversation() {
                       {question}
                     </motion.button>
                   ))}
-                </div>
+                </div> */}
               </motion.div>}
 
             {/* Messages */}
@@ -183,7 +184,7 @@ export default function Conversation() {
                     exit={{ opacity: 0 }}
                     className="flex justify-start items-center w-full "
                   >
-                    <div><AnimatedShinyText className="font-semibold">Thinking ...</AnimatedShinyText></div>
+                    <div><AnimatedShinyText className="font-semibold">{t("chatLoading")}</AnimatedShinyText></div>
                   </motion.div>
                 )}
               </AnimatePresence>

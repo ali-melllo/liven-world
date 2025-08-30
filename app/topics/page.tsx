@@ -45,8 +45,8 @@ export default function TopicsPage() {
   const router = useRouter()
 
   return (
-    <div className="h-[100dvh] bg-gray-100 flex items-center justify-center">
-      <Card className="w-full max-w-sm bg-white h-full flex flex-col border-transparent shadow-none pb-20">
+    <div className="h-[100dvh] flex items-center justify-center">
+      <Card className="w-full max-w-sm  h-full flex flex-col border-transparent shadow-none pb-20">
         <div className="flex items-center gap-4 p-4 border-b">
           <Button variant="ghost" size="icon" onClick={() => router.back()}>
             <ArrowLeft className="h-5 w-5" />
@@ -54,8 +54,8 @@ export default function TopicsPage() {
           <h1 className="text-xl font-semibold">{t("topics")}</h1>
         </div>
 
-        <CardContent className="flex-1 p-4 space-y-4 overflow-y-auto">
-          <h2 className="text-lg font-semibold text-gray-900">{t("topics")}</h2>
+        <CardContent className="flex-1 p-0 space-y-4 overflow-y-auto">
+          <h2 className="text-lg px-4 pt-4 font-semibold text-gray-900">{t("topics")}</h2>
 
           <div className="space-y-3">
             {topics.map((topic, index) => {
@@ -66,8 +66,8 @@ export default function TopicsPage() {
                   className="flex items-center gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer"
                   onClick={() => router.push("/chat/conversation")}
                 >
-                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <IconComponent className="h-5 w-5 text-gray-600" />
+                  <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
+                    <IconComponent className="h-5 w-5" />
                   </div>
                   <div className="flex-1">
                     <div className="font-medium text-gray-900 mb-1">{t(topic.titleKey)}</div>

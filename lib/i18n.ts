@@ -5,8 +5,9 @@ export const translations = {
     appSubtitle: "Your multilingual guide to navigating life in the Netherlands.",
     signUp: "Sign Up",
     logIn: "Log In",
+    logOut: "Log Out",
     termsText: "By continuing, you agree to our Terms of Service and Privacy Policy.",
-    sendVerificationCode:"Send Verification Code",
+    sendVerificationCode: "Send Verification Code",
 
     // Landing Page
     heroTitle: "Welcome to Liven World",
@@ -27,10 +28,10 @@ export const translations = {
 
     // Welcome & Onboarding
     welcomeTitle: "Welcome to Liven Chat",
-    introTitle:"Liven Chat",
-    welcomeIntro:"Your multilingual guide to navigating life in Netherlands",
+    introTitle: "Liven Chat",
+    welcomeIntro: "Your multilingual guide to navigating life in Netherlands",
     welcomeSubtitle: "Your multilingual assistant for migrants and asylum seekers in the Netherlands.",
-    introRule:"By continuing you agree to our Terms Of Service & Privacy Policy",
+    introRule: "By continuing you agree to our Terms Of Service & Privacy Policy",
     getStarted: "Get Started",
 
     // Language Selection
@@ -132,11 +133,16 @@ export const translations = {
 
     // Chat
     startNewChat: "Start a new chat",
+    welcomeToLivenChat: "Welcome to Liven Chat",
+    chatDescriptionIntro: "I'm here to help you navigate life in the Netherlands. Ask me anything about housing, jobs, government services, or integration.",
     askQuestion: "Ask a question",
     askQuestionDesc: "Get answers to your questions about living in the Netherlands.",
     commonTopics: "Common topics",
     typeMessage: "Type your message...",
     chatHistory: "Chat History",
+    chatLoading: "Thinking ...",
+    agentConnect: "Connect With a Support Agent",
+    findAnswers: "Find Answers to Frequently asked questions",
 
     // Topics
     housing: "Housing",
