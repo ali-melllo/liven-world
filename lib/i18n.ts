@@ -146,21 +146,19 @@ export const translations = {
 
     // Topics
     housing: "Housing",
-    housingDesc: "Find information about housing options and regulations.",
-    healthcare: "Healthcare",
-    healthcareDesc: "Learn about the healthcare system and how to access medical services.",
-    education: "Education",
-    educationDesc: "Explore educational opportunities and requirements.",
+    housingDesc: "Find help with housing and rent",
     health: "Health",
-    healthDesc: "Access healthcare services",
+    healthDesc: "Access healthcare and insurance",
     work: "Work",
-    workDesc: "Find employment opportunities",
+    workDesc: "Jobs, permits and career guidance",
     legal: "Legal",
-    legalDesc: "Understand your legal rights",
+    legalDesc: "Residency, registration, and law",
     culture: "Culture",
-    cultureDesc: "Learn about the local culture",
+    cultureDesc: "Traditions, language, and society",
     finance: "Finance",
-    financeDesc: "Manage your finances",
+    financeDesc: "Banking, taxes, and money management",
+    education: "Education",
+    educationDesc: "Schools, courses, and learning opportunities",
 
     // Profile
     joined: "Joined",
@@ -187,6 +185,43 @@ export const translations = {
     profileUpdated: "Profile updated successfully",
     languageUpdated: "Language updated successfully",
 
+    questions: {
+      "housing": {
+        "q1": "How do I apply for housing benefit?",
+        "q2": "What are the requirements to rent an apartment in the Netherlands?",
+        "q3": "Where can I find affordable housing?"
+      },
+      "health": {
+        "q1": "How do I register for health insurance?",
+        "q2": "Where can I find a doctor near me?",
+        "q3": "What should I do in case of a medical emergency?"
+      },
+      "work": {
+        "q1": "Where can I find a job in the Netherlands?",
+        "q2": "How do I apply for a work permit?",
+        "q3": "What are the rules for working as a student?"
+      },
+      "legal": {
+        "q1": "What documents do I need for BSN registration?",
+        "q2": "How do I apply for residency?",
+        "q3": "What should I do if I lose my residence permit?"
+      },
+      "culture": {
+        "q1": "What are some Dutch cultural traditions?",
+        "q2": "Where can I learn the Dutch language?",
+        "q3": "How do Dutch holidays differ from mine?"
+      },
+      "finance": {
+        "q1": "How do I open a Dutch bank account?",
+        "q2": "What is the process for getting a BSN number?",
+        "q3": "How do I pay taxes in the Netherlands?"
+      },
+      "education": {
+        "q1": "How does the Dutch school system work?",
+        "q2": "Where can I find Dutch language courses?",
+        "q3": "What are the requirements for university admission?"
+      }
+    },
     // Theme
     theme: "Theme",
     light: "Light",

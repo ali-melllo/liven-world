@@ -7,24 +7,8 @@ import { useLanguage } from "@/contexts/language-context"
 import { Navigation } from "@/components/navigation"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useRouter } from "next/navigation"
+import { topics } from "../topics/page"
 
-const commonTopics = [
-  {
-    titleKey: "housing" as const,
-    descriptionKey: "housingDesc" as const,
-    image: "/placeholder.svg?height=80&width=80",
-  },
-  {
-    titleKey: "healthcare" as const,
-    descriptionKey: "healthcareDesc" as const,
-    image: "/placeholder.svg?height=80&width=80",
-  },
-  {
-    titleKey: "education" as const,
-    descriptionKey: "educationDesc" as const,
-    image: "/placeholder.svg?height=80&width=80",
-  },
-]
 
 export default function ChatPage() {
   const { t } = useLanguage()
@@ -50,7 +34,7 @@ export default function ChatPage() {
               <h2 className="text-lg font-semibold mb-2">{t("startNewChat")}</h2>
               <h2
                 onClick={() => router.push("/chat/history")}
-                className="border flex items-center gap-2 text-sm border-muted shadow px-4 py-1 rounded-xl font-medium mb-2">{t("chatHistory")} <List size={15}/> </h2>
+                className="border flex items-center gap-2 text-sm border-muted shadow px-4 py-1 rounded-xl font-medium mb-2">{t("chatHistory")} <List size={15} /> </h2>
             </div>
 
             <div
@@ -71,21 +55,23 @@ export default function ChatPage() {
             <h3 className="text-lg font-semibold mb-4">{t("commonTopics")}</h3>
 
             <div className="space-y-4">
-              {commonTopics.map((topic, index) => (
-                <div
+              {topics.map((topic, index) => {
+                const IconComponent = topic.icon
+
+                return <div
                   key={index}
                   className="flex items-center gap-3 p-3 hover:bg-muted rounded-lg cursor-pointer"
-                  onClick={() => router.push("/chat/conversation")}
+                  onClick={() => router.push(`/chat/conversation?topic=${topic.titleKey}`)}
                 >
                   <div className="flex-1">
                     <div className="font-medium mb-1">{t(topic.titleKey)}</div>
                     <div className="text-muted-foreground text-sm">{t(topic.descriptionKey)}</div>
                   </div>
-                  <div className="w-12 h-12 bg-muted rounded-lg flex-shrink-0 flex items-center justify-center">
-                    <img src={topic.image || "/placeholder.svg"} alt={t(topic.titleKey)} className="w-8 h-8 rounded" />
+                  <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
+                    <IconComponent className="h-5 w-5" />
                   </div>
                 </div>
-              ))}
+              })}
             </div>
           </div>
         </CardContent>

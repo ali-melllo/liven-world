@@ -2,12 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, HomeIcon as House, Heart, Briefcase, Scale, Globe, DollarSign } from "lucide-react"
+import { ArrowLeft, HomeIcon as House, Heart, Briefcase, Scale, Globe, DollarSign, Book } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { Navigation } from "@/components/navigation"
 import { useRouter } from "next/navigation"
 
-const topics = [
+
+export const topics = [
   {
     icon: House,
     titleKey: "housing" as const,
@@ -38,7 +39,13 @@ const topics = [
     titleKey: "finance" as const,
     descriptionKey: "financeDesc" as const,
   },
-]
+  {
+    icon: Book,
+    titleKey: "education" as const,
+    descriptionKey: "educationDesc" as const,
+  },
+];
+
 
 export default function TopicsPage() {
   const { t } = useLanguage()
@@ -64,8 +71,8 @@ export default function TopicsPage() {
                 <div
                   key={index}
                   className="flex items-center gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer"
-                  onClick={() => router.push("/chat/conversation")}
-                >
+                  onClick={() => router.push(`/chat/conversation?topic=${topic.titleKey}`)}
+                  >
                   <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
                     <IconComponent className="h-5 w-5" />
                   </div>

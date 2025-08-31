@@ -43,15 +43,15 @@ export default function Conversation() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("sessionId");
 
-  const { data, isLoading : pastDataLoading ,refetch } = useGetSessionDetailQuery(
+  const { data, isLoading: pastDataLoading, refetch } = useGetSessionDetailQuery(
     { id: sessionId ?? "" },
     { skip: !sessionId, refetchOnMountOrArgChange: true }
   );
-  
+
   useEffect(() => {
     const formatted: { role: "user" | "assistant"; content: string }[] = [];
-  
-    data?.forEach((item:any) => {
+
+    data?.forEach((item: any) => {
       formatted.push({ role: "user", content: item.question });
       formatted.push({ role: "assistant", content: item.answer });
     });
@@ -61,12 +61,47 @@ export default function Conversation() {
 
   const [sendMessage] = useSendMessageMutation();
 
-  // const sampleQuestions = [
-  //   "How do I apply for housing benefit?",
-  //   "Where can I find a job in the Netherlands?",
-  //   "What documents do I need for BSN registration?",
-  //   "How do I open a Dutch bank account?",
-  // ]
+  const sampleQuestions = {
+    housing: [
+      "questions.housing.q1",
+      "questions.housing.q2",
+      "questions.housing.q3",
+    ],
+    health: [
+      "questions.health.q1",
+      "questions.health.q2",
+      "questions.health.q3",
+    ],
+    work: [
+      "questions.work.q1",
+      "questions.work.q2",
+      "questions.work.q3",
+    ],
+    legal: [
+      "questions.legal.q1",
+      "questions.legal.q2",
+      "questions.legal.q3",
+    ],
+    culture: [
+      "questions.culture.q1",
+      "questions.culture.q2",
+      "questions.culture.q3",
+    ],
+    finance: [
+      "questions.finance.q1",
+      "questions.finance.q2",
+      "questions.finance.q3",
+    ],
+    education: [
+      "questions.education.q1",
+      "questions.education.q2",
+      "questions.education.q3",
+    ],
+  } as const;
+
+
+  const topic = searchParams.get("topic");
+  const questions = topic ? sampleQuestions[topic as keyof typeof sampleQuestions] : [];
 
   useEffect(() => {
     if (scrollAreaRef.current) {
@@ -108,6 +143,7 @@ export default function Conversation() {
     }
   };
 
+  console.log(questions)
   return (
     <div className="min-h-screen  flex flex-col">
 
@@ -129,8 +165,8 @@ export default function Conversation() {
                 </p>
 
                 {/* Sample Questions */}
-                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl  mx-auto">
-                  {sampleQuestions.map((question, index) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl  mx-auto">
+                  {questions?.map((question, index) => (
                     <motion.button
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -139,10 +175,10 @@ export default function Conversation() {
                       onClick={() => setInputValue(question)}
                       className="p-3 text-left font-bold bg-muted/50 hover:bg-muted/80 rounded-lg border border-border/50 hover:border-border transition-all duration-200 text-sm"
                     >
-                      {question}
+                      {t(question as any)}
                     </motion.button>
                   ))}
-                </div> */}
+                </div>
               </motion.div>}
 
             {/* Messages */}
