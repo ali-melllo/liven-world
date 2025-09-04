@@ -120,7 +120,7 @@ export default function Conversation() {
     try {
       const data = await sendMessage({
         question: inputValue,
-        topic: "work",
+        topic: topic || "",
         sessionId: sessionId || ""
       }).unwrap();
 
