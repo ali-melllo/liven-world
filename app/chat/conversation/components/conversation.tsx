@@ -63,42 +63,42 @@ export default function Conversation() {
 
   const sampleQuestions = {
     housing: [
-      "questions.housing.q1",
-      "questions.housing.q2",
-      "questions.housing.q3",
+      "housing_q1",
+      "housing_q2",
+      "housing_q3",
     ],
     health: [
-      "questions.health.q1",
-      "questions.health.q2",
-      "questions.health.q3",
+      "health_q1",
+      "health_q2",
+      "health_q3",
     ],
     work: [
-      "questions.work.q1",
-      "questions.work.q2",
-      "questions.work.q3",
+      "work_q1",
+      "work_q2",
+      "work_q3",
     ],
     legal: [
-      "questions.legal.q1",
-      "questions.legal.q2",
-      "questions.legal.q3",
+      "legal_q1",
+      "legal_q2",
+      "legal_q3",
     ],
     culture: [
-      "questions.culture.q1",
-      "questions.culture.q2",
-      "questions.culture.q3",
+      "culture_q1",
+      "culture_q2",
+      "culture_q3",
     ],
     finance: [
-      "questions.finance.q1",
-      "questions.finance.q2",
-      "questions.finance.q3",
+      "finance_q1",
+      "finance_q2",
+      "finance_q3",
     ],
     education: [
-      "questions.education.q1",
-      "questions.education.q2",
-      "questions.education.q3",
+      "education_q1",
+      "education_q2",
+      "education_q3",
     ],
   } as const;
-
+  
 
   const topic = searchParams.get("topic");
   const questions = topic ? sampleQuestions[topic as keyof typeof sampleQuestions] : [];
@@ -172,7 +172,7 @@ export default function Conversation() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      onClick={() => setInputValue(question)}
+                      onClick={() => setInputValue(t(question as any))}
                       className="p-3 text-left font-bold bg-muted/50 hover:bg-muted/80 rounded-lg border border-border/50 hover:border-border transition-all duration-200 text-sm"
                     >
                       {t(question as any)}

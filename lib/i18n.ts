@@ -185,43 +185,41 @@ export const translations = {
     profileUpdated: "Profile updated successfully",
     languageUpdated: "Language updated successfully",
 
-    questions: {
-      "housing": {
-        "q1": "How do I apply for housing benefit?",
-        "q2": "What are the requirements to rent an apartment in the Netherlands?",
-        "q3": "Where can I find affordable housing?"
-      },
-      "health": {
-        "q1": "How do I register for health insurance?",
-        "q2": "Where can I find a doctor near me?",
-        "q3": "What should I do in case of a medical emergency?"
-      },
-      "work": {
-        "q1": "Where can I find a job in the Netherlands?",
-        "q2": "How do I apply for a work permit?",
-        "q3": "What are the rules for working as a student?"
-      },
-      "legal": {
-        "q1": "What documents do I need for BSN registration?",
-        "q2": "How do I apply for residency?",
-        "q3": "What should I do if I lose my residence permit?"
-      },
-      "culture": {
-        "q1": "What are some Dutch cultural traditions?",
-        "q2": "Where can I learn the Dutch language?",
-        "q3": "How do Dutch holidays differ from mine?"
-      },
-      "finance": {
-        "q1": "How do I open a Dutch bank account?",
-        "q2": "What is the process for getting a BSN number?",
-        "q3": "How do I pay taxes in the Netherlands?"
-      },
-      "education": {
-        "q1": "How does the Dutch school system work?",
-        "q2": "Where can I find Dutch language courses?",
-        "q3": "What are the requirements for university admission?"
-      }
-    },
+    "housing_q1": "How do I register at a municipality (BRP)?",
+    "housing_q2": "What documents do I need to rent an apartment?",
+    "housing_q3": "How can I find social housing?",
+    "housing_q4": "What are my rights if my landlord increases rent?",
+    "housing_q5": "How do I apply for housing allowance (huurtoeslag)?",
+
+    "legal_q1": "How do I apply for a residence permit?",
+    "legal_q2": "What is family reunification and how can I apply?",
+    "legal_q3": "What are my rights while my asylum case is pending?",
+    "legal_q4": "Where can I get free legal aid as a migrant?",
+
+    "work_q1": "Do I need a work permit (TWV)?",
+    "work_q2": "Where can I find vacancies for newcomers?",
+    "work_q3": "What are my rights as an employee in the Netherlands?",
+    "work_q4": "How do I register at UWV (employment office)?",
+    "work_q5": "Can I work while waiting for asylum decision?",
+
+    "healthcare_q1": "How do I register with a huisarts (GP)?",
+    "healthcare_q2": "Do I need health insurance, and how do I get it?",
+    "healthcare_q3": "What is covered under Dutch basic health insurance?",
+    "healthcare_q4": "How do I apply for healthcare allowance (zorgtoeslag)?",
+
+    "education_q1": "How do I enroll my child in school?",
+    "education_q2": "What are my options for Dutch language courses?",
+    "education_q3": "Can I study at a Dutch university as a newcomer?",
+    "education_q4": "Are there scholarships or financial support for migrants?",
+
+    "culture_q1": "What are some Dutch cultural traditions?",
+    "culture_q2": "Where can I learn the Dutch language?",
+    "culture_q3": "How do Dutch holidays differ from mine?",
+
+    "finance_q1": "How do I open a Dutch bank account?",
+    "finance_q2": "What is the process for getting a BSN number?",
+    "finance_q3": "How do I pay taxes in the Netherlands?",
+
     // Theme
     theme: "Theme",
     light: "Light",
