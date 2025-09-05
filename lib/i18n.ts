@@ -225,6 +225,90 @@ export const translations = {
     light: "Light",
     dark: "Dark",
     system: "System",
+
+
+
+    // new 
+
+    myHeroTitle: "My Hero",
+    myHeroDescription: "My Hero connects migrants and locals. You can post if you need help or want to offer help. Follow safety guidelines: be respectful, no discrimination, no spam. Moderation is active: report inappropriate posts.",
+
+    helpRequests: "Help Requests",
+    helpRequestsDesc: "Post here if you need assistance with everyday tasks, guidance, or support from the community.",
+
+    helpOffers: "Help Offers",
+    helpOffersDesc: "Post here if you want to offer help, resources, or support to migrants and community members.",
+
+    privacyPolicyTitle: "Privacy Policy",
+    privacyIntroductionTitle: "Introduction",
+    privacyIntroductionDesc: "Liven Chat and My Hero value your privacy. This policy explains what data we collect, how we use it, and your rights.",
+
+    dataCollectionTitle: "Data Collection",
+    dataCollectionDesc: "We collect the following types of data:",
+    dataCollectionUsers: "User profile information (name, email, nationality, municipality).",
+    dataCollectionPosts: "Posts and comments you create within the app.",
+    dataCollectionComments: "Comments on posts, including content and timestamps.",
+    dataCollectionPush: "Push notification subscriptions to deliver real-time updates.",
+
+    dataUseTitle: "How We Use Your Data",
+    dataUseDesc: "Your data is used to improve your experience and provide our services, including:",
+    dataUseNotifications: "Sending real-time notifications about likes, comments, and community activity.",
+    dataUsePersonalization: "Personalizing your feed and content recommendations.",
+    dataUseAnalytics: "Analyzing app usage to improve functionality and features.",
+
+    dataSharingTitle: "Data Sharing",
+    dataSharingDesc: "We do not sell your personal data. We may share information with service providers to maintain and improve the app.",
+
+    securityTitle: "Data Security",
+    securityDesc: "We implement reasonable technical and organizational measures to protect your data from unauthorized access.",
+
+    userRightsTitle: "Your Rights",
+    userRightsDesc: "You have the following rights regarding your data:",
+    userRightsAccess: "Access the personal data we hold about you.",
+    userRightsDelete: "Request deletion of your data from our systems.",
+    userRightsOptOut: "Opt out of receiving push notifications.",
+
+    contactTitle: "Contact Us",
+    contactDesc: "If you have any questions about this Privacy Policy, please contact us at support@livenchat.com.",
+
+    health_q1: "How do I register for health insurance?",
+    health_q1_answer: "You must register with a Dutch health insurance provider within four months of arriving in the Netherlands. You can do this online or at the provider’s office.",
+
+    health_q2: "Where can I find a doctor near me?",
+    health_q2_answer: "You can find a local huisarts (general practitioner) by searching online, asking your municipality, or checking the zorgkaart.nl website.",
+
+    health_q3: "What should I do in case of a medical emergency?",
+    health_q3_answer: "In case of a medical emergency, call 112 immediately. For urgent care, visit your local huisartsenpost or emergency department at a hospital.",
+
+    health_q4: "Do I need health insurance, and how do I get it?",
+    health_q4_answer: "Yes, health insurance is mandatory in the Netherlands. Choose a Dutch health insurance provider and register online or in person.",
+
+    "faqTitle": "Frequently Asked Questions",
+    "myHero": "My Hero",
+    "howToPost": "How do I post a help request or offer?",
+    "howToPostDesc": "You can create a post by clicking 'New Post', select your type, write the title and content, and publish.",
+    "helpRequestsGuidelines": "Are there guidelines for posts?",
+    "helpRequestsGuidelinesDesc": "Be respectful, no discrimination, no spam. Follow safety guidelines when posting.",
+    "moderationRules": "How is content moderated?",
+    "moderationRulesDesc": "You can report inappropriate posts. Our moderators will review and take action if necessary.",
+    "privacyAndSafety": "How is my privacy protected?",
+    "privacyAndSafetyDesc": "We store minimal information and never share your data. Follow safety rules while interacting with others.",
+    "howToGetNotified": "How do I receive notifications?",
+    "howToGetNotifiedDesc": "Enable push notifications in your browser or app to get updates about likes, comments, and new posts.",
+    "likeAndCommentNotifications": "What notifications will I receive?",
+    "likeAndCommentNotificationsDesc": "You will be notified when someone likes or comments on your posts.",
+    "updateProfileDesc": "Go to Profile > Settings to update your personal information, avatar, or preferences.",
+    "changeLanguageDesc": "You can select a different language in Profile > Change Language.",
+    
+    aboutTitle: "About the App",
+    aboutDescription: "This app connects migrants and locals, helping you navigate life in your new country. You can ask for help, offer support, or access useful information.",
+    aboutFeatureChatTitle: "Multilingual Chat",
+    aboutFeatureChatDesc: "Chat in your preferred language with an AI assistant to get guidance on housing, health, legal matters, and more.",
+    aboutFeatureHelpTitle: "Help Requests & Offers",
+    aboutFeatureHelpDesc: "Post requests if you need help or offer assistance to others in your community.",
+    aboutSafetyTitle: "Safety & Moderation",
+    aboutSafetyDesc: "Be respectful, no discrimination, no spam. Report inappropriate posts. Moderators ensure safety and enforce guidelines."
+    
   },
   "nl": {
     // Landing & Auth
@@ -463,7 +547,7 @@ export const translations = {
     logOut: "تسجيل الخروج",
     termsText: "بالمتابعة، فإنك توافق على شروط الخدمة وسياسة الخصوصية الخاصة بنا.",
     sendVerificationCode: "إرسال رمز التحقق",
-  
+
     // Landing Page
     heroTitle: "مرحبًا بك في Liven World",
     heroSubtitle: "مساعدك متعدد اللغات للمهاجرين وطالبي اللجوء في هولندا",
@@ -471,7 +555,7 @@ export const translations = {
       "احصل على مساعدة فورية في السكن، الرعاية الصحية، الأمور القانونية والمزيد - متاح 24/7 بلغتك.",
     getStartedNow: "ابدأ الآن",
     learnMore: "اعرف المزيد",
-  
+
     // Features
     featuresTitle: "كيف نساعدك",
     feature1Title: "دعم متعدد اللغات على مدار الساعة",
@@ -480,7 +564,7 @@ export const translations = {
     feature2Desc: "معلومات موثوقة حول القوانين والسكن والرعاية الصحية",
     feature3Title: "سهل الاستخدام",
     feature3Desc: "واجهة دردشة بسيطة مصممة للجميع",
-  
+
     // Welcome & Onboarding
     welcomeTitle: "مرحبًا بك في Liven Chat",
     introTitle: "Liven Chat",
@@ -488,13 +572,13 @@ export const translations = {
     welcomeSubtitle: "مساعدك متعدد اللغات للمهاجرين وطالبي اللجوء في هولندا.",
     introRule: "بالمتابعة أنت توافق على شروط الخدمة وسياسة الخصوصية",
     getStarted: "ابدأ",
-  
+
     // Language Selection
     language: "اللغة",
     selectLanguage: "اختر لغتك",
     continue: "متابعة",
     back: "رجوع",
-  
+
     // Profile Setup
     profileSetup: "إعداد الملف الشخصي",
     tellUsAbout: "أخبرنا عن نفسك",
@@ -508,19 +592,19 @@ export const translations = {
     gender: "الجنس",
     status: "الحالة",
     next: "التالي",
-  
+
     // Gender Options
     male: "ذكر",
     female: "أنثى",
     other: "آخر",
     preferNotToSay: "أفضل عدم الإفصاح",
-  
+
     // Status Options
     asylumSeeker: "طالب لجوء",
     refugee: "لاجئ",
     migrant: "مهاجر",
     student: "طالب",
-  
+
     // Validation Messages
     required: "هذا الحقل مطلوب",
     fullNameRequired: "الاسم الكامل مطلوب",
@@ -535,7 +619,7 @@ export const translations = {
     passwordsDoNotMatch: "كلمات المرور غير متطابقة",
     genderRequired: "يرجى تحديد الجنس",
     statusRequired: "يرجى تحديد الحالة",
-  
+
     // Onboarding Instructions
     howToUseTitle: "كيفية استخدام الدردشة",
     onboardingText1:
@@ -545,7 +629,7 @@ export const translations = {
     onboardingText3:
       "تذكر أن الروبوت أداة لمساعدتك فقط. في القضايا المعقدة أو العاجلة، استشر دائمًا محاميًا أو السلطات المختصة.",
     startChatting: "ابدأ الدردشة",
-  
+
     // Guide Slides
     guides: [
       {
@@ -579,13 +663,13 @@ export const translations = {
         icon: "🚀",
       },
     ],
-  
+
     // Navigation
     home: "الرئيسية",
     chat: "دردشة",
     topics: "المواضيع",
     profile: "الملف الشخصي",
-  
+
     // Chat
     startNewChat: "ابدأ محادثة جديدة",
     welcomeToLivenChat: "مرحبًا بك في Liven Chat",
@@ -598,7 +682,7 @@ export const translations = {
     chatLoading: "جارٍ التفكير...",
     agentConnect: "التواصل مع وكيل دعم",
     findAnswers: "ابحث عن إجابات للأسئلة الشائعة",
-  
+
     // Topics
     housing: "السكن",
     housingDesc: "مساعدة في السكن والإيجار",
@@ -614,7 +698,7 @@ export const translations = {
     financeDesc: "المصارف، الضرائب، وإدارة الأموال",
     education: "التعليم",
     educationDesc: "المدارس، الدورات، وفرص التعلم",
-  
+
     // Profile
     joined: "انضم منذ",
     account: "الحساب",
@@ -639,55 +723,55 @@ export const translations = {
     confirmNewPassword: "تأكيد كلمة المرور الجديدة",
     profileUpdated: "تم تحديث الملف الشخصي بنجاح",
     languageUpdated: "تم تحديث اللغة بنجاح",
-  
+
     // Housing
     housing_q1: "كيف أسجل في البلدية (BRP)؟",
     housing_q2: "ما هي المستندات المطلوبة لاستئجار شقة؟",
     housing_q3: "كيف يمكنني العثور على سكن اجتماعي؟",
     housing_q4: "ما هي حقوقي إذا زاد المالك الإيجار؟",
     housing_q5: "كيف أقدم طلب للحصول على بدل السكن (huurtoeslag)؟",
-  
+
     // Legal
     legal_q1: "كيف أقدم طلب للحصول على تصريح إقامة؟",
     legal_q2: "ما هو لم الشمل العائلي وكيف يمكنني التقديم؟",
     legal_q3: "ما هي حقوقي أثناء انتظار قرار اللجوء؟",
     legal_q4: "أين يمكنني الحصول على مساعدة قانونية مجانية كمهاجر؟",
-  
+
     // Work
     work_q1: "هل أحتاج إلى تصريح عمل (TWV)؟",
     work_q2: "أين يمكنني العثور على وظائف للمهاجرين الجدد؟",
     work_q3: "ما هي حقوقي كعامل في هولندا؟",
     work_q4: "كيف أسجل في مكتب التوظيف (UWV)؟",
     work_q5: "هل يمكنني العمل أثناء انتظار قرار اللجوء؟",
-  
+
     // Healthcare
     healthcare_q1: "كيف أسجل لدى طبيب عام (huisarts)؟",
     healthcare_q2: "هل أحتاج إلى تأمين صحي، وكيف أحصل عليه؟",
     healthcare_q3: "ما الذي يغطيه التأمين الصحي الأساسي في هولندا؟",
     healthcare_q4: "كيف أقدم طلب للحصول على بدل الرعاية الصحية (zorgtoeslag)؟",
-  
+
     // Education
     education_q1: "كيف أسجل طفلي في المدرسة؟",
     education_q2: "ما هي خياراتي لدورات اللغة الهولندية؟",
     education_q3: "هل يمكنني الدراسة في جامعة هولندية كمهاجر جديد؟",
     education_q4: "هل توجد منح دراسية أو دعم مالي للمهاجرين؟",
-  
+
     // Culture
     culture_q1: "ما هي بعض التقاليد الثقافية الهولندية؟",
     culture_q2: "أين يمكنني تعلم اللغة الهولندية؟",
     culture_q3: "كيف تختلف الأعياد الهولندية عن أعيادي؟",
-  
+
     // Finance
     finance_q1: "كيف أفتح حسابًا مصرفيًا هولنديًا؟",
     finance_q2: "ما هي إجراءات الحصول على رقم BSN؟",
     finance_q3: "كيف أدفع الضرائب في هولندا؟",
-  
+
     // Theme
     theme: "المظهر",
     light: "فاتح",
     dark: "داكن",
     system: "النظام",
-  },  
+  },
   es: {
     // Landing & Auth
     appTitle: "Liven Chat",
@@ -697,7 +781,7 @@ export const translations = {
     logOut: "Cerrar sesión",
     termsText: "Al continuar, aceptas nuestros Términos de servicio y Política de privacidad.",
     sendVerificationCode: "Enviar código de verificación",
-  
+
     // Landing Page
     heroTitle: "Bienvenido a Liven World",
     heroSubtitle: "Tu asistente multilingüe de confianza para migrantes y solicitantes de asilo en los Países Bajos",
@@ -705,7 +789,7 @@ export const translations = {
       "Obtén ayuda instantánea sobre vivienda, salud, asuntos legales y más, disponible 24/7 en tu idioma.",
     getStartedNow: "Comenzar ahora",
     learnMore: "Aprender más",
-  
+
     // Features
     featuresTitle: "Cómo te ayudamos",
     feature1Title: "Soporte multilingüe 24/7",
@@ -714,7 +798,7 @@ export const translations = {
     feature2Desc: "Información confiable sobre asuntos legales, de vivienda y de salud",
     feature3Title: "Fácil de usar",
     feature3Desc: "Interfaz de chat simple diseñada para todos",
-  
+
     // Welcome & Onboarding
     welcomeTitle: "Bienvenido a Liven Chat",
     introTitle: "Liven Chat",
@@ -722,13 +806,13 @@ export const translations = {
     welcomeSubtitle: "Tu asistente multilingüe para migrantes y solicitantes de asilo en los Países Bajos.",
     introRule: "Al continuar aceptas nuestros Términos de servicio y Política de privacidad",
     getStarted: "Comenzar",
-  
+
     // Language Selection
     language: "Idioma",
     selectLanguage: "Selecciona tu idioma",
     continue: "Continuar",
     back: "Atrás",
-  
+
     // Profile Setup
     profileSetup: "Configuración del perfil",
     tellUsAbout: "Cuéntanos sobre ti",
@@ -742,19 +826,19 @@ export const translations = {
     gender: "Género",
     status: "Estado",
     next: "Siguiente",
-  
+
     // Gender Options
     male: "Hombre",
     female: "Mujer",
     other: "Otro",
     preferNotToSay: "Prefiero no decirlo",
-  
+
     // Status Options
     asylumSeeker: "Solicitante de asilo",
     refugee: "Refugiado",
     migrant: "Migrante",
     student: "Estudiante",
-  
+
     // Validation Messages
     required: "Este campo es obligatorio",
     fullNameRequired: "El nombre completo es obligatorio",
@@ -769,7 +853,7 @@ export const translations = {
     passwordsDoNotMatch: "Las contraseñas no coinciden",
     genderRequired: "Por favor selecciona tu género",
     statusRequired: "Por favor selecciona tu estado",
-  
+
     // Onboarding Instructions
     howToUseTitle: "Cómo usar el chat",
     onboardingText1:
@@ -779,7 +863,7 @@ export const translations = {
     onboardingText3:
       "Recuerda, el chatbot es solo una herramienta de apoyo. Para asuntos complejos o urgentes, busca siempre asesoría legal o de las autoridades correspondientes.",
     startChatting: "Comenzar a chatear",
-  
+
     // Guide Slides
     guides: [
       {
@@ -813,13 +897,13 @@ export const translations = {
         icon: "🚀",
       },
     ],
-  
+
     // Navigation
     home: "Inicio",
     chat: "Chat",
     topics: "Temas",
     profile: "Perfil",
-  
+
     // Chat
     startNewChat: "Iniciar un nuevo chat",
     welcomeToLivenChat: "Bienvenido a Liven Chat",
@@ -832,7 +916,7 @@ export const translations = {
     chatLoading: "Pensando...",
     agentConnect: "Conectar con un agente de soporte",
     findAnswers: "Encuentra respuestas a preguntas frecuentes",
-  
+
     // Topics
     housing: "Vivienda",
     housingDesc: "Ayuda con vivienda y alquiler",
@@ -848,7 +932,7 @@ export const translations = {
     financeDesc: "Bancos, impuestos y manejo de dinero",
     education: "Educación",
     educationDesc: "Escuelas, cursos y oportunidades de aprendizaje",
-  
+
     // Profile
     joined: "Se unió",
     account: "Cuenta",
@@ -873,55 +957,55 @@ export const translations = {
     confirmNewPassword: "Confirmar nueva contraseña",
     profileUpdated: "Perfil actualizado con éxito",
     languageUpdated: "Idioma actualizado con éxito",
-  
+
     // Housing
     housing_q1: "¿Cómo me registro en el municipio (BRP)?",
     housing_q2: "¿Qué documentos necesito para alquilar un apartamento?",
     housing_q3: "¿Cómo puedo encontrar vivienda social?",
     housing_q4: "¿Cuáles son mis derechos si el propietario aumenta el alquiler?",
     housing_q5: "¿Cómo solicito la ayuda para vivienda (huurtoeslag)?",
-  
+
     // Legal
     legal_q1: "¿Cómo solicito un permiso de residencia?",
     legal_q2: "¿Qué es la reunificación familiar y cómo puedo solicitarla?",
     legal_q3: "¿Cuáles son mis derechos mientras espero mi caso de asilo?",
     legal_q4: "¿Dónde puedo obtener asistencia legal gratuita como migrante?",
-  
+
     // Work
     work_q1: "¿Necesito un permiso de trabajo (TWV)?",
     work_q2: "¿Dónde puedo encontrar vacantes para recién llegados?",
     work_q3: "¿Cuáles son mis derechos como empleado en los Países Bajos?",
     work_q4: "¿Cómo me registro en la oficina de empleo (UWV)?",
     work_q5: "¿Puedo trabajar mientras espero la decisión de asilo?",
-  
+
     // Healthcare
     healthcare_q1: "¿Cómo me registro con un médico de cabecera (huisarts)?",
     healthcare_q2: "¿Necesito un seguro de salud y cómo lo consigo?",
     healthcare_q3: "¿Qué cubre el seguro de salud básico en los Países Bajos?",
     healthcare_q4: "¿Cómo solicito la ayuda sanitaria (zorgtoeslag)?",
-  
+
     // Education
     education_q1: "¿Cómo inscribo a mi hijo en la escuela?",
     education_q2: "¿Cuáles son mis opciones para cursos de idioma neerlandés?",
     education_q3: "¿Puedo estudiar en una universidad neerlandesa como recién llegado?",
     education_q4: "¿Existen becas o apoyo financiero para migrantes?",
-  
+
     // Culture
     culture_q1: "¿Cuáles son algunas tradiciones culturales neerlandesas?",
     culture_q2: "¿Dónde puedo aprender el idioma neerlandés?",
     culture_q3: "¿En qué se diferencian las festividades neerlandesas de las mías?",
-  
+
     // Finance
     finance_q1: "¿Cómo abro una cuenta bancaria neerlandesa?",
     finance_q2: "¿Cuál es el proceso para obtener un número BSN?",
     finance_q3: "¿Cómo pago impuestos en los Países Bajos?",
-  
+
     // Theme
     theme: "Tema",
     light: "Claro",
     dark: "Oscuro",
     system: "Sistema",
-  },  
+  },
   fr: {
     // Landing & Auth
     appTitle: "Liven Chat",
@@ -931,7 +1015,7 @@ export const translations = {
     logOut: "Se déconnecter",
     termsText: "En continuant, vous acceptez nos Conditions d'utilisation et notre Politique de confidentialité.",
     sendVerificationCode: "Envoyer le code de vérification",
-  
+
     // Landing Page
     heroTitle: "Bienvenue dans Liven World",
     heroSubtitle: "Votre assistant multilingue de confiance pour les migrants et demandeurs d'asile aux Pays-Bas",
@@ -939,7 +1023,7 @@ export const translations = {
       "Obtenez de l'aide instantanée sur le logement, la santé, les questions juridiques et plus encore - disponible 24/7 dans votre langue.",
     getStartedNow: "Commencer maintenant",
     learnMore: "En savoir plus",
-  
+
     // Features
     featuresTitle: "Comment nous vous aidons",
     feature1Title: "Support multilingue 24/7",
@@ -948,7 +1032,7 @@ export const translations = {
     feature2Desc: "Informations fiables sur le droit, le logement et la santé",
     feature3Title: "Facile à utiliser",
     feature3Desc: "Interface de chat simple conçue pour tous",
-  
+
     // Welcome & Onboarding
     welcomeTitle: "Bienvenue sur Liven Chat",
     introTitle: "Liven Chat",
@@ -956,13 +1040,13 @@ export const translations = {
     welcomeSubtitle: "Votre assistant multilingue pour les migrants et demandeurs d'asile aux Pays-Bas.",
     introRule: "En continuant, vous acceptez nos Conditions d'utilisation et Politique de confidentialité",
     getStarted: "Commencer",
-  
+
     // Language Selection
     language: "Langue",
     selectLanguage: "Sélectionnez votre langue",
     continue: "Continuer",
     back: "Retour",
-  
+
     // Profile Setup
     profileSetup: "Configuration du profil",
     tellUsAbout: "Parlez-nous de vous",
@@ -976,19 +1060,19 @@ export const translations = {
     gender: "Genre",
     status: "Statut",
     next: "Suivant",
-  
+
     // Gender Options
     male: "Homme",
     female: "Femme",
     other: "Autre",
     preferNotToSay: "Préférer ne pas dire",
-  
+
     // Status Options
     asylumSeeker: "Demandeur d'asile",
     refugee: "Réfugié",
     migrant: "Migrants",
     student: "Étudiant",
-  
+
     // Validation Messages
     required: "Ce champ est requis",
     fullNameRequired: "Le nom complet est requis",
@@ -1003,7 +1087,7 @@ export const translations = {
     passwordsDoNotMatch: "Les mots de passe ne correspondent pas",
     genderRequired: "Veuillez sélectionner votre genre",
     statusRequired: "Veuillez sélectionner votre statut",
-  
+
     // Onboarding Instructions
     howToUseTitle: "Comment utiliser le chat",
     onboardingText1:
@@ -1013,7 +1097,7 @@ export const translations = {
     onboardingText3:
       "Rappelez-vous que le chatbot est un outil pour vous aider. Pour des questions complexes ou urgentes, consultez toujours un professionnel du droit ou les autorités compétentes.",
     startChatting: "Commencer à chatter",
-  
+
     // Guide Slides
     guides: [
       {
@@ -1047,13 +1131,13 @@ export const translations = {
         icon: "🚀",
       },
     ],
-  
+
     // Navigation
     home: "Accueil",
     chat: "Chat",
     topics: "Sujets",
     profile: "Profil",
-  
+
     // Chat
     startNewChat: "Commencer un nouveau chat",
     welcomeToLivenChat: "Bienvenue sur Liven Chat",
@@ -1066,7 +1150,7 @@ export const translations = {
     chatLoading: "Réflexion en cours...",
     agentConnect: "Connectez-vous avec un agent de support",
     findAnswers: "Trouvez des réponses aux questions fréquentes",
-  
+
     // Topics
     housing: "Logement",
     housingDesc: "Aide pour le logement et la location",
@@ -1082,7 +1166,7 @@ export const translations = {
     financeDesc: "Banques, impôts et gestion de l'argent",
     education: "Éducation",
     educationDesc: "Écoles, cours et opportunités d'apprentissage",
-  
+
     // Profile
     joined: "Membre depuis",
     account: "Compte",
@@ -1107,49 +1191,49 @@ export const translations = {
     confirmNewPassword: "Confirmer le nouveau mot de passe",
     profileUpdated: "Profil mis à jour avec succès",
     languageUpdated: "Langue mise à jour avec succès",
-  
+
     // Housing
     housing_q1: "Comment m'inscrire auprès de la municipalité (BRP) ?",
     housing_q2: "Quels documents sont nécessaires pour louer un appartement ?",
     housing_q3: "Comment puis-je trouver un logement social ?",
     housing_q4: "Quels sont mes droits si le propriétaire augmente le loyer ?",
     housing_q5: "Comment demander l'allocation logement (huurtoeslag) ?",
-  
+
     // Legal
     legal_q1: "Comment demander un permis de séjour ?",
     legal_q2: "Qu'est-ce que le regroupement familial et comment puis-je en faire la demande ?",
     legal_q3: "Quels sont mes droits pendant l'attente de ma demande d'asile ?",
     legal_q4: "Où puis-je obtenir une aide juridique gratuite en tant que migrant ?",
-  
+
     // Work
     work_q1: "Ai-je besoin d'un permis de travail (TWV) ?",
     work_q2: "Où puis-je trouver des offres d'emploi pour les nouveaux arrivants ?",
     work_q3: "Quels sont mes droits en tant qu'employé aux Pays-Bas ?",
     work_q4: "Comment m'inscrire à l'UWV (office de l'emploi) ?",
     work_q5: "Puis-je travailler en attendant la décision sur mon asile ?",
-  
+
     // Healthcare
     healthcare_q1: "Comment m'inscrire auprès d'un médecin généraliste (huisarts) ?",
     healthcare_q2: "Ai-je besoin d'une assurance santé et comment l'obtenir ?",
     healthcare_q3: "Que couvre l'assurance santé de base aux Pays-Bas ?",
     healthcare_q4: "Comment demander l'allocation santé (zorgtoeslag) ?",
-  
+
     // Education
     education_q1: "Comment inscrire mon enfant à l'école ?",
     education_q2: "Quelles sont mes options pour les cours de néerlandais ?",
     education_q3: "Puis-je étudier dans une université néerlandaise en tant que nouvel arrivant ?",
     education_q4: "Existe-t-il des bourses ou un soutien financier pour les migrants ?",
-  
+
     // Culture
     culture_q1: "Quelles sont certaines traditions culturelles néerlandaises ?",
     culture_q2: "Où puis-je apprendre le néerlandais ?",
     culture_q3: "En quoi les fêtes néerlandaises diffèrent-elles des miennes ?",
-  
+
     // Finance
     finance_q1: "Comment ouvrir un compte bancaire néerlandais ?",
     finance_q2: "Quel est le processus pour obtenir un numéro BSN ?",
     finance_q3: "Comment payer les impôts aux Pays-Bas ?",
-  
+
     // Theme
     theme: "Thème",
     light: "Clair",
@@ -1165,7 +1249,7 @@ export const translations = {
     logOut: "Çıkış Yap",
     termsText: "Devam ederek Hizmet Şartlarımızı ve Gizlilik Politikamızı kabul etmiş olursunuz.",
     sendVerificationCode: "Doğrulama Kodu Gönder",
-  
+
     // Landing Page
     heroTitle: "Liven World'e Hoş Geldiniz",
     heroSubtitle: "Hollanda'daki göçmenler ve mülteciler için güvenilir çok dilli asistanınız",
@@ -1173,7 +1257,7 @@ export const translations = {
       "Konaklama, sağlık, hukuk ve daha fazlası hakkında anında yardım alın - 7/24, kendi dilinizde.",
     getStartedNow: "Hemen Başlayın",
     learnMore: "Daha Fazla Bilgi",
-  
+
     // Features
     featuresTitle: "Size Nasıl Yardımcı Oluyoruz",
     feature1Title: "7/24 Çok Dilli Destek",
@@ -1182,7 +1266,7 @@ export const translations = {
     feature2Desc: "Hukuk, konut ve sağlık konularında güvenilir bilgiler",
     feature3Title: "Kolay Kullanım",
     feature3Desc: "Herkes için tasarlanmış basit sohbet arayüzü",
-  
+
     // Welcome & Onboarding
     welcomeTitle: "Liven Chat'e Hoş Geldiniz",
     introTitle: "Liven Chat",
@@ -1190,13 +1274,13 @@ export const translations = {
     welcomeSubtitle: "Hollanda'daki göçmenler ve mülteciler için çok dilli asistanınız.",
     introRule: "Devam ederek Hizmet Şartlarımızı ve Gizlilik Politikamızı kabul etmiş olursunuz",
     getStarted: "Başla",
-  
+
     // Language Selection
     language: "Dil",
     selectLanguage: "Dil Seçin",
     continue: "Devam",
     back: "Geri",
-  
+
     // Profile Setup
     profileSetup: "Profil Ayarları",
     tellUsAbout: "Bize kendinizden bahsedin",
@@ -1210,19 +1294,19 @@ export const translations = {
     gender: "Cinsiyet",
     status: "Durum",
     next: "İleri",
-  
+
     // Gender Options
     male: "Erkek",
     female: "Kadın",
     other: "Diğer",
     preferNotToSay: "Belirtmek İstemiyorum",
-  
+
     // Status Options
     asylumSeeker: "Mülteci Başvuru Sahibi",
     refugee: "Mülteci",
     migrant: "Göçmen",
     student: "Öğrenci",
-  
+
     // Validation Messages
     required: "Bu alan zorunludur",
     fullNameRequired: "Ad soyad zorunludur",
@@ -1237,7 +1321,7 @@ export const translations = {
     passwordsDoNotMatch: "Şifreler eşleşmiyor",
     genderRequired: "Lütfen cinsiyetinizi seçin",
     statusRequired: "Lütfen durumunuzu seçin",
-  
+
     // Onboarding Instructions
     howToUseTitle: "Sohbeti nasıl kullanırım",
     onboardingText1:
@@ -1247,7 +1331,7 @@ export const translations = {
     onboardingText3:
       "Unutmayın, chatbot yalnızca bir yardım aracıdır. Karmaşık veya acil durumlar için her zaman bir hukuk uzmanına veya ilgili yetkililere danışın.",
     startChatting: "Sohbete Başla",
-  
+
     // Guide Slides
     guides: [
       {
@@ -1281,13 +1365,13 @@ export const translations = {
         icon: "🚀",
       },
     ],
-  
+
     // Navigation
     home: "Ana Sayfa",
     chat: "Sohbet",
     topics: "Konu Başlıkları",
     profile: "Profil",
-  
+
     // Chat
     startNewChat: "Yeni bir sohbet başlat",
     welcomeToLivenChat: "Liven Chat'e Hoş Geldiniz",
@@ -1301,7 +1385,7 @@ export const translations = {
     chatLoading: "Düşünüyor...",
     agentConnect: "Destek temsilcisi ile bağlan",
     findAnswers: "Sık Sorulan Soruların Cevaplarını Bul",
-  
+
     // Topics
     housing: "Konut",
     housingDesc: "Konut ve kira ile ilgili yardım",
@@ -1317,7 +1401,7 @@ export const translations = {
     financeDesc: "Bankacılık, vergiler ve para yönetimi",
     education: "Eğitim",
     educationDesc: "Okullar, kurslar ve öğrenim fırsatları",
-  
+
     // Profile
     joined: "Katılım Tarihi",
     account: "Hesap",
@@ -1342,55 +1426,55 @@ export const translations = {
     confirmNewPassword: "Yeni Şifreyi Onayla",
     profileUpdated: "Profil başarıyla güncellendi",
     languageUpdated: "Dil başarıyla güncellendi",
-  
+
     // Housing
     housing_q1: "Belediyede (BRP) nasıl kayıt olabilirim?",
     housing_q2: "Bir daire kiralamak için hangi belgelere ihtiyacım var?",
     housing_q3: "Sosyal konutları nasıl bulabilirim?",
     housing_q4: "Ev sahibim kirası artırırsa haklarım nelerdir?",
     housing_q5: "Konut yardımı (huurtoeslag) için nasıl başvurabilirim?",
-  
+
     // Legal
     legal_q1: "İkamet izni için nasıl başvurabilirim?",
     legal_q2: "Aile birleşimi nedir ve nasıl başvurabilirim?",
     legal_q3: "Mülteci başvurum beklerken haklarım nelerdir?",
     legal_q4: "Göçmen olarak ücretsiz hukuki yardım nereden alabilirim?",
-  
+
     // Work
     work_q1: "Çalışma iznine (TWV) ihtiyacım var mı?",
     work_q2: "Yeni gelenler için iş ilanlarını nereden bulabilirim?",
     work_q3: "Hollanda'da çalışan olarak haklarım nelerdir?",
     work_q4: "UWV'ye (İş Kurumu) nasıl kayıt olabilirim?",
     work_q5: "Asil kararı beklerken çalışabilir miyim?",
-  
+
     // Healthcare
     healthcare_q1: "Huisarts (aile hekimi) ile nasıl kayıt olabilirim?",
     healthcare_q2: "Sağlık sigortasına ihtiyacım var mı ve nasıl alabilirim?",
     healthcare_q3: "Hollanda temel sağlık sigortası neleri kapsar?",
     healthcare_q4: "Sağlık yardımı (zorgtoeslag) için nasıl başvurabilirim?",
-  
+
     // Education
     education_q1: "Çocuğumu okula nasıl kaydettirebilirim?",
     education_q2: "Hollandaca dil kursları için seçeneklerim nelerdir?",
     education_q3: "Yeni gelen biri olarak Hollanda üniversitesinde eğitim alabilir miyim?",
     education_q4: "Göçmenler için burs veya maddi destek var mı?",
-  
+
     // Culture
     culture_q1: "Bazı Hollanda kültürel gelenekleri nelerdir?",
     culture_q2: "Hollandaca öğrenebileceğim yerler neresi?",
     culture_q3: "Hollanda tatilleri benimkilerden nasıl farklıdır?",
-  
+
     // Finance
     finance_q1: "Hollanda'da banka hesabı nasıl açılır?",
     finance_q2: "BSN numarası almak için süreç nedir?",
     finance_q3: "Hollanda'da vergiler nasıl ödenir?",
-  
+
     // Theme
     theme: "Tema",
     light: "Açık",
     dark: "Koyu",
     system: "Sistem",
-  },  
+  },
   uk: {
     // Landing & Auth
     appTitle: "Liven Chat",
@@ -1400,7 +1484,7 @@ export const translations = {
     logOut: "Вийти",
     termsText: "Продовжуючи, ви погоджуєтесь з нашими Умовами надання послуг та Політикою конфіденційності.",
     sendVerificationCode: "Надіслати код підтвердження",
-  
+
     // Landing Page
     heroTitle: "Ласкаво просимо до Liven World",
     heroSubtitle: "Ваш надійний багатомовний помічник для мігрантів та шукачів притулку в Нідерландах",
@@ -1408,7 +1492,7 @@ export const translations = {
       "Отримуйте миттєву допомогу з житлом, охороною здоров'я, юридичними питаннями та іншим — доступно 24/7 вашою мовою.",
     getStartedNow: "Почати зараз",
     learnMore: "Дізнатися більше",
-  
+
     // Features
     featuresTitle: "Як ми вам допомагаємо",
     feature1Title: "Багатомовна підтримка 24/7",
@@ -1417,7 +1501,7 @@ export const translations = {
     feature2Desc: "Надійна інформація про право, житло та охорону здоров'я",
     feature3Title: "Легко використовувати",
     feature3Desc: "Простий чат-інтерфейс, розроблений для всіх",
-  
+
     // Welcome & Onboarding
     welcomeTitle: "Ласкаво просимо до Liven Chat",
     introTitle: "Liven Chat",
@@ -1425,13 +1509,13 @@ export const translations = {
     welcomeSubtitle: "Ваш багатомовний помічник для мігрантів та шукачів притулку в Нідерландах.",
     introRule: "Продовжуючи, ви погоджуєтесь з нашими Умовами надання послуг та Політикою конфіденційності",
     getStarted: "Почати",
-  
+
     // Language Selection
     language: "Мова",
     selectLanguage: "Виберіть вашу мову",
     continue: "Продовжити",
     back: "Назад",
-  
+
     // Profile Setup
     profileSetup: "Налаштування профілю",
     tellUsAbout: "Розкажіть про себе",
@@ -1445,19 +1529,19 @@ export const translations = {
     gender: "Стать",
     status: "Статус",
     next: "Далі",
-  
+
     // Gender Options
     male: "Чоловік",
     female: "Жінка",
     other: "Інше",
     preferNotToSay: "Не хочу вказувати",
-  
+
     // Status Options
     asylumSeeker: "Шукач притулку",
     refugee: "Біженець",
     migrant: "Мігрант",
     student: "Студент",
-  
+
     // Validation Messages
     required: "Це поле обов'язкове",
     fullNameRequired: "Повне ім’я обов’язкове",
@@ -1472,7 +1556,7 @@ export const translations = {
     passwordsDoNotMatch: "Паролі не співпадають",
     genderRequired: "Будь ласка, оберіть вашу стать",
     statusRequired: "Будь ласка, оберіть ваш статус",
-  
+
     // Onboarding Instructions
     howToUseTitle: "Як користуватися чатом",
     onboardingText1:
@@ -1482,7 +1566,7 @@ export const translations = {
     onboardingText3:
       "Пам’ятайте, чат-бот — це інструмент допомоги. Для складних або термінових питань завжди консультуйтеся з юристом або відповідними органами.",
     startChatting: "Почати чат",
-  
+
     // Guide Slides
     guides: [
       {
@@ -1516,13 +1600,13 @@ export const translations = {
         icon: "🚀"
       }
     ],
-  
+
     // Navigation
     home: "Головна",
     chat: "Чат",
     topics: "Теми",
     profile: "Профіль",
-  
+
     // Chat
     startNewChat: "Почати новий чат",
     welcomeToLivenChat: "Ласкаво просимо до Liven Chat",
@@ -1536,7 +1620,7 @@ export const translations = {
     chatLoading: "Думка ...",
     agentConnect: "Зв'язатися з агентом підтримки",
     findAnswers: "Знайдіть відповіді на поширені запитання",
-  
+
     // Topics
     housing: "Житло",
     housingDesc: "Допомога з житлом та орендою",
@@ -1552,7 +1636,7 @@ export const translations = {
     financeDesc: "Банки, податки та управління грошима",
     education: "Освіта",
     educationDesc: "Школи, курси та можливості навчання",
-  
+
     // Profile
     joined: "Приєднався",
     account: "Акаунт",
@@ -1577,55 +1661,55 @@ export const translations = {
     confirmNewPassword: "Підтвердьте новий пароль",
     profileUpdated: "Профіль успішно оновлено",
     languageUpdated: "Мову успішно оновлено",
-  
+
     // Housing
     housing_q1: "Як зареєструватися в муніципалітеті (BRP)?",
     housing_q2: "Які документи потрібні для оренди квартири?",
     housing_q3: "Як знайти соціальне житло?",
     housing_q4: "Які мої права, якщо орендодавець підвищує орендну плату?",
     housing_q5: "Як подати заявку на житлову допомогу (huurtoeslag)?",
-  
+
     // Legal
     legal_q1: "Як подати заявку на вид на проживання?",
     legal_q2: "Що таке возз’єднання сім’ї та як на нього подати?",
     legal_q3: "Які мої права під час очікування розгляду прохання про притулок?",
     legal_q4: "Де можна отримати безкоштовну юридичну допомогу як мігрант?",
-  
+
     // Work
     work_q1: "Мені потрібен дозвіл на роботу (TWV)?",
     work_q2: "Де можна знайти вакансії для новоприбулих?",
     work_q3: "Які мої права як працівника в Нідерландах?",
     work_q4: "Як зареєструватися в UWV (служба зайнятості)?",
     work_q5: "Чи можу я працювати, очікуючи рішення про притулок?",
-  
+
     // Healthcare
     healthcare_q1: "Як зареєструватися у huisarts (лікар загальної практики)?",
     healthcare_q2: "Мені потрібна медична страховка і як її отримати?",
     healthcare_q3: "Що покриває базова медична страховка в Нідерландах?",
     healthcare_q4: "Як подати заявку на медичну допомогу (zorgtoeslag)?",
-  
+
     // Education
     education_q1: "Як записати дитину до школи?",
     education_q2: "Які є варіанти курсів голландської мови?",
     education_q3: "Чи можу я навчатися в голландському університеті як новоприбулий?",
     education_q4: "Чи існують стипендії або фінансова підтримка для мігрантів?",
-  
+
     // Culture
     culture_q1: "Які деякі голландські культурні традиції?",
     culture_q2: "Де я можу вивчати голландську мову?",
     culture_q3: "Чим голландські свята відрізняються від моїх?",
-  
+
     // Finance
     finance_q1: "Як відкрити банківський рахунок у Нідерландах?",
     finance_q2: "Який процес отримання BSN номера?",
     finance_q3: "Як сплачувати податки в Нідерландах?",
-  
+
     // Theme
     theme: "Тема",
     light: "Світла",
     dark: "Темна",
     system: "Системна"
-  },  
+  },
   ru: {
     // Landing & Auth
     appTitle: "Liven Chat",
@@ -1635,7 +1719,7 @@ export const translations = {
     logOut: "Выйти",
     termsText: "Продолжая, вы соглашаетесь с нашими Условиями обслуживания и Политикой конфиденциальности.",
     sendVerificationCode: "Отправить код подтверждения",
-  
+
     // Landing Page
     heroTitle: "Добро пожаловать в Liven World",
     heroSubtitle: "Ваш надежный многоязычный помощник для мигрантов и соискателей убежища в Нидерландах",
@@ -1643,7 +1727,7 @@ export const translations = {
       "Получайте мгновенную помощь по вопросам жилья, здравоохранения, юридических вопросов и не только — доступно 24/7 на вашем языке.",
     getStartedNow: "Начать сейчас",
     learnMore: "Узнать больше",
-  
+
     // Features
     featuresTitle: "Как мы вам помогаем",
     feature1Title: "Многоязычная поддержка 24/7",
@@ -1652,7 +1736,7 @@ export const translations = {
     feature2Desc: "Надежная информация по юридическим, жилищным и медицинским вопросам",
     feature3Title: "Просто в использовании",
     feature3Desc: "Простой чат-интерфейс, разработанный для всех",
-  
+
     // Welcome & Onboarding
     welcomeTitle: "Добро пожаловать в Liven Chat",
     introTitle: "Liven Chat",
@@ -1660,13 +1744,13 @@ export const translations = {
     welcomeSubtitle: "Ваш многоязычный помощник для мигрантов и соискателей убежища в Нидерландах.",
     introRule: "Продолжая, вы соглашаетесь с нашими Условиями обслуживания и Политикой конфиденциальности",
     getStarted: "Начать",
-  
+
     // Language Selection
     language: "Язык",
     selectLanguage: "Выберите ваш язык",
     continue: "Продолжить",
     back: "Назад",
-  
+
     // Profile Setup
     profileSetup: "Настройка профиля",
     tellUsAbout: "Расскажите о себе",
@@ -1680,19 +1764,19 @@ export const translations = {
     gender: "Пол",
     status: "Статус",
     next: "Далее",
-  
+
     // Gender Options
     male: "Мужской",
     female: "Женский",
     other: "Другое",
     preferNotToSay: "Предпочитаю не указывать",
-  
+
     // Status Options
     asylumSeeker: "Соискатель убежища",
     refugee: "Беженец",
     migrant: "Мигрант",
     student: "Студент",
-  
+
     // Validation Messages
     required: "Это поле обязательно",
     fullNameRequired: "Полное имя обязательно",
@@ -1707,7 +1791,7 @@ export const translations = {
     passwordsDoNotMatch: "Пароли не совпадают",
     genderRequired: "Пожалуйста, выберите ваш пол",
     statusRequired: "Пожалуйста, выберите ваш статус",
-  
+
     // Onboarding Instructions
     howToUseTitle: "Как использовать чат",
     onboardingText1:
@@ -1717,7 +1801,7 @@ export const translations = {
     onboardingText3:
       "Помните, чат-бот — это инструмент помощи. Для сложных или срочных вопросов всегда консультируйтесь с юристом или соответствующими органами.",
     startChatting: "Начать чат",
-  
+
     // Guide Slides
     guides: [
       {
@@ -1751,13 +1835,13 @@ export const translations = {
         icon: "🚀"
       }
     ],
-  
+
     // Navigation
     home: "Главная",
     chat: "Чат",
     topics: "Темы",
     profile: "Профиль",
-  
+
     // Chat
     startNewChat: "Начать новый чат",
     welcomeToLivenChat: "Добро пожаловать в Liven Chat",
@@ -1771,7 +1855,7 @@ export const translations = {
     chatLoading: "Думаю ...",
     agentConnect: "Связаться с агентом поддержки",
     findAnswers: "Найдите ответы на часто задаваемые вопросы",
-  
+
     // Topics
     housing: "Жильё",
     housingDesc: "Помощь с жильём и арендой",
@@ -1787,7 +1871,7 @@ export const translations = {
     financeDesc: "Банки, налоги и управление деньгами",
     education: "Образование",
     educationDesc: "Школы, курсы и возможности обучения",
-  
+
     // Profile
     joined: "Присоединился",
     account: "Аккаунт",
@@ -1812,55 +1896,55 @@ export const translations = {
     confirmNewPassword: "Подтвердите новый пароль",
     profileUpdated: "Профиль успешно обновлен",
     languageUpdated: "Язык успешно обновлен",
-  
+
     // Housing
     housing_q1: "Как зарегистрироваться в муниципалитете (BRP)?",
     housing_q2: "Какие документы нужны для аренды квартиры?",
     housing_q3: "Как найти социальное жильё?",
     housing_q4: "Какие мои права, если арендодатель повышает аренду?",
     housing_q5: "Как подать заявку на жилищное пособие (huurtoeslag)?",
-  
+
     // Legal
     legal_q1: "Как подать заявку на вид на жительство?",
     legal_q2: "Что такое воссоединение семьи и как подать заявку?",
     legal_q3: "Какие мои права во время рассмотрения запроса на убежище?",
     legal_q4: "Где можно получить бесплатную юридическую помощь для мигрантов?",
-  
+
     // Work
     work_q1: "Нужен ли мне разрешение на работу (TWV)?",
     work_q2: "Где найти вакансии для новоприбывших?",
     work_q3: "Какие мои права как работника в Нидерландах?",
     work_q4: "Как зарегистрироваться в UWV (служба занятости)?",
     work_q5: "Могу ли я работать, ожидая решения по убежищу?",
-  
+
     // Healthcare
     healthcare_q1: "Как зарегистрироваться у huisarts (врач общей практики)?",
     healthcare_q2: "Нужна ли медицинская страховка и как её получить?",
     healthcare_q3: "Что покрывает базовая медицинская страховка в Нидерландах?",
     healthcare_q4: "Как подать заявку на пособие на здравоохранение (zorgtoeslag)?",
-  
+
     // Education
     education_q1: "Как записать ребёнка в школу?",
     education_q2: "Какие есть варианты курсов голландского языка?",
     education_q3: "Могу ли я учиться в голландском университете как новоприбывший?",
     education_q4: "Существуют ли стипендии или финансовая поддержка для мигрантов?",
-  
+
     // Culture
     culture_q1: "Какие есть голландские культурные традиции?",
     culture_q2: "Где можно изучать голландский язык?",
     culture_q3: "Чем голландские праздники отличаются от моих?",
-  
+
     // Finance
     finance_q1: "Как открыть голландский банковский счёт?",
     finance_q2: "Как получить BSN номер?",
     finance_q3: "Как платить налоги в Нидерландах?",
-  
+
     // Theme
     theme: "Тема",
     light: "Светлая",
     dark: "Тёмная",
     system: "Системная"
-  }  
+  }
 }
 
 export type Language = keyof typeof translations

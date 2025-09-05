@@ -30,6 +30,47 @@ type Message = {
   content: string;
 };
 
+
+export const sampleQuestions = {
+  housing: [
+    "housing_q1",
+    "housing_q2",
+    "housing_q3",
+  ],
+  health: [
+    "health_q1",
+    "health_q2",
+    "health_q3",
+  ],
+  work: [
+    "work_q1",
+    "work_q2",
+    "work_q3",
+  ],
+  legal: [
+    "legal_q1",
+    "legal_q2",
+    "legal_q3",
+  ],
+  culture: [
+    "culture_q1",
+    "culture_q2",
+    "culture_q3",
+  ],
+  finance: [
+    "finance_q1",
+    "finance_q2",
+    "finance_q3",
+  ],
+  education: [
+    "education_q1",
+    "education_q2",
+    "education_q3",
+  ],
+} as const;
+
+
+
 export default function Conversation() {
   const [messages, setMessages] = useState<Message[]>([])
 
@@ -61,45 +102,7 @@ export default function Conversation() {
 
   const [sendMessage] = useSendMessageMutation();
 
-  const sampleQuestions = {
-    housing: [
-      "housing_q1",
-      "housing_q2",
-      "housing_q3",
-    ],
-    health: [
-      "health_q1",
-      "health_q2",
-      "health_q3",
-    ],
-    work: [
-      "work_q1",
-      "work_q2",
-      "work_q3",
-    ],
-    legal: [
-      "legal_q1",
-      "legal_q2",
-      "legal_q3",
-    ],
-    culture: [
-      "culture_q1",
-      "culture_q2",
-      "culture_q3",
-    ],
-    finance: [
-      "finance_q1",
-      "finance_q2",
-      "finance_q3",
-    ],
-    education: [
-      "education_q1",
-      "education_q2",
-      "education_q3",
-    ],
-  } as const;
   
-
   const topic = searchParams.get("topic");
   const questions = topic ? sampleQuestions[topic as keyof typeof sampleQuestions] : [];
 

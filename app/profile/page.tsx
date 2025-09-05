@@ -129,17 +129,25 @@ export default function ProfilePage() {
                 <Switch checked={notificationsEnabled} onCheckedChange={setNotificationsEnabled} />
               </div>
 
-              <div className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+              <div
+                onClick={() => router.push("/profile/privacy-policy")}
+                className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
                 <div className="font-medium">{t("privacy")}</div>
                 <ChevronRight className="h-5 w-5 text-muted-foreground" />
               </div>
 
-              <div className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+              <div
+                onClick={() => router.push("/profile/help")}
+
+                className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
                 <div className="font-medium">{t("help")}</div>
                 <ChevronRight className="h-5 w-5 text-muted-foreground" />
               </div>
 
-              <div className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+              <div
+                onClick={() => router.push("/profile/about")}
+
+                className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
                 <div className="font-medium">{t("about")}</div>
                 <ChevronRight className="h-5 w-5 text-muted-foreground" />
               </div>
