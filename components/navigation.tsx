@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Home, MessageCircle, Hash, User } from "lucide-react"
+import { Home, MessageCircle, Hash, User, Users } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { useRouter, usePathname } from "next/navigation"
 
@@ -14,6 +14,7 @@ export function Navigation() {
     if (pathname === "/chat" || pathname.startsWith("/chat/")) return "chat"
     if (pathname === "/topics") return "topics"
     if (pathname === "/profile" || pathname.startsWith("/profile")) return "profile"
+    if (pathname === "/my-hero" || pathname.startsWith("/my-hero")) return "my-hero"
     return "home"
   }
 
@@ -53,6 +54,14 @@ export function Navigation() {
         >
           <User className="h-5 w-5" />
           <span className="text-xs">{t("profile")}</span>
+        </Button>
+        <Button
+          variant="ghost"
+          className={`flex flex-col items-center gap-1 ${activeTab === "my-hero" ? "text-orange-500" : "text-muted-foreground"}`}
+          onClick={() => router.push("/my-hero")}
+        >
+          <Users className="h-5 w-5" />
+          <span className="text-xs">{t("myHero")}</span>
         </Button>
       </div>
     </div>
