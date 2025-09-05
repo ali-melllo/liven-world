@@ -12,7 +12,7 @@ export const myHeroApi = api.injectEndpoints({
       }),
     }),
 
-    getPosts: builder.query<MyHeroPost[], void>({
+    getPosts: builder.query<MyHeroPost[], unknown>({
       query: () => ({
         url: 'myhero/posts',
         method: 'GET',

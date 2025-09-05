@@ -9,7 +9,7 @@ import { MessageCircle, Send, Heart } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 interface Comment {
-  id: number
+  id: string
   author: string
   content: string
   timeAgo: string
@@ -167,7 +167,7 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
                         className="flex items-center gap-1 text-xs text-muted-foreground hover:text-red-500 transition-colors"
                       >
                         <Heart className="h-3 w-3" />
-                        {comment.likes > 0 && <span>{comment.likes}</span>}
+                        {comment.likes.length > 0 && <span>{comment.likes}</span>}
                       </button>
                       <button className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                         {t("reply")}
