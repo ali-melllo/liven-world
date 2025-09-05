@@ -17,4 +17,7 @@ export interface MyHeroComment {
   userId: string;
   content: string;
   createdAt: string;
+  user : {
+    fullName : string;
+  }
 }

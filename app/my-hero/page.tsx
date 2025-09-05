@@ -57,13 +57,12 @@ const mockPosts: Post[] = [
 ]
 
 
-function formatPostDate(dateString: string) {
+export function formatPostDate(dateString: string) {
     const date = new Date(dateString)
     const diff = Date.now() - date.getTime()
     const oneWeek = 7 * 24 * 60 * 60 * 1000 // 7 days
 
     if (diff < oneWeek) {
-        // Show relative time (e.g., "2 days ago", "5 hours ago")
         return formatDistanceToNow(date, { addSuffix: true })
     }
 
@@ -185,7 +184,7 @@ export default function MyHeroPage() {
                                                     <Heart className={`h-4 w-4 ${post.likes?.includes(userId) ? "fill-current" : ""}`} />
                                                     <span className="text-sm">{post.likes.length}</span>
                                                 </button>
-                                                <CommentsDrawer postId={post._id} commentCount={post.commentCount} postTitle={post.title} />
+                                                <CommentsDrawer postId={post._id} commentCount={post.commentCount} postTitle={post.type === "looking_for_help" ? "Looking For Help" : post.type === "offering_help" ? "Offering Help" : ""} />
                                             </div>
                                         </CardContent>
                                     </Card>

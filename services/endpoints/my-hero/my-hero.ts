@@ -41,7 +41,7 @@ export const myHeroApi = api.injectEndpoints({
       }),
     }),
 
-    getComments: builder.query<MyHeroComment[], string>({
+    getComments: builder.query<MyHeroComment[], unknown>({
       query: (postId) => ({
         url: `myhero/posts/${postId}/comments`,
         method: 'GET',
