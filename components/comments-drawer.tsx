@@ -7,9 +7,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer"
 import { MessageCircle, Send, Heart } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
-import { useGetCommentsQuery } from "@/services/endpoints/my-hero/my-hero"
+import { useAddCommentMutation, useGetCommentsQuery } from "@/services/endpoints/my-hero/my-hero"
 import { useRouter } from "next/navigation"
 import { formatPostDate } from "@/app/my-hero/page"
+import { toast } from "sonner"
 
 interface Comment {
   id: string
@@ -34,6 +35,8 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
 
   const router = useRouter();
 
+  const [addComment, { isLoading }] = useAddCommentMutation();
+
   const { data, refetch } = useGetCommentsQuery({ postId },
     {
       refetchOnMountOrArgChange: true,
@@ -41,8 +44,13 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
     });
 
 
-  const handleAddComment = () => {
-    
+  const handleAddComment = async () => {
+    try {
+      await addComment({ postId, content: newComment }).unwrap();
+      refetch();
+    } catch {
+      toast("Failed To Add Comment")
+    }
   }
 
 
@@ -51,7 +59,7 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
       <DrawerTrigger asChild>
         <button onClick={() => router.push(`/my-hero?postId=${postId}`)} className="flex items-center gap-2 text-muted-foreground hover:text-blue-500 transition-colors">
           <MessageCircle className="h-4 w-4" />
-          <span className="text-sm">{data?.length}</span>
+          <span className="text-sm">{commentCount}</span>
         </button>
       </DrawerTrigger>
       <DrawerContent className="max-h-[80vh]">
@@ -71,7 +79,7 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
             </div>
           ) : (
             <div className="space-y-4">
-              {data?.map((comment) => (
+              {data?.slice().reverse().map((comment) => (
                 <div key={comment._id} className="flex gap-3">
                   <Avatar className="w-8 h-8 flex-shrink-0">
                     <AvatarImage src={"/placeholder.svg"} />
@@ -86,8 +94,8 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
                       <p className="text-sm leading-relaxed">{comment.content}</p>
                     </div>
                     <div className="flex items-center gap-4 mt-2 ml-3">
-                      
-                      
+
+
                     </div>
                   </div>
                 </div>

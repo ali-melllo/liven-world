@@ -184,7 +184,7 @@ export default function MyHeroPage() {
                                                     <Heart className={`h-4 w-4 ${post.likes?.includes(userId) ? "fill-current" : ""}`} />
                                                     <span className="text-sm">{post.likes.length}</span>
                                                 </button>
-                                                <CommentsDrawer postId={post._id} commentCount={post.commentCount} postTitle={post.type === "looking_for_help" ? "Looking For Help" : post.type === "offering_help" ? "Offering Help" : ""} />
+                                                <CommentsDrawer postId={post._id} commentCount={Number(post.commentCount)} postTitle={post.type === "looking_for_help" ? "Looking For Help" : post.type === "offering_help" ? "Offering Help" : ""} />
                                             </div>
                                         </CardContent>
                                     </Card>
