@@ -82,7 +82,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className={`h-dvh bg-background flex ${currentStep !== "welcome" ? "" : "py-5"}  justify-center`}>
+    <div className={`h-dvh bg-background  flex ${currentStep !== "welcome" ? "" : "py-5 pt-10"}  justify-center`}>
       <Card className="w-full h-full md:max-w-sm bg-card p-0 shadow-none border-transparent">
         {currentStep !== "welcome" && (
           <CardHeader className="">
@@ -107,7 +107,7 @@ export default function OnboardingPage() {
 
 
               <Button
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6"
+                className="w-full h-14 bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6"
                 onClick={nextStep}
               >
                 {t("getStarted")}
@@ -117,14 +117,14 @@ export default function OnboardingPage() {
 
           {currentStep === "profile" && (
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 mt-5 h-5/6 relative flex flex-col">
-              <h2 className="text-lg font-semibold">{t("enterEmail")}</h2>
+              <h2 className="text-xl font-semibold">{t("enterEmail")}</h2>
 
               <div className="space-y-4">
                 <div>
                   <Input
                     placeholder={t("emailAddress")}
                     type="email"
-                    className="bg-muted border-0 rounded-lg py-3"
+                    className="bg-muted border !h-14 outline-none border-muted-foreground rounded-lg py-3"
                     {...register("email", {
                       required: t("emailRequired"),
                       pattern: {
@@ -140,7 +140,7 @@ export default function OnboardingPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6 absolute bottom-5 "
+                className="w-full h-14 bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6 absolute bottom-5 "
               >
                 {t("next")}
               </Button>

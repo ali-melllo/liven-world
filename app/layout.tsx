@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
       <Providers>
           <AppInitializer>
-            <Toaster />
+            <Toaster position={"top-right"}/>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
               <LanguageProvider>
                 <div className="w-full relative flex flex-col">
