@@ -11,6 +11,7 @@ import { useAddCommentMutation, useGetCommentsQuery } from "@/services/endpoints
 import { useRouter } from "next/navigation"
 import { formatPostDate } from "@/app/my-hero/page"
 import { toast } from "sonner"
+import { Skeleton } from "./ui/skeleton"
 
 interface Comment {
   id: string
@@ -69,9 +70,26 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
           </DrawerTitle>
         </DrawerHeader>
 
+
         {/* Comments List */}
         <div className="flex-1 overflow-y-auto px-4 pb-4">
-          {data?.length === 0 || !commentCount ? (
+          {!data ? (
+            // Skeleton Loading
+            <div className="space-y-4">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="flex gap-3">
+                  <Avatar className="w-8 h-8 flex-shrink-0">
+                    <Skeleton className="w-8 h-8 rounded-full" />
+                    <AvatarFallback></AvatarFallback>
+                  </Avatar>
+                  <div className="flex-1 min-w-0 space-y-2">
+                    <Skeleton className="h-4 w-1/4" /> {/* Username + date */}
+                    <Skeleton className="h-10 w-full rounded-lg" /> {/* Comment text */}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : data?.length === 0 || !commentCount ? (
             <div className="text-center py-8 text-muted-foreground">
               <MessageCircle className="h-12 w-12 mx-auto mb-4 opacity-50" />
               <p>{t("noComments")}</p>
@@ -89,13 +107,11 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
                     <div className="bg-muted rounded-lg p-3">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="font-medium text-sm">{comment.user?.fullName}</span>
-                        <span className="text-xs text-muted-foreground">{formatPostDate(comment.createdAt)}</span>
+                        <span className="text-xs text-muted-foreground">
+                          {formatPostDate(comment.createdAt)}
+                        </span>
                       </div>
                       <p className="text-sm leading-relaxed">{comment.content}</p>
-                    </div>
-                    <div className="flex items-center gap-4 mt-2 ml-3">
-
-
                     </div>
                   </div>
                 </div>
@@ -103,6 +119,7 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
             </div>
           )}
         </div>
+
 
         {/* Add Comment Input */}
         <div className="border-t p-4 bg-background">
