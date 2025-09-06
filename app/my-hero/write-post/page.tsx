@@ -8,14 +8,15 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, Loader } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { useRouter } from "next/navigation"
 import { useCreatePostMutation } from "@/services/endpoints/my-hero/my-hero"
+import { toast } from "sonner"
 
 
 enum postType {
-  LOOKING ="looking_for_help", 
+  LOOKING = "looking_for_help",
   OFFERING = "offering_help",
 }
 
@@ -49,19 +50,16 @@ export default function WritePostPage() {
   const onSubmit = async (data: PostFormData) => {
     try {
       await createPost(data).unwrap()
-      setShowSuccess(true)
-      setTimeout(() => {
-        setShowSuccess(false)
-        router.back()
-      }, 1500)
+      toast("Comment Added Successfully")
+      router.push("/my-hero");
     } catch (err) {
       console.error("Failed to create post:", err)
     }
   }
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-sm bg-card">
+    <div className="min-h-screen bg-background flex justify-center p-4">
+      <Card className="w-full max-w-sm bg-card border-transparent">
         <CardHeader className="pb-4">
           <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon" onClick={() => router.back()}>
@@ -71,13 +69,8 @@ export default function WritePostPage() {
           </div>
         </CardHeader>
 
-        <CardContent className="space-y-6">
-          {showSuccess && (
-            <div className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg p-4 text-center">
-              <p className="text-green-800 dark:text-green-200 font-medium">{t("postPublished")}</p>
-            </div>
-          )}
-
+        <CardContent className="space-y-6 mt-10">
+         
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             {/* Post Type */}
             <div>
@@ -105,13 +98,13 @@ export default function WritePostPage() {
                   </Label>
                 </div>
               </RadioGroup>
-            </div>    
+            </div>
 
             {/* Content */}
             <div>
               <Textarea
                 placeholder={t("postContent")}
-                className="bg-muted border-0 rounded-lg py-3 min-h-[120px] resize-none"
+                className="bg-muted border border-muted-foreground rounded-lg py-3 min-h-[120px] resize-none"
                 {...register("content", { required: t("contentRequired") })}
               />
               {errors.content && <p className="text-red-500 text-sm mt-1">{errors.content.message}</p>}
@@ -122,6 +115,8 @@ export default function WritePostPage() {
                 {t("cancel")}
               </Button>
               <Button type="submit" className="flex-1 bg-orange-500 hover:bg-orange-600" disabled={isLoading}>
+                {isLoading && <Loader className="animate-spin" />}
+
                 {isLoading ? t("publishing") : t("publish")}
               </Button>
             </div>

@@ -122,12 +122,11 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
                     handleAddComment()
                   }
                 }}
-                className="flex-1"
+                className="flex-1 !outline-none"
               />
               <Button
                 onClick={handleAddComment}
                 disabled={!newComment.trim()}
-                size="sm"
                 className="bg-orange-500 hover:bg-orange-600"
               >
                 <Send className="h-4 w-4" />

@@ -92,7 +92,7 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
   }
 
 
-  if (!showInstructions) {
+  if (showInstructions) {
     return (
       <div className="h-dvh bg-background flex items-center justify-center">
         <Card className="w-full max-w-sm bg-card relative shadow-none border-transparent p-0">
