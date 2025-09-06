@@ -153,7 +153,7 @@ export default function MyHeroPage() {
                             {/* Posts */}
                             <div className="space-y-4">
                                 {data?.map((post) => (
-                                    <Card key={post._id} className="border border-gray-200">
+                                    <Card key={post._id} className="border-none shadow-none">
                                         <CardContent className="p-4 space-y-3">
                                             {/* Post Header */}
                                             <div className="flex items-center gap-3">
@@ -167,8 +167,7 @@ export default function MyHeroPage() {
                                                         {formatPostDate(post.createdAt)}
                                                     </p>
                                                 </div>
-                                                {post.type === "looking_for_help" && <div className="w-2 h-2 bg-blue-500 rounded-full" />}
-                                                {post.type === "offering_help" && <div className="w-2 h-2 bg-green-500 rounded-full" />}
+                                               
                                             </div>
 
                                             {/* Post Content */}
@@ -196,9 +195,6 @@ export default function MyHeroPage() {
                     {activeTab === "about" && (
                         <div className="p-4 space-y-6">
                             <div className="text-center space-y-4">
-                                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-                                    <Heart className="h-8 w-8 text-orange-600" />
-                                </div>
                                 <div>
                                     <h2 className="text-lg font-semibold mb-2">{t("myHeroTitle")}</h2>
                                     <p className="text-sm text-muted-foreground leading-relaxed">{t("myHeroDescription")}</p>

@@ -12,6 +12,8 @@ import {
   Building2,
   Briefcase,
   Users,
+  Settings,
+  ArrowLeft,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -24,6 +26,7 @@ import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text"
 import { useGetSessionDetailQuery, useSendMessageMutation } from "@/services/endpoints/chat/chat"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useLanguage } from "@/contexts/language-context"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 type Message = {
   role: "assistant" | "user";
@@ -102,7 +105,7 @@ export default function Conversation() {
 
   const [sendMessage] = useSendMessageMutation();
 
-  
+
   const topic = searchParams.get("topic");
   const questions = topic ? sampleQuestions[topic as keyof typeof sampleQuestions] : [];
 
@@ -146,9 +149,20 @@ export default function Conversation() {
     }
   };
 
-  console.log(questions)
   return (
-    <div className="min-h-screen  flex flex-col">
+    <div className="h-dvh flex flex-col">
+
+      <div className="flex items-center justify-between p-4 border-b">
+        <div onClick={() => router.back()} className="text-xl font-semibold">
+          <ArrowLeft/>
+        </div>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Button variant="ghost" size="icon" onClick={() => router.push("/profile")}>
+            <Settings className="h-5 w-5" />
+          </Button>
+        </div>
+      </div>
 
       {/* Chat Area */}
       <div className="flex-1 flex flex-col overflow-hidden">
@@ -197,9 +211,9 @@ export default function Conversation() {
                 >
                   <Card
                     className={cn(
-                      "max-w-[80%] px-3 py-2 shadow-md rounded-[35px] font-bold",
+                      "max-w-[80%] px-3 py-2 shadow-md rounded-2xl font-bold",
                       message.role === "user"
-                        ? "bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 rounded-tr-none text-white border-0"
+                        ? "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 rounded-tr-none text-white border-0"
                         : "bg-background rounded-tl-none [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
                     )}
                   >
@@ -254,14 +268,11 @@ export default function Conversation() {
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder="Ask me anything about life in the Netherlands..."
-                    className="pr-20 w-full py-6 text-base rounded-2xl border-border/50 bg-background backdrop-blur-sm !outline-none focus:bg-background transition-all duration-200"
+                    className="pr-14 w-full py-6 text-base rounded-2xl border-border/50 bg-background backdrop-blur-sm !outline-none focus:bg-background transition-all duration-200"
                   />
 
                   {/* Input Actions */}
                   <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center space-x-1">
-                    <Button variant="ghost" size="sm" className="w-8 h-8 p-0">
-                      <Smile className="w-4 h-4" />
-                    </Button>
                     <Button variant="ghost" size="sm" className="w-8 h-8 p-0">
                       <Mic className="w-4 h-4" />
                     </Button>
