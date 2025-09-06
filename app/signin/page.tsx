@@ -14,6 +14,7 @@ import { languages, type Language } from "@/lib/i18n"
 import { useRouter } from "next/navigation"
 import { GuideSlider } from "@/components/guide-slider"
 import OTPVerificationPage from "./components/otp-verfication"
+import { toast } from "sonner"
 
 interface FormData {
   language: Language
@@ -57,6 +58,7 @@ export default function OnboardingPage() {
   const onSubmit = (data: FormData) => {
     setUSerData(data);
     setCurrentStep("verify");
+    toast("Default code is 1111 for demo only");
     // setShowInstructions(true)
   }
 
