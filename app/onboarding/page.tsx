@@ -83,7 +83,7 @@ export default function OnboardingPage() {
   
 
   return (
-    <div className={`h-dvh bg-background flex ${currentStep !== "welcome" ? "" : "py-5"}  justify-center`}>
+    <div className={`h-dvh bg-background flex ${currentStep !== "welcome" ? "" : "py-5 pt-10"}  justify-center`}>
       <Card className="w-full h-full md:max-w-sm bg-card p-0 shadow-none border-transparent">
         {currentStep !== "welcome" && (
           <CardHeader className="">
@@ -109,7 +109,7 @@ export default function OnboardingPage() {
 
 
               <Button
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6"
+                className="w-full h-14 bg-orange-500 hover:bg-orange-600 text-white rounded-full !py-6"
                 onClick={nextStep}
               >
                 {t("getStarted")}
@@ -133,7 +133,7 @@ export default function OnboardingPage() {
               </RadioGroup>
 
               <Button
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full py-3 mt-8"
+                className="w-[95%] mx-auto fixed bottom-0 inset-x-0 h-14 bg-orange-500 hover:bg-orange-600 text-white rounded-full py-3 mt-8"
                 onClick={nextStep}
               >
                 {t("continue")}
@@ -149,7 +149,7 @@ export default function OnboardingPage() {
                 <div>
                   <Input
                     placeholder={t("fullName")}
-                    className="bg-muted border-0 rounded-lg py-3"
+                    className="bg-muted h-12 border border-muted-foreground  rounded-lg py-3"
                     {...register("fullName", { required: t("fullNameRequired") })}
                   />
                   {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName.message}</p>}
@@ -158,7 +158,7 @@ export default function OnboardingPage() {
                 <div>
                   <Input
                     placeholder={t("nationality")}
-                    className="bg-muted border-0 rounded-lg py-3"
+                    className="bg-muted h-12 border border-muted-foreground  rounded-lg py-3"
                     {...register("nationality", { required: t("nationalityRequired") })}
                   />
                   {errors.nationality && <p className="text-red-500 text-sm mt-1">{errors.nationality.message}</p>}
@@ -167,7 +167,7 @@ export default function OnboardingPage() {
                 <div>
                   <Input
                     placeholder={t("municipality")}
-                    className="bg-muted border-0 rounded-lg py-3"
+                    className="bg-muted h-12 border border-muted-foreground  rounded-lg py-3"
                     {...register("municipality", { required: t("municipalityRequired") })}
                   />
                   {errors.municipality && <p className="text-red-500 text-sm mt-1">{errors.municipality.message}</p>}
@@ -177,7 +177,7 @@ export default function OnboardingPage() {
                   <Input
                     placeholder={t("emailAddress")}
                     type="email"
-                    className="bg-muted border-0 rounded-lg py-3"
+                    className="bg-muted h-12 border border-muted-foreground  rounded-lg py-3"
                     {...register("email", {
                       required: t("emailRequired"),
                       pattern: {
@@ -191,7 +191,7 @@ export default function OnboardingPage() {
 
                 <div>
                   <Select onValueChange={(value) => setValue("gender", value)}>
-                    <SelectTrigger className="bg-muted border-0 rounded-lg py-3">
+                    <SelectTrigger className="bg-muted h-12 border border-muted-foreground  rounded-lg py-3">
                       <SelectValue placeholder={t("gender")} />
                     </SelectTrigger>
                     <SelectContent>
@@ -205,7 +205,7 @@ export default function OnboardingPage() {
 
                 <div>
                   <Select onValueChange={(value) => setValue("status", value)}>
-                    <SelectTrigger className="bg-muted border-0 rounded-lg py-3">
+                    <SelectTrigger className="bg-muted h-12 border border-muted-foreground  rounded-lg py-3">
                       <SelectValue placeholder={t("status")} />
                     </SelectTrigger>
                     <SelectContent>
@@ -221,7 +221,7 @@ export default function OnboardingPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full py-3 mt-8"
+                className="w-full h-14 bg-orange-500 hover:bg-orange-600 text-white rounded-full py-3 mt-8"
               >
                 {t("next")}
               </Button>

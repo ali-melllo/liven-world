@@ -92,14 +92,10 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
   }
 
 
-  if (showInstructions) {
+  if (!showInstructions) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="h-dvh bg-background flex items-center justify-center">
         <Card className="w-full max-w-sm bg-card relative shadow-none border-transparent p-0">
-          <Button variant="ghost" size="icon" className="absolute top-4 right-4" onClick={() => router.push("/chat")}>
-            <X className="h-5 w-5" />
-          </Button>
-
           <CardContent className="p-8">
             <GuideSlider onComplete={() => router.push("/")} />
           </CardContent>
@@ -109,13 +105,10 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
   }
 
   return (
-    <div className="bg-gradient-to-br from-background via-background to-muted/20 flex items-center justify-center">
+    <div className="h-dvh bg-gradient-to-br from-background via-background to-muted/20 flex items-center justify-center">
       <Card className="w-full border-transparent">
         <CardHeader className="text-center space-y-4">
           
-          <div className="mx-auto w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center neo-card">
-            <Shield className="w-8 h-8 text-primary" />
-          </div>
 
           <div>
             <CardTitle className="text-2xl font-bold">Verify Your Account</CardTitle>
@@ -144,7 +137,7 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
             </div>
 
             {/* Verify Button */}
-            <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 neo-button" disabled={isLoading || otp.join("").length !== 4 || signInLoading}>
+            <Button type="submit" className="w-full bg-orange-500 h-12 text-lg hover:bg-orange-600 neo-button" disabled={isLoading || otp.join("").length !== 4 || signInLoading}>
               {(isLoading || signInLoading) ? (
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
