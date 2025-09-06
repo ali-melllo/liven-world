@@ -152,8 +152,8 @@ export default function ProfilePage() {
                 <ChevronRight className="h-5 w-5 text-muted-foreground" />
               </div>
 
-              <div className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
-                <button onClick={handleLogOut} className="font-medium">{t("logOut")}</button>
+              <div onClick={handleLogOut} className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+                <button  className="font-medium">{t("logOut")}</button>
                 <LogOut className="h-5 w-5 text-muted-foreground" />
               </div>
             </div>

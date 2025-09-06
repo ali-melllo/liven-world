@@ -36,14 +36,16 @@ const customBaseQuery: BaseQueryFn<
   const cleanedArgs =
     typeof args === 'string' ? args : { ...args, baseUrl: dynamicBaseUrl };
 
-  const result = await baseQuery(cleanedArgs, api, extraOptions);
+  const result: any = await baseQuery(cleanedArgs, api, extraOptions);
 
   if (result.error) {
     const status = result.error.status || 'Error';
     const errorMessage =
-      (result.error.data as { message?: string })?.message ||
-      'Error While Fetching To Server';
+      (result.error.data.error as { title?: string })?.title ||
+      (result.error.data.errors[0] as { detail?: string })?.detail
+    'Error While Fetching To Server';
 
+    console.log(result)
     toast(`${status} : ${errorMessage}`);
 
     // if (Number(status) === 401 || Number(status) === 403) {
