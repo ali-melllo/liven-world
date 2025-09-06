@@ -15,6 +15,7 @@ import { setUser } from "@/lib/store/slices/userSlice"
 import { useDispatch } from "react-redux"
 import { useGetProfileQuery } from "@/services/endpoints/admin/admin"
 import { format } from "date-fns"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export default function ProfilePage() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
@@ -29,7 +30,7 @@ export default function ProfilePage() {
     setUserId(storedId);
   }, []);
 
-  const { data, refetch } = useGetProfileQuery(
+  const { data } = useGetProfileQuery(
     { id: userId ?? "" },
     { skip: !userId, refetchOnMountOrArgChange: true }
   );
@@ -66,7 +67,57 @@ export default function ProfilePage() {
           </div>
         </div>
 
+        {!data ? 
         <CardContent className="flex-1 p-4 space-y-6 overflow-y-auto">
+        {/* Profile Header */}
+        <div className="text-center space-y-3">
+          <Skeleton className="w-20 h-20 rounded-full mx-auto" /> {/* Avatar */}
+          <div className="space-y-2">
+            <Skeleton className="h-5 w-32 mx-auto" /> {/* Full name */}
+            <Skeleton className="h-4 w-40 mx-auto" /> {/* Joined date */}
+          </div>
+        </div>
+      
+        {/* Account Section */}
+        <div className="space-y-4">
+          <Skeleton className="h-5 w-24" /> {/* Account title */}
+          <div className="space-y-3">
+            {[...Array(2)].map((_, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-between p-3 rounded-lg"
+              >
+                <div className="space-y-1">
+                  <Skeleton className="h-4 w-20" /> {/* Label */}
+                  <Skeleton className="h-3 w-28" /> {/* Sub text */}
+                </div>
+                <Skeleton className="h-5 w-5 rounded-full" /> {/* Chevron */}
+              </div>
+            ))}
+          </div>
+        </div>
+      
+        {/* Settings Section */}
+        <div className="space-y-4">
+          <Skeleton className="h-5 w-24" /> {/* Settings title */}
+          <div className="space-y-3">
+            <div className="flex items-center justify-between p-3">
+              <Skeleton className="h-4 w-28" /> {/* Notifications */}
+              <Skeleton className="h-5 w-10 rounded-full" /> {/* Switch */}
+            </div>
+            {[...Array(4)].map((_, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-between p-3 rounded-lg"
+              >
+                <Skeleton className="h-4 w-20" />
+                <Skeleton className="h-5 w-5 rounded-full" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </CardContent>
+        : <CardContent className="flex-1 p-4 space-y-6 overflow-y-auto">
           <div className="text-center space-y-3">
             <Avatar className="w-20 h-20 mx-auto">
               <AvatarImage src={"/" + data?.data?.user?.avatar} />
@@ -158,7 +209,7 @@ export default function ProfilePage() {
               </div>
             </div>
           </div>
-        </CardContent>
+        </CardContent>}
 
         <Navigation />
       </Card>
