@@ -33,9 +33,7 @@ export default function Page() {
                 // height={800}
                 // width={800}
                 />
-                <div className="absolute h-20 w-full top-0 bg-gradient-to-b from-background to-transparent" />
-                <div className="absolute h-20 w-full bottom-0 bg-gradient-to-t from-background to-transparent" />
-
+               
                 <h2
                     className="text-5xl md:text-8xl z-50 lg:text-9xl font-extrabold bg-gradient-to-br from-primary to-primary/75 bg-clip-text text-transparent"
                     style={{

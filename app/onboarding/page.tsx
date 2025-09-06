@@ -133,7 +133,7 @@ export default function OnboardingPage() {
               </RadioGroup>
 
               <Button
-                className="w-[95%] mx-auto fixed bottom-0 inset-x-0 h-14 bg-orange-500 hover:bg-orange-600 text-white rounded-full py-3 mt-8"
+                className="w-[90%] mx-auto fixed bottom-2 inset-x-0 h-14 bg-orange-500 hover:bg-orange-600 text-white rounded-full py-3 mt-8"
                 onClick={nextStep}
               >
                 {t("continue")}

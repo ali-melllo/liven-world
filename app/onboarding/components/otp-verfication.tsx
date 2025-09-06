@@ -109,7 +109,6 @@ export default function OTPVerificationPage({ data, isForLogin }: { data: any, i
       <Card className="w-full border-transparent">
         <CardHeader className="text-center space-y-4">
           
-
           <div>
             <CardTitle className="text-2xl font-bold">Verify Your Account</CardTitle>
             <CardDescription>We've sent a 4-digit code to your email</CardDescription>

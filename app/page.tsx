@@ -27,6 +27,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { setUser } from "@/lib/store/slices/userSlice"
 import Link from "next/link"
 import Image from "next/image"
+import { Navigation } from "@/components/navigation"
 
 const features = [
   {
@@ -146,7 +147,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-10 flex flex-col gap-5 md:py-20 px-4">
+      <section className="py-3 flex flex-col gap-5 md:py-20 px-4">
         <Link href={"/chat"} className="w-full flex flex-col">
           <div className="w-full h-48 flex">
             <Image
@@ -177,86 +178,8 @@ export default function LandingPage() {
 
       </section>
 
-      {/* Features Section */}
-      {/* <section className="py-20 px-4 bg-muted/50">
-        <div className="container max-w-6xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">{t("featuresTitle")}</h2>
-          </div>
+      <Navigation />
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon
-              return (
-                <Card key={index} className="text-center">
-                  <CardContent className="p-8 space-y-4">
-                    <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto">
-                      <IconComponent className="h-8 w-8 text-orange-600 dark:text-orange-300" />
-                    </div>
-                    <h3 className="text-xl font-semibold">{t(feature.titleKey)}</h3>
-                    <p className="text-muted-foreground">{t(feature.descKey)}</p>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-4">
-        <div className="container max-w-6xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">{t("commonTopics")}</h2>
-            <p className="text-xl text-muted-foreground">Get help with the topics that matter most to you</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {topics.map((topic, index) => {
-              const IconComponent = topic.icon
-              return (
-                <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer">
-                  <CardContent className="p-6 space-y-4">
-                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${topic.color}`}>
-                      <IconComponent className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">{t(topic.titleKey)}</h3>
-                      <p className="text-sm text-muted-foreground">{t(topic.descKey)}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-4 bg-orange-50 dark:bg-orange-950">
-        <div className="container max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Ready to get started?</h2>
-            <p className="text-xl text-muted-foreground">
-              Join thousands of people who trust Liven World for guidance in the Netherlands.
-            </p>
-          </div>
-
-          <Button size="lg" className="bg-orange-500 hover:bg-orange-600" onClick={() => router.push("/onboarding")}>
-            {t("getStartedNow")}
-          </Button>
-        </div>
-      </section>
-
-      <footer className="border-t py-12 px-4">
-        <div className="container max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center gap-2">
-              <MessageCircle className="h-6 w-6 text-orange-500" />
-              <span className="text-xl font-bold">{t("appTitle")}</span>
-            </div>
-            <p className="text-sm text-muted-foreground text-center">{t("termsText")}</p>
-          </div>
-        </div>
-      </footer> */}
     </div>
   )
 }
