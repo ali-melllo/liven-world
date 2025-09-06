@@ -69,8 +69,8 @@ export default function ProfilePage() {
         <CardContent className="flex-1 p-4 space-y-6 overflow-y-auto">
           <div className="text-center space-y-3">
             <Avatar className="w-20 h-20 mx-auto">
-              <AvatarImage src="/placeholder.svg?height=80&width=80" />
-              <AvatarFallback>S</AvatarFallback>
+              <AvatarImage src={"/" + data?.data?.user?.avatar} />
+              <AvatarFallback>{data?.data?.user?.fullName.charAt[0]}</AvatarFallback>
             </Avatar>
             {data?.data &&
               <div>

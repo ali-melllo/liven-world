@@ -2,12 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { List, Settings } from "lucide-react"
+import { List, MessageCircle, Settings } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { Navigation } from "@/components/navigation"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useRouter } from "next/navigation"
 import { topics } from "../topics/page"
+import Image from "next/image"
 
 
 export default function ChatPage() {
@@ -46,7 +47,7 @@ export default function ChatPage() {
                 <div className="text-muted-foreground text-xs">{t("askQuestionDesc")}</div>
               </div>
               <div className="w-16 h-16 bg-orange-200 dark:bg-orange-800 rounded-lg flex-shrink-0 flex items-center justify-center">
-                <img src="/placeholder.svg?height=40&width=40" alt="Ask question" className="w-10 h-10 rounded" />
+                <MessageCircle className="stroke-white"/>
               </div>
             </div>
           </div>
@@ -67,8 +68,14 @@ export default function ChatPage() {
                     <div className="font-medium mb-1">{t(topic.titleKey)}</div>
                     <div className="text-muted-foreground text-sm">{t(topic.descriptionKey)}</div>
                   </div>
-                  <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <IconComponent className="h-5 w-5" />
+                  <div className="size-14 rounded-lg bg-muted  flex items-center justify-center flex-shrink-0">
+                    <Image
+                      className="rounded-lg shadow"
+                      src={topic.avatar}
+                      alt={""}
+                      width={200}
+                      height={200}
+                    />
                   </div>
                 </div>
               })}

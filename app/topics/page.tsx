@@ -6,6 +6,7 @@ import { ArrowLeft, HomeIcon as House, Heart, Briefcase, Scale, Globe, DollarSig
 import { useLanguage } from "@/contexts/language-context"
 import { Navigation } from "@/components/navigation"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 
 export const topics = [
@@ -13,36 +14,43 @@ export const topics = [
     icon: House,
     titleKey: "housing" as const,
     descriptionKey: "housingDesc" as const,
+    avatar: "/housing.jpg"
   },
   {
     icon: Heart,
     titleKey: "health" as const,
     descriptionKey: "healthDesc" as const,
+    avatar: "/health.jpg"
   },
   {
     icon: Briefcase,
     titleKey: "work" as const,
     descriptionKey: "workDesc" as const,
+    avatar: "/work.jpg"
   },
   {
     icon: Scale,
     titleKey: "legal" as const,
     descriptionKey: "legalDesc" as const,
+    avatar: "/legal.jpg"
   },
   {
     icon: Globe,
     titleKey: "culture" as const,
     descriptionKey: "cultureDesc" as const,
+    avatar: "/culture.jpg"
   },
   {
     icon: DollarSign,
     titleKey: "finance" as const,
     descriptionKey: "financeDesc" as const,
+    avatar: "/finance.jpg"
   },
   {
     icon: Book,
     titleKey: "education" as const,
     descriptionKey: "educationDesc" as const,
+    avatar: "/education.jpg"
   },
 ];
 
@@ -72,13 +80,21 @@ export default function TopicsPage() {
                   key={index}
                   className="flex items-center gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer"
                   onClick={() => router.push(`/chat/conversation?topic=${topic.titleKey}`)}
-                  >
-                  <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <IconComponent className="h-5 w-5" />
-                  </div>
+                >
+
                   <div className="flex-1">
                     <div className="font-medium text-gray-900 mb-1">{t(topic.titleKey)}</div>
                     <div className="text-sm text-gray-600">{t(topic.descriptionKey)}</div>
+                  </div>
+
+                  <div className="size-14 rounded-lg bg-muted  flex items-center justify-center flex-shrink-0">
+                    <Image
+                      className="rounded-lg shadow"
+                      src={topic.avatar}
+                      alt={""}
+                      width={200}
+                      height={200}
+                    />
                   </div>
                 </div>
               )
