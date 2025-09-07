@@ -188,8 +188,8 @@ export default function MyHeroPage() {
                                                 {/* Post Header */}
                                                 <div className="flex items-center gap-3">
                                                     <Avatar className="w-10 h-10">
-                                                        <AvatarImage src={"/placeholder.svg"} />
-                                                        <AvatarFallback>{"/placeholder.svg"}</AvatarFallback>
+                                                        <AvatarImage src={"/" +post.user?.avatar} />
+                                                        <AvatarFallback>{post.user.fullName.charAt(0)}</AvatarFallback>
                                                     </Avatar>
                                                     <div className="flex-1">
                                                         <h3 className="font-semibold text-sm">

@@ -49,20 +49,21 @@ export function Navigation() {
         </button>
         <button
           
-          className={`flex bg-transparent :hover:bg-transparent flex-col items-center gap-1 ${activeTab === "profile" ? "text-orange-500" : "text-muted-foreground"}`}
-          onClick={() => router.push("/profile")}
-        >
-          <User className="h-5 w-5" />
-          <span className="text-xs">{t("profile")}</span>
-        </button>
-        <button
-          
           className={`flex bg-transparent :hover:bg-transparent flex-col items-center gap-1 ${activeTab === "my-hero" ? "text-orange-500" : "text-muted-foreground"}`}
           onClick={() => router.push("/my-hero")}
         >
           <Users className="h-5 w-5" />
           <span className="text-xs">{t("myHero")}</span>
         </button>
+        <button
+          
+          className={`flex bg-transparent :hover:bg-transparent flex-col items-center gap-1 ${activeTab === "profile" ? "text-orange-500" : "text-muted-foreground"}`}
+          onClick={() => router.push("/profile")}
+        >
+          <User className="h-5 w-5" />
+          <span className="text-xs">{t("profile")}</span>
+        </button>
+        
       </div>
     </div>
   )

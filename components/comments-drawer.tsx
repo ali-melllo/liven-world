@@ -48,6 +48,7 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
   const handleAddComment = async () => {
     try {
       await addComment({ postId, content: newComment }).unwrap();
+      setNewComment("");
       refetch();
     } catch {
       toast("Failed To Add Comment")
@@ -100,8 +101,8 @@ export function CommentsDrawer({ postId, commentCount, postTitle }: CommentsDraw
               {data?.slice().reverse().map((comment) => (
                 <div key={comment._id} className="flex gap-3">
                   <Avatar className="w-8 h-8 flex-shrink-0">
-                    <AvatarImage src={"/placeholder.svg"} />
-                    <AvatarFallback>{"/placeholder.svg"}</AvatarFallback>
+                    <AvatarImage src={"/" + comment.user?.avatar} />
+                    <AvatarFallback></AvatarFallback>
                   </Avatar>
                   <div className="flex-1 min-w-0">
                     <div className="bg-muted rounded-lg p-3">

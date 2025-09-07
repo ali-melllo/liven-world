@@ -5,6 +5,10 @@ export interface MyHeroPost {
   content: string;
   likes: string[];
   type: string;
+  user: {
+    fullName: string;
+    avatar: string;
+  }
   createdAt: string;
   updatedAt: string;
   commentCount: string | number;
@@ -17,7 +21,8 @@ export interface MyHeroComment {
   userId: string;
   content: string;
   createdAt: string;
-  user : {
-    fullName : string;
+  user: {
+    fullName: string;
+    avatar: string;
   }
 }
