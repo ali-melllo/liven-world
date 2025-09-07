@@ -76,10 +76,6 @@ export default function OnboardingPage() {
     }
   }
 
-  const handleLanguageChange = (lang: Language) => {
-    setValue("language", lang)
-    setLanguage(lang)
-  }
 
   return (
     <div className={`h-dvh bg-background  flex ${currentStep !== "welcome" ? "" : "py-5 pt-10"}  justify-center`}>

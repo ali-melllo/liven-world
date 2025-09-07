@@ -20,9 +20,9 @@ export default function UpdateEmailPage() {
   const { t } = useLanguage()
   const router = useRouter()
 
-  const [defaultEmail, setDefaultEmail] = useState<string>("");
-  const [userData, setUserData] = useState<any>({});
-  const [showOtp, setShowOtp] = useState<boolean>(false);
+  const [defaultEmail, setDefaultEmail] = useState<string>("")
+  const [userData, setUserData] = useState<any>({})
+  const [showOtp, setShowOtp] = useState<boolean>(false)
 
   const [otp, setOtp] = useState(["", "", "", ""])
   const [resendTimer, setResendTimer] = useState(30)
@@ -32,19 +32,19 @@ export default function UpdateEmailPage() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       try {
-        const storedUser = localStorage.getItem("user");
+        const storedUser = localStorage.getItem("user")
         if (storedUser) {
-          const parsed = JSON.parse(storedUser);
-          setDefaultEmail(parsed.email || "");
-          setUserData(parsed);
+          const parsed = JSON.parse(storedUser)
+          setDefaultEmail(parsed.email || "")
+          setUserData(parsed)
         }
       } catch (err) {
-        console.error("Error parsing user from localStorage:", err);
+        console.error("Error parsing user from localStorage:", err)
       }
     }
-  }, []);
+  }, [])
 
-  const [updateUser, { isLoading }] = useUpdateUserMutation();
+  const [updateUser, { isLoading }] = useUpdateUserMutation()
 
   const {
     register,
@@ -59,13 +59,13 @@ export default function UpdateEmailPage() {
     },
   })
 
-  const newEmailValue = watch("newEmail");
+  const newEmailValue = watch("newEmail")
 
   useEffect(() => {
     if (defaultEmail) {
-      reset({ currentEmail: defaultEmail, newEmail: "" });
+      reset({ currentEmail: defaultEmail, newEmail: "" })
     }
-  }, [defaultEmail, reset]);
+  }, [defaultEmail, reset])
 
   useEffect(() => {
     if (resendTimer > 0) {
@@ -83,7 +83,6 @@ export default function UpdateEmailPage() {
     newOtp[index] = value
     setOtp(newOtp)
 
-    // Auto-focus next input
     if (value && index < 5) {
       inputRefs.current[index + 1]?.focus()
     }
@@ -95,12 +94,9 @@ export default function UpdateEmailPage() {
     }
   }
 
-
   const onSubmit = async () => {
-    setShowOtp(true);
-    
-  };
-
+    setShowOtp(true)
+  }
 
   const handleVerify = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -110,28 +106,22 @@ export default function UpdateEmailPage() {
       const response = await updateUser({
         ...userData,
         email: newEmailValue,
-        otp : otp.join("")
-      }).unwrap();
+        otp: otp.join(""),
+      }).unwrap()
 
-      localStorage.setItem(
-        "user",
-        JSON.stringify({ ...userData, email: newEmailValue })
-      );
+      localStorage.setItem("user", JSON.stringify({ ...userData, email: newEmailValue }))
 
-      toast.success("Email updated successfully!");
-      router.push('/profile');
-
+      toast.success(t("emailUpdateSuccess"))
+      router.push("/profile")
     } catch (err) {
-      console.error("Failed to update user:", err);
-      toast.error("Something went wrong!");
+      console.error("Failed to update user:", err)
+      toast.error(t("emailUpdateError"))
     }
-
   }
 
   const handleResend = () => {
     setResendTimer(30)
     setCanResend(false)
-    // Simulate resend
   }
 
   return (
@@ -147,7 +137,6 @@ export default function UpdateEmailPage() {
         </CardHeader>
 
         <CardContent className="space-y-6">
-
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
               <Input
@@ -172,30 +161,33 @@ export default function UpdateEmailPage() {
                   },
                 })}
               />
-              {errors.newEmail && <p className="text-red-500 text-sm mt-1">{errors.newEmail.message}</p>}
+              {errors.newEmail && (
+                <p className="text-red-500 text-sm mt-1">{errors.newEmail.message}</p>
+              )}
             </div>
 
-            {!showOtp && <div className="flex gap-3 pt-4">
-              <Button type="submit" className="flex-1 bg-orange-500 hover:bg-orange-600">
-                {t("sendVerificationCode")}
-              </Button>
-            </div>}
+            {!showOtp && (
+              <div className="flex gap-3 pt-4">
+                <Button type="submit" className="flex-1 bg-orange-500 hover:bg-orange-600">
+                  {t("sendVerificationCode")}
+                </Button>
+              </div>
+            )}
           </form>
         </CardContent>
       </Card>
 
-      {showOtp &&
+      {showOtp && (
         <Card className="w-full border-transparent">
           <CardHeader className="text-center space-y-4">
             <div>
-              <CardTitle className="text-lg font-bold">Verify Your New Email</CardTitle>
-              <CardDescription>We've sent a 4-digit code to your email</CardDescription>
+              <CardTitle className="text-lg font-bold">{t("verifyNewEmail")}</CardTitle>
+              <CardDescription>{t("otpSentToEmail")}</CardDescription>
             </div>
           </CardHeader>
 
           <CardContent className="space-y-6">
             <form onSubmit={handleVerify} className="space-y-6">
-              {/* OTP Input */}
               <div className="flex justify-center gap-3">
                 {otp.map((digit, index) => (
                   <Input
@@ -213,38 +205,44 @@ export default function UpdateEmailPage() {
                 ))}
               </div>
 
-              {/* Verify Button */}
-              <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 neo-button" disabled={isLoading || otp.join("").length !== 4}>
-                {(isLoading) ? (
+              <Button
+                type="submit"
+                className="w-full bg-orange-500 hover:bg-orange-600 neo-button"
+                disabled={isLoading || otp.join("").length !== 4}
+              >
+                {isLoading ? (
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-                    Verifying...
+                    {t("verifying")}
                   </div>
                 ) : (
                   <>
                     <Shield className="w-4 h-4 mr-2" />
-                    Verify Code
+                    {t("verifyCode")}
                   </>
                 )}
               </Button>
             </form>
 
-            {/* Resend Code */}
             <div className="text-center space-y-2">
-              <p className="text-sm text-muted-foreground">Didn't receive the code?</p>
+              <p className="text-sm text-muted-foreground">{t("didNotReceiveCode")}</p>
 
               {canResend ? (
-                <Button variant="ghost" onClick={handleResend} className="text-primary hover:text-primary/80">
+                <Button
+                  variant="ghost"
+                  onClick={handleResend}
+                  className="text-primary hover:text-primary/80"
+                >
                   <RefreshCw className="w-4 h-4 mr-2" />
-                  Resend Code
+                  {t("resendCode")}
                 </Button>
               ) : (
-                <p className="text-sm text-muted-foreground">Resend code in {resendTimer}s</p>
+                <p className="text-sm text-muted-foreground">{t("resendCodeIn")} {resendTimer}</p>
               )}
             </div>
-            
           </CardContent>
-        </Card>}
+        </Card>
+      )}
     </div>
   )
 }

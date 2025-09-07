@@ -299,7 +299,7 @@ export const translations = {
     "likeAndCommentNotificationsDesc": "You will be notified when someone likes or comments on your posts.",
     "updateProfileDesc": "Go to Profile > Settings to update your personal information, avatar, or preferences.",
     "changeLanguageDesc": "You can select a different language in Profile > Change Language.",
-    
+
     aboutTitle: "About the App",
     aboutDescription: "This app connects migrants and locals, helping you navigate life in your new country. You can ask for help, offer support, or access useful information.",
     aboutFeatureChatTitle: "Multilingual Chat",
@@ -307,8 +307,46 @@ export const translations = {
     aboutFeatureHelpTitle: "Help Requests & Offers",
     aboutFeatureHelpDesc: "Post requests if you need help or offer assistance to others in your community.",
     aboutSafetyTitle: "Safety & Moderation",
-    aboutSafetyDesc: "Be respectful, no discrimination, no spam. Report inappropriate posts. Moderators ensure safety and enforce guidelines."
-    
+    aboutSafetyDesc: "Be respectful, no discrimination, no spam. Report inappropriate posts. Moderators ensure safety and enforce guidelines.",
+
+    comments: "Comments",
+    noComments: "No Comments",
+    beFirstToComment: "Be First To Comment",
+    addComment: "Add Comment",
+
+    "verifyAccount": "Verify Your Account",
+    "otpSentDescription": "We've sent a 4-digit code to your email",
+    "verifying": "Verifying...",
+    "verifyCode": "Verify Code",
+    "didNotReceiveCode": "Didn't receive the code?",
+    "resendCode": "Resend Code",
+    "resendIn": "Resend code in {seconds}s",
+    "supportText": "Having trouble? Contact support at",
+    "loginSuccess": "Logged In Successfully",
+    "signupSuccess": "Account Created Successfully",
+    "verifyNewEmail": "Verify Your New Email",
+    "otpSentToEmail": "We've sent a 4-digit code to your email",
+    "resendCodeIn": "Resend code in ",
+    "emailUpdateSuccess": "Email updated successfully!",
+    "emailUpdateError": "Something went wrong! Please try again.",
+
+    "otpVerification": "Verify Your Account",
+    "verifyButton": "Verify Code",
+    "havingTrouble": "Having trouble?",
+    "contactSupport": "Contact support at",
+
+    writePost: "Write Post",
+    posts: "posts",
+    postType: "Post Type",
+    lookingForHelp: "Looking For Help",
+    offeringHelp: "Offering Help",
+    postContent: "Post Content",
+    contentRequired: "Content Required",
+    publishing: "publishing",
+    publish: "publish"
+
+
+
   },
   "nl": {
     // Landing & Auth
@@ -536,7 +574,131 @@ export const translations = {
     "theme": "Thema",
     "light": "Licht",
     "dark": "Donker",
-    "system": "Systeem"
+    "system": "Systeem",
+
+    // new
+
+    "myHeroTitle": "Mijn Held",
+    "myHeroDescription": "Mijn Held verbindt migranten en locals. Je kunt een bericht plaatsen als je hulp nodig hebt of hulp wilt aanbieden. Volg de veiligheidsrichtlijnen: wees respectvol, geen discriminatie, geen spam. Moderatie is actief: meld ongepaste berichten.",
+
+    "helpRequests": "Hulpverzoeken",
+    "helpRequestsDesc": "Plaats hier een bericht als je hulp nodig hebt bij dagelijkse taken, begeleiding of steun van de gemeenschap.",
+
+    "helpOffers": "Hulpaanbiedingen",
+    "helpOffersDesc": "Plaats hier een bericht als je hulp, middelen of steun wilt aanbieden aan migranten en leden van de gemeenschap.",
+
+    "privacyPolicyTitle": "Privacybeleid",
+    "privacyIntroductionTitle": "Inleiding",
+    "privacyIntroductionDesc": "Liven Chat en Mijn Held hechten waarde aan je privacy. Dit beleid legt uit welke gegevens we verzamelen, hoe we deze gebruiken en wat jouw rechten zijn.",
+
+    "dataCollectionTitle": "Gegevensverzameling",
+    "dataCollectionDesc": "Wij verzamelen de volgende soorten gegevens:",
+    "dataCollectionUsers": "Gebruikersprofielinformatie (naam, e-mail, nationaliteit, gemeente).",
+    "dataCollectionPosts": "Berichten en reacties die je in de app maakt.",
+    "dataCollectionComments": "Reacties op berichten, inclusief inhoud en tijdstippen.",
+    "dataCollectionPush": "Pushnotificatie-abonnementen om realtime updates te versturen.",
+
+    "dataUseTitle": "Hoe wij jouw gegevens gebruiken",
+    "dataUseDesc": "Je gegevens worden gebruikt om je ervaring te verbeteren en onze diensten te leveren, waaronder:",
+    "dataUseNotifications": "Het versturen van realtime meldingen over likes, reacties en community-activiteiten.",
+    "dataUsePersonalization": "Het personaliseren van je feed en inhoudsaanbevelingen.",
+    "dataUseAnalytics": "Het analyseren van app-gebruik om functionaliteit en functies te verbeteren.",
+
+    "dataSharingTitle": "Gegevensdeling",
+    "dataSharingDesc": "Wij verkopen je persoonlijke gegevens niet. We kunnen informatie delen met dienstverleners om de app te onderhouden en te verbeteren.",
+
+    "securityTitle": "Gegevensbeveiliging",
+    "securityDesc": "We nemen redelijke technische en organisatorische maatregelen om je gegevens te beschermen tegen ongeautoriseerde toegang.",
+
+    "userRightsTitle": "Jouw rechten",
+    "userRightsDesc": "Je hebt de volgende rechten met betrekking tot je gegevens:",
+    "userRightsAccess": "Toegang tot de persoonlijke gegevens die we over je hebben.",
+    "userRightsDelete": "Verzoek om je gegevens uit onze systemen te verwijderen.",
+    "userRightsOptOut": "Uitschrijven voor pushnotificaties.",
+
+    "contactTitle": "Contact",
+    "contactDesc": "Als je vragen hebt over dit privacybeleid, neem dan contact met ons op via support@livenchat.com.",
+
+    "health_q1": "Hoe registreer ik me voor een zorgverzekering?",
+    "health_q1_answer": "Je moet je binnen vier maanden na aankomst in Nederland registreren bij een Nederlandse zorgverzekeraar. Dit kan online of op het kantoor van de verzekeraar.",
+
+    "health_q2": "Waar kan ik een dokter bij mij in de buurt vinden?",
+    "health_q2_answer": "Je kunt een lokale huisarts vinden door online te zoeken, je gemeente te vragen of de website zorgkaart.nl te raadplegen.",
+
+    "health_q3": "Wat moet ik doen in geval van een medisch noodgeval?",
+    "health_q3_answer": "Bel bij een medisch noodgeval onmiddellijk 112. Voor spoedzorg ga je naar je lokale huisartsenpost of de spoedeisende hulp van een ziekenhuis.",
+
+    "health_q4": "Heb ik een zorgverzekering nodig en hoe krijg ik die?",
+    "health_q4_answer": "Ja, zorgverzekering is verplicht in Nederland. Kies een Nederlandse zorgverzekeraar en registreer je online of persoonlijk.",
+
+    "faqTitle": "Veelgestelde vragen",
+    "myHero": "Mijn Held",
+    "howToPost": "Hoe plaats ik een hulpverzoek of aanbod?",
+    "howToPostDesc": "Je kunt een bericht maken door op 'Nieuw Bericht' te klikken, kies je type, schrijf de titel en inhoud, en publiceer.",
+
+    "helpRequestsGuidelines": "Zijn er richtlijnen voor berichten?",
+    "helpRequestsGuidelinesDesc": "Wees respectvol, geen discriminatie, geen spam. Volg de veiligheidsrichtlijnen bij het plaatsen van berichten.",
+
+    "moderationRules": "Hoe wordt inhoud gemodereerd?",
+    "moderationRulesDesc": "Je kunt ongepaste berichten melden. Onze moderators beoordelen dit en nemen zo nodig actie.",
+
+    "privacyAndSafety": "Hoe wordt mijn privacy beschermd?",
+    "privacyAndSafetyDesc": "We slaan minimale informatie op en delen je gegevens nooit. Volg de veiligheidsregels bij interactie met anderen.",
+
+    "howToGetNotified": "Hoe ontvang ik meldingen?",
+    "howToGetNotifiedDesc": "Schakel pushnotificaties in via je browser of app om updates te ontvangen over likes, reacties en nieuwe berichten.",
+
+    "likeAndCommentNotifications": "Welke meldingen ontvang ik?",
+    "likeAndCommentNotificationsDesc": "Je ontvangt een melding wanneer iemand je bericht leuk vindt of erop reageert.",
+
+    "updateProfileDesc": "Ga naar Profiel > Instellingen om je persoonlijke gegevens, avatar of voorkeuren bij te werken.",
+    "changeLanguageDesc": "Je kunt een andere taal selecteren in Profiel > Taal wijzigen.",
+
+    "aboutTitle": "Over de app",
+    "aboutDescription": "Deze app verbindt migranten en locals, zodat je je weg vindt in je nieuwe land. Je kunt om hulp vragen, steun bieden of nuttige informatie vinden.",
+    "aboutFeatureChatTitle": "Meertalige chat",
+    "aboutFeatureChatDesc": "Chat in je voorkeurstaal met een AI-assistent voor begeleiding bij huisvesting, gezondheid, juridische zaken en meer.",
+    "aboutFeatureHelpTitle": "Hulpverzoeken & -aanbiedingen",
+    "aboutFeatureHelpDesc": "Plaats een verzoek als je hulp nodig hebt of bied steun aan anderen in je gemeenschap.",
+    "aboutSafetyTitle": "Veiligheid & Moderatie",
+    "aboutSafetyDesc": "Wees respectvol, geen discriminatie, geen spam. Meld ongepaste berichten. Moderators zorgen voor veiligheid en handhaving van richtlijnen.",
+
+    "comments": "Reacties",
+    "noComments": "Geen reacties",
+    "beFirstToComment": "Wees de eerste om te reageren",
+    "addComment": "Reactie toevoegen",
+
+    "verifyAccount": "Verifieer je account",
+    "otpSentDescription": "We hebben een 4-cijferige code naar je e-mail gestuurd",
+    "verifying": "Verifiëren...",
+    "verifyCode": "Code verifiëren",
+    "didNotReceiveCode": "Geen code ontvangen?",
+    "resendCode": "Code opnieuw versturen",
+    "resendIn": "Code opnieuw versturen in {seconds}s",
+    "supportText": "Problemen? Neem contact op met support via",
+    "loginSuccess": "Succesvol ingelogd",
+    "signupSuccess": "Account succesvol aangemaakt",
+    "verifyNewEmail": "Verifieer je nieuwe e-mailadres",
+    "otpSentToEmail": "We hebben een 4-cijferige code naar je e-mail gestuurd",
+    "resendCodeIn": "Code opnieuw versturen in {{seconds}}s",
+    "emailUpdateSuccess": "E-mailadres succesvol bijgewerkt!",
+    "emailUpdateError": "Er is iets misgegaan! Probeer het opnieuw.",
+
+    "otpVerification": "Verifieer je account",
+    "verifyButton": "Code verifiëren",
+    "havingTrouble": "Heb je problemen?",
+    "contactSupport": "Neem contact op met support via",
+
+    "writePost": "Bericht schrijven",
+    "posts": "berichten",
+    "postType": "Berichttype",
+    "lookingForHelp": "Op zoek naar hulp",
+    "offeringHelp": "Hulp aanbieden",
+    "postContent": "Berichtinhoud",
+    "contentRequired": "Inhoud vereist",
+    "publishing": "publiceren",
+    "publish": "publiceren"
+
   },
   ar: {
     // Landing & Auth
@@ -771,6 +933,123 @@ export const translations = {
     light: "فاتح",
     dark: "داكن",
     system: "النظام",
+
+    // new
+
+    "myHeroTitle": "بطلي",
+    "myHeroDescription": "بطلي يربط بين المهاجرين والسكان المحليين. يمكنك نشر طلب إذا كنت بحاجة إلى مساعدة أو ترغب في تقديم المساعدة. اتبع إرشادات السلامة: كن محترمًا، لا للتمييز، لا للرسائل غير المرغوب فيها. المراقبة نشطة: أبلغ عن المنشورات غير المناسبة.",
+
+    "helpRequests": "طلبات المساعدة",
+    "helpRequestsDesc": "انشر هنا إذا كنت بحاجة إلى مساعدة في المهام اليومية أو التوجيه أو الدعم من المجتمع.",
+
+    "helpOffers": "عروض المساعدة",
+    "helpOffersDesc": "انشر هنا إذا كنت ترغب في تقديم المساعدة أو الموارد أو الدعم للمهاجرين وأفراد المجتمع.",
+
+    "privacyPolicyTitle": "سياسة الخصوصية",
+    "privacyIntroductionTitle": "مقدمة",
+    "privacyIntroductionDesc": "تقدّر Liven Chat و بطلي خصوصيتك. تشرح هذه السياسة البيانات التي نجمعها، وكيف نستخدمها، وحقوقك.",
+
+    "dataCollectionTitle": "جمع البيانات",
+    "dataCollectionDesc": "نحن نجمع الأنواع التالية من البيانات:",
+    "dataCollectionUsers": "معلومات الملف الشخصي للمستخدم (الاسم، البريد الإلكتروني، الجنسية، البلدية).",
+    "dataCollectionPosts": "المنشورات والتعليقات التي تنشئها داخل التطبيق.",
+    "dataCollectionComments": "التعليقات على المنشورات، بما في ذلك المحتوى والطوابع الزمنية.",
+    "dataCollectionPush": "اشتراكات الإشعارات الفورية لإرسال التحديثات في الوقت الحقيقي.",
+
+    "dataUseTitle": "كيفية استخدام بياناتك",
+    "dataUseDesc": "تُستخدم بياناتك لتحسين تجربتك وتقديم خدماتنا، بما في ذلك:",
+    "dataUseNotifications": "إرسال إشعارات فورية حول الإعجابات والتعليقات ونشاط المجتمع.",
+    "dataUsePersonalization": "تخصيص موجزك وتوصيات المحتوى.",
+    "dataUseAnalytics": "تحليل استخدام التطبيق لتحسين الوظائف والميزات.",
+
+    "dataSharingTitle": "مشاركة البيانات",
+    "dataSharingDesc": "نحن لا نبيع بياناتك الشخصية. قد نشارك المعلومات مع مزوّدي الخدمات للحفاظ على التطبيق وتحسينه.",
+
+    "securityTitle": "أمان البيانات",
+    "securityDesc": "نطبق تدابير تقنية وتنظيمية معقولة لحماية بياناتك من الوصول غير المصرح به.",
+
+    "userRightsTitle": "حقوقك",
+    "userRightsDesc": "لديك الحقوق التالية فيما يتعلق ببياناتك:",
+    "userRightsAccess": "الوصول إلى البيانات الشخصية التي نحتفظ بها عنك.",
+    "userRightsDelete": "طلب حذف بياناتك من أنظمتنا.",
+    "userRightsOptOut": "إلغاء الاشتراك في تلقي الإشعارات الفورية.",
+
+    "contactTitle": "اتصل بنا",
+    "contactDesc": "إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا عبر support@livenchat.com.",
+
+    "health_q1": "كيف أسجل للحصول على التأمين الصحي؟",
+    "health_q1_answer": "يجب عليك التسجيل لدى مزود تأمين صحي هولندي في غضون أربعة أشهر من وصولك إلى هولندا. يمكنك القيام بذلك عبر الإنترنت أو في مكتب المزود.",
+
+    "health_q2": "أين أجد طبيبًا بالقرب مني؟",
+    "health_q2_answer": "يمكنك العثور على طبيب عام (huisarts) محلي عن طريق البحث عبر الإنترنت، أو سؤال البلدية الخاصة بك، أو زيارة موقع zorgkaart.nl.",
+
+    "health_q3": "ماذا أفعل في حالة الطوارئ الطبية؟",
+    "health_q3_answer": "في حالة الطوارئ الطبية، اتصل على 112 فورًا. للرعاية العاجلة، قم بزيارة عيادة الطوارئ (huisartsenpost) أو قسم الطوارئ في المستشفى.",
+
+    "health_q4": "هل أحتاج إلى تأمين صحي وكيف أحصل عليه؟",
+    "health_q4_answer": "نعم، التأمين الصحي إلزامي في هولندا. اختر مزود تأمين صحي هولندي وسجل عبر الإنترنت أو شخصيًا.",
+
+    "faqTitle": "الأسئلة الشائعة",
+    "myHero": "بطلي",
+    "howToPost": "كيف أنشر طلب مساعدة أو عرض؟",
+    "howToPostDesc": "يمكنك إنشاء منشور بالنقر على 'منشور جديد'، اختر النوع، اكتب العنوان والمحتوى، ثم انشر.",
+    "helpRequestsGuidelines": "هل هناك إرشادات للمنشورات؟",
+    "helpRequestsGuidelinesDesc": "كن محترمًا، لا للتمييز، لا للرسائل غير المرغوب فيها. اتبع إرشادات السلامة عند النشر.",
+    "moderationRules": "كيف يتم الإشراف على المحتوى؟",
+    "moderationRulesDesc": "يمكنك الإبلاغ عن المنشورات غير المناسبة. سيراجعها المشرفون وسيتخذون الإجراءات اللازمة.",
+    "privacyAndSafety": "كيف يتم حماية خصوصيتي؟",
+    "privacyAndSafetyDesc": "نخزن أقل قدر ممكن من المعلومات ولا نشارك بياناتك أبدًا. اتبع قواعد السلامة عند التفاعل مع الآخرين.",
+    "howToGetNotified": "كيف أتلقى الإشعارات؟",
+    "howToGetNotifiedDesc": "قم بتمكين الإشعارات الفورية في متصفحك أو تطبيقك لتلقي التحديثات حول الإعجابات والتعليقات والمنشورات الجديدة.",
+    "likeAndCommentNotifications": "ما هي الإشعارات التي سأتلقاها؟",
+    "likeAndCommentNotificationsDesc": "ستتلقى إشعارًا عندما يحب شخص ما منشوراتك أو يعلق عليها.",
+    "updateProfileDesc": "انتقل إلى الملف الشخصي > الإعدادات لتحديث معلوماتك الشخصية أو صورتك الرمزية أو تفضيلاتك.",
+    "changeLanguageDesc": "يمكنك اختيار لغة مختلفة من الملف الشخصي > تغيير اللغة.",
+
+    "aboutTitle": "حول التطبيق",
+    "aboutDescription": "يربط هذا التطبيق بين المهاجرين والسكان المحليين، مما يساعدك على التكيف مع الحياة في بلدك الجديد. يمكنك طلب المساعدة، أو تقديم الدعم، أو الوصول إلى معلومات مفيدة.",
+    "aboutFeatureChatTitle": "دردشة متعددة اللغات",
+    "aboutFeatureChatDesc": "تحدث بلغتك المفضلة مع مساعد ذكي للحصول على إرشادات حول السكن، الصحة، الأمور القانونية، والمزيد.",
+    "aboutFeatureHelpTitle": "طلبات وعروض المساعدة",
+    "aboutFeatureHelpDesc": "انشر طلبًا إذا كنت بحاجة إلى مساعدة أو قدم المساعدة للآخرين في مجتمعك.",
+    "aboutSafetyTitle": "السلامة والإشراف",
+    "aboutSafetyDesc": "كن محترمًا، لا للتمييز، لا للرسائل غير المرغوب فيها. أبلغ عن المنشورات غير المناسبة. يضمن المشرفون السلامة ويطبقون الإرشادات.",
+
+    "comments": "التعليقات",
+    "noComments": "لا توجد تعليقات",
+    "beFirstToComment": "كن أول من يعلق",
+    "addComment": "أضف تعليقًا",
+
+    "verifyAccount": "تحقق من حسابك",
+    "otpSentDescription": "لقد أرسلنا رمزًا مكونًا من 4 أرقام إلى بريدك الإلكتروني",
+    "verifying": "جاري التحقق...",
+    "verifyCode": "تحقق من الرمز",
+    "didNotReceiveCode": "لم تستلم الرمز؟",
+    "resendCode": "إعادة إرسال الرمز",
+    "resendIn": "إعادة إرسال الرمز خلال {seconds} ثانية",
+    "supportText": "هل تواجه مشكلة؟ اتصل بالدعم على",
+    "loginSuccess": "تم تسجيل الدخول بنجاح",
+    "signupSuccess": "تم إنشاء الحساب بنجاح",
+    "verifyNewEmail": "تحقق من بريدك الإلكتروني الجديد",
+    "otpSentToEmail": "لقد أرسلنا رمزًا مكونًا من 4 أرقام إلى بريدك الإلكتروني",
+    "resendCodeIn": "إعادة إرسال الرمز خلال {{seconds}} ثانية",
+    "emailUpdateSuccess": "تم تحديث البريد الإلكتروني بنجاح!",
+    "emailUpdateError": "حدث خطأ ما! حاول مرة أخرى.",
+
+    "otpVerification": "تحقق من حسابك",
+    "verifyButton": "تحقق من الرمز",
+    "havingTrouble": "هل تواجه مشكلة؟",
+    "contactSupport": "اتصل بالدعم على",
+
+    "writePost": "اكتب منشورًا",
+    "posts": "المنشورات",
+    "postType": "نوع المنشور",
+    "lookingForHelp": "أبحث عن مساعدة",
+    "offeringHelp": "أقدم المساعدة",
+    "postContent": "محتوى المنشور",
+    "contentRequired": "المحتوى مطلوب",
+    "publishing": "جاري النشر",
+    "publish": "انشر"
   },
   es: {
     // Landing & Auth
@@ -1005,6 +1284,124 @@ export const translations = {
     light: "Claro",
     dark: "Oscuro",
     system: "Sistema",
+
+
+    // new
+
+    "myHeroTitle": "Mi Héroe",
+    "myHeroDescription": "Mi Héroe conecta a migrantes y locales. Puedes publicar si necesitas ayuda o si deseas ofrecerla. Sigue las normas de seguridad: sé respetuoso, sin discriminación, sin spam. La moderación está activa: informa sobre publicaciones inapropiadas.",
+
+    "helpRequests": "Solicitudes de ayuda",
+    "helpRequestsDesc": "Publica aquí si necesitas asistencia con tareas cotidianas, orientación o apoyo de la comunidad.",
+
+    "helpOffers": "Ofertas de ayuda",
+    "helpOffersDesc": "Publica aquí si deseas ofrecer ayuda, recursos o apoyo a migrantes y miembros de la comunidad.",
+
+    "privacyPolicyTitle": "Política de Privacidad",
+    "privacyIntroductionTitle": "Introducción",
+    "privacyIntroductionDesc": "Liven Chat y Mi Héroe valoran tu privacidad. Esta política explica qué datos recopilamos, cómo los usamos y cuáles son tus derechos.",
+
+    "dataCollectionTitle": "Recopilación de datos",
+    "dataCollectionDesc": "Recopilamos los siguientes tipos de datos:",
+    "dataCollectionUsers": "Información del perfil de usuario (nombre, correo electrónico, nacionalidad, municipio).",
+    "dataCollectionPosts": "Publicaciones y comentarios que crees dentro de la aplicación.",
+    "dataCollectionComments": "Comentarios en publicaciones, incluyendo contenido y marcas de tiempo.",
+    "dataCollectionPush": "Suscripciones a notificaciones push para enviar actualizaciones en tiempo real.",
+
+    "dataUseTitle": "Cómo usamos tus datos",
+    "dataUseDesc": "Tus datos se utilizan para mejorar tu experiencia y proporcionar nuestros servicios, incluyendo:",
+    "dataUseNotifications": "Enviar notificaciones en tiempo real sobre 'me gusta', comentarios y actividad de la comunidad.",
+    "dataUsePersonalization": "Personalizar tu feed y recomendaciones de contenido.",
+    "dataUseAnalytics": "Analizar el uso de la aplicación para mejorar funciones y características.",
+
+    "dataSharingTitle": "Compartición de datos",
+    "dataSharingDesc": "No vendemos tus datos personales. Podemos compartir información con proveedores de servicios para mantener y mejorar la aplicación.",
+
+    "securityTitle": "Seguridad de los datos",
+    "securityDesc": "Implementamos medidas técnicas y organizativas razonables para proteger tus datos contra accesos no autorizados.",
+
+    "userRightsTitle": "Tus derechos",
+    "userRightsDesc": "Tienes los siguientes derechos respecto a tus datos:",
+    "userRightsAccess": "Acceder a los datos personales que tenemos sobre ti.",
+    "userRightsDelete": "Solicitar la eliminación de tus datos de nuestros sistemas.",
+    "userRightsOptOut": "Darte de baja de las notificaciones push.",
+
+    "contactTitle": "Contáctanos",
+    "contactDesc": "Si tienes preguntas sobre esta Política de Privacidad, contáctanos en support@livenchat.com.",
+
+    "health_q1": "¿Cómo me registro para el seguro de salud?",
+    "health_q1_answer": "Debes registrarte con un proveedor de seguro de salud holandés dentro de los cuatro meses posteriores a tu llegada a los Países Bajos. Puedes hacerlo en línea o en la oficina del proveedor.",
+
+    "health_q2": "¿Dónde puedo encontrar un médico cerca de mí?",
+    "health_q2_answer": "Puedes encontrar un médico de cabecera (huisarts) local buscando en línea, preguntando en tu municipio o revisando el sitio web zorgkaart.nl.",
+
+    "health_q3": "¿Qué debo hacer en caso de una emergencia médica?",
+    "health_q3_answer": "En caso de una emergencia médica, llama al 112 de inmediato. Para atención urgente, visita tu centro de urgencias (huisartsenpost) o el departamento de emergencias de un hospital.",
+
+    "health_q4": "¿Necesito seguro de salud y cómo lo obtengo?",
+    "health_q4_answer": "Sí, el seguro de salud es obligatorio en los Países Bajos. Elige un proveedor de seguro holandés y regístrate en línea o en persona.",
+
+    "faqTitle": "Preguntas frecuentes",
+    "myHero": "Mi Héroe",
+    "howToPost": "¿Cómo publico una solicitud de ayuda u oferta?",
+    "howToPostDesc": "Puedes crear una publicación haciendo clic en 'Nueva publicación', selecciona el tipo, escribe el título y el contenido, y publícalo.",
+    "helpRequestsGuidelines": "¿Existen pautas para las publicaciones?",
+    "helpRequestsGuidelinesDesc": "Sé respetuoso, sin discriminación, sin spam. Sigue las normas de seguridad al publicar.",
+    "moderationRules": "¿Cómo se modera el contenido?",
+    "moderationRulesDesc": "Puedes denunciar publicaciones inapropiadas. Nuestros moderadores las revisarán y tomarán las medidas necesarias.",
+    "privacyAndSafety": "¿Cómo se protege mi privacidad?",
+    "privacyAndSafetyDesc": "Almacenamos la mínima información y nunca compartimos tus datos. Sigue las reglas de seguridad al interactuar con otros.",
+    "howToGetNotified": "¿Cómo recibo notificaciones?",
+    "howToGetNotifiedDesc": "Habilita las notificaciones push en tu navegador o aplicación para recibir actualizaciones sobre 'me gusta', comentarios y nuevas publicaciones.",
+    "likeAndCommentNotifications": "¿Qué notificaciones recibiré?",
+    "likeAndCommentNotificationsDesc": "Recibirás notificaciones cuando alguien dé 'me gusta' o comente tus publicaciones.",
+    "updateProfileDesc": "Ve a Perfil > Configuración para actualizar tu información personal, avatar o preferencias.",
+    "changeLanguageDesc": "Puedes seleccionar un idioma diferente en Perfil > Cambiar idioma.",
+
+    "aboutTitle": "Acerca de la aplicación",
+    "aboutDescription": "Esta aplicación conecta a migrantes y locales, ayudándote a adaptarte a la vida en tu nuevo país. Puedes pedir ayuda, ofrecer apoyo o acceder a información útil.",
+    "aboutFeatureChatTitle": "Chat multilingüe",
+    "aboutFeatureChatDesc": "Chatea en tu idioma preferido con un asistente de IA para obtener orientación sobre vivienda, salud, temas legales y más.",
+    "aboutFeatureHelpTitle": "Solicitudes y ofertas de ayuda",
+    "aboutFeatureHelpDesc": "Publica solicitudes si necesitas ayuda u ofrece asistencia a otros en tu comunidad.",
+    "aboutSafetyTitle": "Seguridad y moderación",
+    "aboutSafetyDesc": "Sé respetuoso, sin discriminación, sin spam. Informa sobre publicaciones inapropiadas. Los moderadores garantizan la seguridad y aplican las normas.",
+
+    "comments": "Comentarios",
+    "noComments": "Sin comentarios",
+    "beFirstToComment": "Sé el primero en comentar",
+    "addComment": "Agregar comentario",
+
+    "verifyAccount": "Verifica tu cuenta",
+    "otpSentDescription": "Hemos enviado un código de 4 dígitos a tu correo electrónico",
+    "verifying": "Verificando...",
+    "verifyCode": "Verificar código",
+    "didNotReceiveCode": "¿No recibiste el código?",
+    "resendCode": "Reenviar código",
+    "resendIn": "Reenviar código en {seconds}s",
+    "supportText": "¿Tienes problemas? Contacta con soporte en",
+    "loginSuccess": "Inicio de sesión exitoso",
+    "signupSuccess": "Cuenta creada con éxito",
+    "verifyNewEmail": "Verifica tu nuevo correo electrónico",
+    "otpSentToEmail": "Hemos enviado un código de 4 dígitos a tu correo electrónico",
+    "resendCodeIn": "Reenviar código en {{seconds}}s",
+    "emailUpdateSuccess": "¡Correo electrónico actualizado con éxito!",
+    "emailUpdateError": "¡Algo salió mal! Por favor, inténtalo de nuevo.",
+
+    "otpVerification": "Verifica tu cuenta",
+    "verifyButton": "Verificar código",
+    "havingTrouble": "¿Tienes problemas?",
+    "contactSupport": "Contacta con soporte en",
+
+    "writePost": "Escribir publicación",
+    "posts": "publicaciones",
+    "postType": "Tipo de publicación",
+    "lookingForHelp": "Busco ayuda",
+    "offeringHelp": "Ofrezco ayuda",
+    "postContent": "Contenido de la publicación",
+    "contentRequired": "El contenido es obligatorio",
+    "publishing": "Publicando",
+    "publish": "Publicar"
   },
   fr: {
     // Landing & Auth
@@ -1239,6 +1636,121 @@ export const translations = {
     light: "Clair",
     dark: "Sombre",
     system: "Système",
+
+    "myHeroTitle": "Mon Héros",
+    "myHeroDescription": "Mon Héros connecte les migrants et les locaux. Vous pouvez publier si vous avez besoin d'aide ou si vous souhaitez en offrir. Suivez les consignes de sécurité : soyez respectueux, pas de discrimination, pas de spam. La modération est active : signalez les publications inappropriées.",
+
+    "helpRequests": "Demandes d'aide",
+    "helpRequestsDesc": "Publiez ici si vous avez besoin d'assistance pour les tâches quotidiennes, des conseils ou un soutien de la communauté.",
+
+    "helpOffers": "Offres d'aide",
+    "helpOffersDesc": "Publiez ici si vous souhaitez offrir de l'aide, des ressources ou un soutien aux migrants et aux membres de la communauté.",
+
+    "privacyPolicyTitle": "Politique de confidentialité",
+    "privacyIntroductionTitle": "Introduction",
+    "privacyIntroductionDesc": "Liven Chat et Mon Héros respectent votre vie privée. Cette politique explique quelles données nous collectons, comment nous les utilisons et vos droits.",
+
+    "dataCollectionTitle": "Collecte de données",
+    "dataCollectionDesc": "Nous collectons les types de données suivants :",
+    "dataCollectionUsers": "Informations de profil utilisateur (nom, email, nationalité, municipalité).",
+    "dataCollectionPosts": "Publications et commentaires que vous créez dans l'application.",
+    "dataCollectionComments": "Commentaires sur les publications, y compris le contenu et les horodatages.",
+    "dataCollectionPush": "Abonnements aux notifications push pour fournir des mises à jour en temps réel.",
+
+    "dataUseTitle": "Comment nous utilisons vos données",
+    "dataUseDesc": "Vos données sont utilisées pour améliorer votre expérience et fournir nos services, notamment :",
+    "dataUseNotifications": "Envoyer des notifications en temps réel concernant les likes, commentaires et activités de la communauté.",
+    "dataUsePersonalization": "Personnaliser votre fil et les recommandations de contenu.",
+    "dataUseAnalytics": "Analyser l'utilisation de l'application pour améliorer les fonctionnalités.",
+
+    "dataSharingTitle": "Partage des données",
+    "dataSharingDesc": "Nous ne vendons pas vos données personnelles. Nous pouvons partager des informations avec des prestataires de services pour maintenir et améliorer l'application.",
+
+    "securityTitle": "Sécurité des données",
+    "securityDesc": "Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables pour protéger vos données contre tout accès non autorisé.",
+
+    "userRightsTitle": "Vos droits",
+    "userRightsDesc": "Vous avez les droits suivants concernant vos données :",
+    "userRightsAccess": "Accéder aux données personnelles que nous détenons à votre sujet.",
+    "userRightsDelete": "Demander la suppression de vos données de nos systèmes.",
+    "userRightsOptOut": "Se désinscrire des notifications push.",
+
+    "contactTitle": "Contactez-nous",
+    "contactDesc": "Si vous avez des questions concernant cette Politique de confidentialité, contactez-nous à support@livenchat.com.",
+
+    "health_q1": "Comment m'inscrire à l'assurance santé ?",
+    "health_q1_answer": "Vous devez vous inscrire auprès d'un fournisseur d'assurance santé néerlandais dans les quatre mois suivant votre arrivée aux Pays-Bas. Vous pouvez le faire en ligne ou au bureau du fournisseur.",
+
+    "health_q2": "Où puis-je trouver un médecin près de chez moi ?",
+    "health_q2_answer": "Vous pouvez trouver un médecin généraliste local (huisarts) en cherchant en ligne, en demandant à votre municipalité ou en consultant le site zorgkaart.nl.",
+
+    "health_q3": "Que dois-je faire en cas d'urgence médicale ?",
+    "health_q3_answer": "En cas d'urgence médicale, appelez immédiatement le 112. Pour les soins urgents, rendez-vous à votre huisartsenpost local ou au service d'urgence d'un hôpital.",
+
+    "health_q4": "Ai-je besoin d'une assurance santé et comment l'obtenir ?",
+    "health_q4_answer": "Oui, l'assurance santé est obligatoire aux Pays-Bas. Choisissez un fournisseur néerlandais et inscrivez-vous en ligne ou en personne.",
+
+    "faqTitle": "Questions fréquentes",
+    "myHero": "Mon Héros",
+    "howToPost": "Comment publier une demande ou offre d'aide ?",
+    "howToPostDesc": "Vous pouvez créer une publication en cliquant sur 'Nouvelle publication', sélectionnez le type, rédigez le titre et le contenu, puis publiez-la.",
+    "helpRequestsGuidelines": "Y a-t-il des directives pour les publications ?",
+    "helpRequestsGuidelinesDesc": "Soyez respectueux, pas de discrimination, pas de spam. Suivez les consignes de sécurité lors de la publication.",
+    "moderationRules": "Comment le contenu est-il modéré ?",
+    "moderationRulesDesc": "Vous pouvez signaler les publications inappropriées. Nos modérateurs les examineront et prendront les mesures nécessaires.",
+    "privacyAndSafety": "Comment ma vie privée est-elle protégée ?",
+    "privacyAndSafetyDesc": "Nous stockons le minimum d'informations et ne partageons jamais vos données. Suivez les règles de sécurité lorsque vous interagissez avec les autres.",
+    "howToGetNotified": "Comment recevoir des notifications ?",
+    "howToGetNotifiedDesc": "Activez les notifications push dans votre navigateur ou application pour recevoir des mises à jour sur les likes, commentaires et nouvelles publications.",
+    "likeAndCommentNotifications": "Quelles notifications vais-je recevoir ?",
+    "likeAndCommentNotificationsDesc": "Vous serez informé lorsque quelqu'un aimera ou commentera vos publications.",
+    "updateProfileDesc": "Allez dans Profil > Paramètres pour mettre à jour vos informations personnelles, avatar ou préférences.",
+    "changeLanguageDesc": "Vous pouvez sélectionner une langue différente dans Profil > Changer de langue.",
+
+    "aboutTitle": "À propos de l'application",
+    "aboutDescription": "Cette application connecte les migrants et les locaux, vous aidant à naviguer dans la vie de votre nouveau pays. Vous pouvez demander de l'aide, offrir du soutien ou accéder à des informations utiles.",
+    "aboutFeatureChatTitle": "Chat multilingue",
+    "aboutFeatureChatDesc": "Discutez dans votre langue préférée avec un assistant IA pour obtenir des conseils sur le logement, la santé, les aspects légaux et plus encore.",
+    "aboutFeatureHelpTitle": "Demandes et offres d'aide",
+    "aboutFeatureHelpDesc": "Publiez des demandes si vous avez besoin d'aide ou proposez votre assistance aux autres membres de votre communauté.",
+    "aboutSafetyTitle": "Sécurité et modération",
+    "aboutSafetyDesc": "Soyez respectueux, pas de discrimination, pas de spam. Signalez les publications inappropriées. Les modérateurs assurent la sécurité et appliquent les règles.",
+
+    "comments": "Commentaires",
+    "noComments": "Pas de commentaires",
+    "beFirstToComment": "Soyez le premier à commenter",
+    "addComment": "Ajouter un commentaire",
+
+    "verifyAccount": "Vérifiez votre compte",
+    "otpSentDescription": "Nous avons envoyé un code à 4 chiffres à votre email",
+    "verifying": "Vérification en cours...",
+    "verifyCode": "Vérifier le code",
+    "didNotReceiveCode": "Vous n'avez pas reçu le code ?",
+    "resendCode": "Renvoyer le code",
+    "resendIn": "Renvoyer le code dans {seconds}s",
+    "supportText": "Vous rencontrez un problème ? Contactez le support à",
+    "loginSuccess": "Connexion réussie",
+    "signupSuccess": "Compte créé avec succès",
+    "verifyNewEmail": "Vérifiez votre nouvel email",
+    "otpSentToEmail": "Nous avons envoyé un code à 4 chiffres à votre email",
+    "resendCodeIn": "Renvoyer le code dans {{seconds}}s",
+    "emailUpdateSuccess": "Email mis à jour avec succès !",
+    "emailUpdateError": "Une erreur est survenue ! Veuillez réessayer.",
+
+    "otpVerification": "Vérifiez votre compte",
+    "verifyButton": "Vérifier le code",
+    "havingTrouble": "Vous rencontrez un problème ?",
+    "contactSupport": "Contactez le support à",
+
+    "writePost": "Écrire une publication",
+    "posts": "publications",
+    "postType": "Type de publication",
+    "lookingForHelp": "Je cherche de l'aide",
+    "offeringHelp": "J'offre de l'aide",
+    "postContent": "Contenu de la publication",
+    "contentRequired": "Contenu obligatoire",
+    "publishing": "Publication en cours",
+    "publish": "Publier"
   },
   tr: {
     // Landing & Auth
@@ -1474,6 +1986,123 @@ export const translations = {
     light: "Açık",
     dark: "Koyu",
     system: "Sistem",
+
+    // new 
+
+    "myHeroTitle": "Benim Kahramanım",
+    "myHeroDescription": "Benim Kahramanım, göçmenleri ve yerel halkı bir araya getirir. Yardıma ihtiyacınız varsa veya yardım sunmak istiyorsanız paylaşım yapabilirsiniz. Güvenlik kurallarına uyun: saygılı olun, ayrımcılık yapmayın, spam yapmayın. Moderasyon aktiftir: uygunsuz paylaşımları bildirin.",
+
+    "helpRequests": "Yardım Talepleri",
+    "helpRequestsDesc": "Günlük görevler, rehberlik veya topluluk desteği için yardıma ihtiyacınız varsa burada paylaşım yapın.",
+
+    "helpOffers": "Yardım Teklifleri",
+    "helpOffersDesc": "Göçmenlere ve topluluk üyelerine yardım, kaynak veya destek sunmak istiyorsanız burada paylaşım yapın.",
+
+    "privacyPolicyTitle": "Gizlilik Politikası",
+    "privacyIntroductionTitle": "Giriş",
+    "privacyIntroductionDesc": "Liven Chat ve Benim Kahramanım gizliliğinizi önemser. Bu politika, hangi verileri topladığımızı, nasıl kullandığımızı ve haklarınızı açıklar.",
+
+    "dataCollectionTitle": "Veri Toplama",
+    "dataCollectionDesc": "Aşağıdaki veri türlerini topluyoruz:",
+    "dataCollectionUsers": "Kullanıcı profili bilgileri (isim, e-posta, milliyet, belediye).",
+    "dataCollectionPosts": "Uygulama içinde oluşturduğunuz gönderiler ve yorumlar.",
+    "dataCollectionComments": "Gönderiler üzerindeki yorumlar, içerik ve zaman damgaları dahil.",
+    "dataCollectionPush": "Gerçek zamanlı bildirimler göndermek için push bildirim abonelikleri.",
+
+    "dataUseTitle": "Verilerinizi Nasıl Kullanıyoruz",
+    "dataUseDesc": "Verileriniz deneyiminizi geliştirmek ve hizmetlerimizi sunmak için kullanılır, bunlar dahil:",
+    "dataUseNotifications": "Beğeniler, yorumlar ve topluluk etkinliği hakkında gerçek zamanlı bildirimler göndermek.",
+    "dataUsePersonalization": "Akışınızı ve içerik önerilerinizi kişiselleştirmek.",
+    "dataUseAnalytics": "Uygulama kullanımını analiz ederek işlevselliği ve özellikleri geliştirmek.",
+
+    "dataSharingTitle": "Veri Paylaşımı",
+    "dataSharingDesc": "Kişisel verilerinizi satmıyoruz. Uygulamayı sürdürmek ve geliştirmek için hizmet sağlayıcılarla bilgi paylaşabiliriz.",
+
+    "securityTitle": "Veri Güvenliği",
+    "securityDesc": "Verilerinizi yetkisiz erişimden korumak için makul teknik ve organizasyonel önlemler uyguluyoruz.",
+
+    "userRightsTitle": "Haklarınız",
+    "userRightsDesc": "Verilerinizle ilgili aşağıdaki haklara sahipsiniz:",
+    "userRightsAccess": "Hakkınızda sahip olduğumuz kişisel verilere erişmek.",
+    "userRightsDelete": "Verilerinizin sistemlerimizden silinmesini talep etmek.",
+    "userRightsOptOut": "Push bildirimlerini almaktan vazgeçmek.",
+
+    "contactTitle": "Bize Ulaşın",
+    "contactDesc": "Bu Gizlilik Politikasıyla ilgili sorularınız varsa, bize support@livenchat.com adresinden ulaşın.",
+
+    "health_q1": "Sağlık sigortasına nasıl kaydolurum?",
+    "health_q1_answer": "Hollanda'ya geldikten sonraki dört ay içinde bir Hollanda sağlık sigortası sağlayıcısına kaydolmanız gerekir. Bunu çevrimiçi veya sağlayıcının ofisinde yapabilirsiniz.",
+
+    "health_q2": "Yakınımda bir doktoru nereden bulabilirim?",
+    "health_q2_answer": "Yerel bir huisarts (pratisyen hekim) bulmak için çevrimiçi arama yapabilir, belediyenize sorabilir veya zorgkaart.nl sitesine bakabilirsiniz.",
+
+    "health_q3": "Acil bir durumda ne yapmalıyım?",
+    "health_q3_answer": "Acil bir durumda hemen 112'yi arayın. Acil bakım için yerel huisartsenpost veya hastanede acil servise gidin.",
+
+    "health_q4": "Sağlık sigortasına ihtiyacım var mı ve nasıl alabilirim?",
+    "health_q4_answer": "Evet, Hollanda’da sağlık sigortası zorunludur. Bir Hollanda sağlık sigortası sağlayıcısı seçin ve çevrimiçi veya şahsen kaydolun.",
+
+    "faqTitle": "Sıkça Sorulan Sorular",
+    "myHero": "Benim Kahramanım",
+    "howToPost": "Yardım talebi veya teklifi nasıl paylaşırım?",
+    "howToPostDesc": "Yeni Gönderi'ye tıklayarak bir paylaşım oluşturabilir, türünüzü seçebilir, başlık ve içeriği yazabilir ve yayımlayabilirsiniz.",
+    "helpRequestsGuidelines": "Gönderiler için kurallar var mı?",
+    "helpRequestsGuidelinesDesc": "Saygılı olun, ayrımcılık yapmayın, spam yapmayın. Paylaşım yaparken güvenlik kurallarına uyun.",
+    "moderationRules": "İçerik nasıl denetleniyor?",
+    "moderationRulesDesc": "Uygunsuz gönderileri bildirebilirsiniz. Moderatörler inceleyip gerekirse işlem yapacaktır.",
+    "privacyAndSafety": "Gizliliğim nasıl korunuyor?",
+    "privacyAndSafetyDesc": "Minimum bilgi saklıyoruz ve verilerinizi asla paylaşmıyoruz. Başkalarıyla etkileşimde güvenlik kurallarına uyun.",
+    "howToGetNotified": "Bildirimleri nasıl alırım?",
+    "howToGetNotifiedDesc": "Beğeniler, yorumlar ve yeni gönderiler hakkında güncellemeler almak için tarayıcınızda veya uygulamanızda push bildirimlerini etkinleştirin.",
+    "likeAndCommentNotifications": "Hangi bildirimleri alacağım?",
+    "likeAndCommentNotificationsDesc": "Birisi gönderilerinizi beğendiğinde veya yorum yaptığında bilgilendirileceksiniz.",
+    "updateProfileDesc": "Profil > Ayarlar'a giderek kişisel bilgilerinizi, avatarınızı veya tercihlerinizi güncelleyebilirsiniz.",
+    "changeLanguageDesc": "Profil > Dili Değiştir bölümünden farklı bir dil seçebilirsiniz.",
+
+    "aboutTitle": "Uygulama Hakkında",
+    "aboutDescription": "Bu uygulama göçmenleri ve yerel halkı bir araya getirir ve yeni ülkenizde hayatınızı kolaylaştırır. Yardım isteyebilir, destek sunabilir veya faydalı bilgilere erişebilirsiniz.",
+    "aboutFeatureChatTitle": "Çok Dilli Sohbet",
+    "aboutFeatureChatDesc": "İstediğiniz dilde bir AI asistanıyla konuşarak konaklama, sağlık, hukuk ve daha fazlası hakkında rehberlik alın.",
+    "aboutFeatureHelpTitle": "Yardım Talepleri ve Teklifleri",
+    "aboutFeatureHelpDesc": "Yardıma ihtiyacınız varsa talepler paylaşın veya topluluktaki diğer kişilere yardım teklif edin.",
+    "aboutSafetyTitle": "Güvenlik ve Moderasyon",
+    "aboutSafetyDesc": "Saygılı olun, ayrımcılık yapmayın, spam yapmayın. Uygunsuz gönderileri bildirin. Moderatörler güvenliği sağlar ve kuralları uygular.",
+
+    "comments": "Yorumlar",
+    "noComments": "Yorum Yok",
+    "beFirstToComment": "İlk Yorum Yapan Siz Olun",
+    "addComment": "Yorum Ekle",
+
+    "verifyAccount": "Hesabınızı Doğrulayın",
+    "otpSentDescription": "4 haneli kod e-posta adresinize gönderildi",
+    "verifying": "Doğrulanıyor...",
+    "verifyCode": "Kodu Doğrula",
+    "didNotReceiveCode": "Kodu almadınız mı?",
+    "resendCode": "Kodu Yeniden Gönder",
+    "resendIn": "{seconds}s içinde kodu yeniden gönder",
+    "supportText": "Sorun mu yaşıyorsunuz? Destek ile iletişime geçin:",
+    "loginSuccess": "Başarıyla giriş yapıldı",
+    "signupSuccess": "Hesap başarıyla oluşturuldu",
+    "verifyNewEmail": "Yeni E-posta Adresinizi Doğrulayın",
+    "otpSentToEmail": "4 haneli kod e-posta adresinize gönderildi",
+    "resendCodeIn": "{{seconds}}s içinde kodu yeniden gönder",
+    "emailUpdateSuccess": "E-posta başarıyla güncellendi!",
+    "emailUpdateError": "Bir hata oluştu! Lütfen tekrar deneyin.",
+
+    "otpVerification": "Hesabınızı Doğrulayın",
+    "verifyButton": "Kodu Doğrula",
+    "havingTrouble": "Sorun mu yaşıyorsunuz?",
+    "contactSupport": "Destek ile iletişime geçin:",
+
+    "writePost": "Gönderi Yaz",
+    "posts": "gönderiler",
+    "postType": "Gönderi Türü",
+    "lookingForHelp": "Yardım Aranıyor",
+    "offeringHelp": "Yardım Sunuluyor",
+    "postContent": "Gönderi İçeriği",
+    "contentRequired": "İçerik Gereklidir",
+    "publishing": "Yayınlanıyor",
+    "publish": "Yayınla"
   },
   uk: {
     // Landing & Auth
@@ -1708,7 +2337,124 @@ export const translations = {
     theme: "Тема",
     light: "Світла",
     dark: "Темна",
-    system: "Системна"
+    system: "Системна",
+
+    // new 
+
+    "myHeroTitle": "Мій Герой",
+    "myHeroDescription": "Мій Герой об’єднує мігрантів і місцевих жителів. Ви можете створювати пости, якщо потребуєте допомоги або хочете її запропонувати. Дотримуйтесь правил безпеки: будьте ввічливі, без дискримінації, без спаму. Модерація активна: повідомляйте про неприйнятні пости.",
+
+    "helpRequests": "Запити про допомогу",
+    "helpRequestsDesc": "Розміщуйте тут, якщо вам потрібна допомога у повсякденних справах, поради чи підтримка від спільноти.",
+
+    "helpOffers": "Пропозиції допомоги",
+    "helpOffersDesc": "Розміщуйте тут, якщо хочете запропонувати допомогу, ресурси або підтримку мігрантам та членам спільноти.",
+
+    "privacyPolicyTitle": "Політика конфіденційності",
+    "privacyIntroductionTitle": "Вступ",
+    "privacyIntroductionDesc": "Liven Chat та Мій Герой цінують вашу конфіденційність. Ця політика пояснює, які дані ми збираємо, як їх використовуємо та ваші права.",
+
+    "dataCollectionTitle": "Збір даних",
+    "dataCollectionDesc": "Ми збираємо такі типи даних:",
+    "dataCollectionUsers": "Інформація профілю користувача (ім’я, електронна пошта, національність, муніципалітет).",
+    "dataCollectionPosts": "Пости та коментарі, які ви створюєте у додатку.",
+    "dataCollectionComments": "Коментарі до постів, включаючи зміст та часові мітки.",
+    "dataCollectionPush": "Підписки на push-повідомлення для отримання оновлень у реальному часі.",
+
+    "dataUseTitle": "Як ми використовуємо ваші дані",
+    "dataUseDesc": "Ваші дані використовуються для покращення вашого досвіду та надання наших послуг, включаючи:",
+    "dataUseNotifications": "Надсилання сповіщень у реальному часі про лайки, коментарі та активність спільноти.",
+    "dataUsePersonalization": "Персоналізацію вашої стрічки та рекомендацій контенту.",
+    "dataUseAnalytics": "Аналіз використання додатку для покращення функціональності та функцій.",
+
+    "dataSharingTitle": "Обмін даними",
+    "dataSharingDesc": "Ми не продаємо ваші персональні дані. Ми можемо ділитися інформацією з постачальниками послуг для підтримки та покращення додатку.",
+
+    "securityTitle": "Безпека даних",
+    "securityDesc": "Ми впроваджуємо розумні технічні та організаційні заходи для захисту ваших даних від несанкціонованого доступу.",
+
+    "userRightsTitle": "Ваші права",
+    "userRightsDesc": "Ви маєте наступні права щодо ваших даних:",
+    "userRightsAccess": "Доступ до персональних даних, які ми зберігаємо про вас.",
+    "userRightsDelete": "Запит на видалення ваших даних з наших систем.",
+    "userRightsOptOut": "Відмовитися від отримання push-повідомлень.",
+
+    "contactTitle": "Зв’яжіться з нами",
+    "contactDesc": "Якщо у вас є запитання щодо цієї Політики конфіденційності, будь ласка, зв’яжіться з нами за адресою support@livenchat.com.",
+
+    "health_q1": "Як зареєструватися для медичного страхування?",
+    "health_q1_answer": "Ви повинні зареєструватися у голландського провайдера медичного страхування протягом чотирьох місяців після прибуття до Нідерландів. Це можна зробити онлайн або в офісі провайдера.",
+
+    "health_q2": "Де я можу знайти лікаря поблизу?",
+    "health_q2_answer": "Ви можете знайти місцевого huisarts (лікар загальної практики), шукаючи онлайн, запитавши у муніципалітеті або перевіривши сайт zorgkaart.nl.",
+
+    "health_q3": "Що робити у разі медичної надзвичайної ситуації?",
+    "health_q3_answer": "У разі медичної надзвичайної ситуації негайно телефонуйте 112. Для невідкладної допомоги звертайтесь до місцевого huisartsenpost або відділення невідкладної допомоги в лікарні.",
+
+    "health_q4": "Чи потрібне мені медичне страхування і як його отримати?",
+    "health_q4_answer": "Так, медичне страхування є обов’язковим у Нідерландах. Виберіть голландського провайдера страхування та зареєструйтесь онлайн або особисто.",
+
+    "faqTitle": "Поширені питання",
+    "myHero": "Мій Герой",
+    "howToPost": "Як я можу опублікувати запит чи пропозицію допомоги?",
+    "howToPostDesc": "Ви можете створити пост, натиснувши 'Новий пост', вибрати тип, написати заголовок та зміст, і опублікувати.",
+    "helpRequestsGuidelines": "Чи є правила для постів?",
+    "helpRequestsGuidelinesDesc": "Будьте ввічливі, без дискримінації, без спаму. Дотримуйтесь правил безпеки під час публікації.",
+    "moderationRules": "Як відбувається модерація контенту?",
+    "moderationRulesDesc": "Ви можете повідомляти про неприйнятні пости. Наші модератори перевірять і вживуть необхідні заходи.",
+    "privacyAndSafety": "Як захищено мою конфіденційність?",
+    "privacyAndSafetyDesc": "Ми зберігаємо мінімальну інформацію і ніколи не передаємо ваші дані. Дотримуйтесь правил безпеки при взаємодії з іншими.",
+    "howToGetNotified": "Як отримувати сповіщення?",
+    "howToGetNotifiedDesc": "Увімкніть push-повідомлення у вашому браузері або додатку, щоб отримувати оновлення про лайки, коментарі та нові пости.",
+    "likeAndCommentNotifications": "Які сповіщення я отримуватиму?",
+    "likeAndCommentNotificationsDesc": "Ви отримаєте повідомлення, коли хтось лайкне або прокоментує ваші пости.",
+    "updateProfileDesc": "Перейдіть до Профіль > Налаштування, щоб оновити персональну інформацію, аватар або налаштування.",
+    "changeLanguageDesc": "Ви можете вибрати іншу мову у Профіль > Змінити мову.",
+
+    "aboutTitle": "Про додаток",
+    "aboutDescription": "Цей додаток об’єднує мігрантів і місцевих жителів, допомагаючи орієнтуватися у житті нової країни. Ви можете просити допомогу, пропонувати підтримку або отримувати корисну інформацію.",
+    "aboutFeatureChatTitle": "Багатомовний чат",
+    "aboutFeatureChatDesc": "Спілкуйтеся вашою мовою з AI-асистентом, щоб отримувати поради щодо житла, здоров’я, права та іншого.",
+    "aboutFeatureHelpTitle": "Запити та пропозиції допомоги",
+    "aboutFeatureHelpDesc": "Створюйте запити, якщо потребуєте допомоги, або пропонуйте підтримку іншим у спільноті.",
+    "aboutSafetyTitle": "Безпека та модерація",
+    "aboutSafetyDesc": "Будьте ввічливі, без дискримінації, без спаму. Повідомляйте про неприйнятні пости. Модератори забезпечують безпеку та дотримання правил.",
+
+    "comments": "Коментарі",
+    "noComments": "Немає коментарів",
+    "beFirstToComment": "Будьте першим, хто прокоментує",
+    "addComment": "Додати коментар",
+
+    "verifyAccount": "Підтвердьте свій акаунт",
+    "otpSentDescription": "4-значний код надіслано на вашу електронну пошту",
+    "verifying": "Перевірка...",
+    "verifyCode": "Перевірити код",
+    "didNotReceiveCode": "Не отримали код?",
+    "resendCode": "Надіслати код повторно",
+    "resendIn": "Надіслати код повторно через {seconds}с",
+    "supportText": "Маєте проблеми? Зверніться в службу підтримки за",
+    "loginSuccess": "Успішно увійшли",
+    "signupSuccess": "Акаунт успішно створено",
+    "verifyNewEmail": "Підтвердьте новий e-mail",
+    "otpSentToEmail": "4-значний код надіслано на вашу електронну пошту",
+    "resendCodeIn": "Надіслати код повторно через {{seconds}}с",
+    "emailUpdateSuccess": "E-mail успішно оновлено!",
+    "emailUpdateError": "Щось пішло не так! Спробуйте ще раз.",
+
+    "otpVerification": "Підтвердьте свій акаунт",
+    "verifyButton": "Перевірити код",
+    "havingTrouble": "Маєте проблеми?",
+    "contactSupport": "Зверніться в службу підтримки:",
+
+    "writePost": "Написати пост",
+    "posts": "пости",
+    "postType": "Тип посту",
+    "lookingForHelp": "Потрібна допомога",
+    "offeringHelp": "Пропоную допомогу",
+    "postContent": "Вміст посту",
+    "contentRequired": "Вміст обов’язковий",
+    "publishing": "Публікація",
+    "publish": "Опублікувати"
   },
   ru: {
     // Landing & Auth
@@ -1943,7 +2689,124 @@ export const translations = {
     theme: "Тема",
     light: "Светлая",
     dark: "Тёмная",
-    system: "Системная"
+    system: "Системная",
+
+    // new 
+
+    "myHeroTitle": "Мой Герой",
+    "myHeroDescription": "Мой Герой объединяет мигрантов и местных жителей. Вы можете создавать посты, если нуждаетесь в помощи или хотите предложить помощь. Следуйте правилам безопасности: будьте вежливы, без дискриминации, без спама. Модерация активна: сообщайте о неподобающих постах.",
+
+    "helpRequests": "Запросы помощи",
+    "helpRequestsDesc": "Размещайте здесь, если вам нужна помощь в повседневных делах, советы или поддержка сообщества.",
+
+    "helpOffers": "Предложения помощи",
+    "helpOffersDesc": "Размещайте здесь, если хотите предложить помощь, ресурсы или поддержку мигрантам и членам сообщества.",
+
+    "privacyPolicyTitle": "Политика конфиденциальности",
+    "privacyIntroductionTitle": "Введение",
+    "privacyIntroductionDesc": "Liven Chat и Мой Герой ценят вашу конфиденциальность. Эта политика объясняет, какие данные мы собираем, как мы их используем и ваши права.",
+
+    "dataCollectionTitle": "Сбор данных",
+    "dataCollectionDesc": "Мы собираем следующие типы данных:",
+    "dataCollectionUsers": "Информация профиля пользователя (имя, электронная почта, национальность, муниципалитет).",
+    "dataCollectionPosts": "Посты и комментарии, которые вы создаете в приложении.",
+    "dataCollectionComments": "Комментарии к постам, включая содержание и временные метки.",
+    "dataCollectionPush": "Подписки на push-уведомления для получения обновлений в реальном времени.",
+
+    "dataUseTitle": "Как мы используем ваши данные",
+    "dataUseDesc": "Ваши данные используются для улучшения вашего опыта и предоставления наших услуг, включая:",
+    "dataUseNotifications": "Отправку уведомлений в реальном времени о лайках, комментариях и активности сообщества.",
+    "dataUsePersonalization": "Персонализацию вашей ленты и рекомендаций контента.",
+    "dataUseAnalytics": "Анализ использования приложения для улучшения функциональности и возможностей.",
+
+    "dataSharingTitle": "Обмен данными",
+    "dataSharingDesc": "Мы не продаем ваши персональные данные. Мы можем делиться информацией с поставщиками услуг для поддержки и улучшения приложения.",
+
+    "securityTitle": "Безопасность данных",
+    "securityDesc": "Мы внедряем разумные технические и организационные меры для защиты ваших данных от несанкционированного доступа.",
+
+    "userRightsTitle": "Ваши права",
+    "userRightsDesc": "Вы имеете следующие права в отношении ваших данных:",
+    "userRightsAccess": "Доступ к персональным данным, которые мы храним о вас.",
+    "userRightsDelete": "Запрос на удаление ваших данных из наших систем.",
+    "userRightsOptOut": "Отказ от получения push-уведомлений.",
+
+    "contactTitle": "Свяжитесь с нами",
+    "contactDesc": "Если у вас есть вопросы по этой Политике конфиденциальности, пожалуйста, свяжитесь с нами по адресу support@livenchat.com.",
+
+    "health_q1": "Как зарегистрироваться для медицинского страхования?",
+    "health_q1_answer": "Вы должны зарегистрироваться у голландского поставщика медицинского страхования в течение четырех месяцев после прибытия в Нидерланды. Это можно сделать онлайн или в офисе провайдера.",
+
+    "health_q2": "Где я могу найти врача поблизости?",
+    "health_q2_answer": "Вы можете найти местного huisarts (врача общей практики), используя онлайн-поиск, спросив в муниципалитете или проверив сайт zorgkaart.nl.",
+
+    "health_q3": "Что делать в случае медицинской чрезвычайной ситуации?",
+    "health_q3_answer": "В случае медицинской чрезвычайной ситуации немедленно звоните 112. Для неотложной помощи посетите местный huisartsenpost или отделение неотложной помощи в больнице.",
+
+    "health_q4": "Нужно ли мне медицинское страхование и как его получить?",
+    "health_q4_answer": "Да, медицинское страхование обязательно в Нидерландах. Выберите голландского провайдера страхования и зарегистрируйтесь онлайн или лично.",
+
+    "faqTitle": "Часто задаваемые вопросы",
+    "myHero": "Мой Герой",
+    "howToPost": "Как опубликовать запрос или предложение помощи?",
+    "howToPostDesc": "Вы можете создать пост, нажав 'Новый пост', выбрать тип, написать заголовок и содержание, и опубликовать.",
+    "helpRequestsGuidelines": "Есть ли правила для постов?",
+    "helpRequestsGuidelinesDesc": "Будьте вежливы, без дискриминации, без спама. Следуйте правилам безопасности при публикации.",
+    "moderationRules": "Как осуществляется модерация контента?",
+    "moderationRulesDesc": "Вы можете сообщать о неподобающих постах. Наши модераторы проверят и примут необходимые меры.",
+    "privacyAndSafety": "Как защищена моя конфиденциальность?",
+    "privacyAndSafetyDesc": "Мы храним минимальную информацию и никогда не передаем ваши данные. Соблюдайте правила безопасности при взаимодействии с другими.",
+    "howToGetNotified": "Как получать уведомления?",
+    "howToGetNotifiedDesc": "Включите push-уведомления в браузере или приложении, чтобы получать обновления о лайках, комментариях и новых постах.",
+    "likeAndCommentNotifications": "Какие уведомления я буду получать?",
+    "likeAndCommentNotificationsDesc": "Вы получите уведомление, когда кто-то лайкнет или прокомментирует ваши посты.",
+    "updateProfileDesc": "Перейдите в Профиль > Настройки, чтобы обновить личную информацию, аватар или предпочтения.",
+    "changeLanguageDesc": "Вы можете выбрать другой язык в Профиль > Сменить язык.",
+
+    "aboutTitle": "О приложении",
+    "aboutDescription": "Это приложение объединяет мигрантов и местных жителей, помогая ориентироваться в жизни в новой стране. Вы можете просить помощи, предлагать поддержку или получать полезную информацию.",
+    "aboutFeatureChatTitle": "Многоязычный чат",
+    "aboutFeatureChatDesc": "Общайтесь на предпочитаемом языке с AI-ассистентом, чтобы получить советы по жилью, здоровью, правовым вопросам и другим темам.",
+    "aboutFeatureHelpTitle": "Запросы и предложения помощи",
+    "aboutFeatureHelpDesc": "Создавайте запросы, если вам нужна помощь, или предлагайте поддержку другим членам сообщества.",
+    "aboutSafetyTitle": "Безопасность и модерация",
+    "aboutSafetyDesc": "Будьте вежливы, без дискриминации, без спама. Сообщайте о неподобающих постах. Модераторы обеспечивают безопасность и соблюдение правил.",
+
+    "comments": "Комментарии",
+    "noComments": "Нет комментариев",
+    "beFirstToComment": "Будьте первым, кто прокомментирует",
+    "addComment": "Добавить комментарий",
+
+    "verifyAccount": "Подтвердите свой аккаунт",
+    "otpSentDescription": "4-значный код отправлен на вашу электронную почту",
+    "verifying": "Проверка...",
+    "verifyCode": "Проверить код",
+    "didNotReceiveCode": "Не получили код?",
+    "resendCode": "Отправить код повторно",
+    "resendIn": "Отправить код повторно через {seconds}с",
+    "supportText": "Возникли проблемы? Свяжитесь с поддержкой по",
+    "loginSuccess": "Успешный вход",
+    "signupSuccess": "Аккаунт успешно создан",
+    "verifyNewEmail": "Подтвердите новый e-mail",
+    "otpSentToEmail": "4-значный код отправлен на вашу электронную почту",
+    "resendCodeIn": "Отправить код повторно через {{seconds}}с",
+    "emailUpdateSuccess": "E-mail успешно обновлен!",
+    "emailUpdateError": "Что-то пошло не так! Попробуйте снова.",
+
+    "otpVerification": "Подтвердите свой аккаунт",
+    "verifyButton": "Проверить код",
+    "havingTrouble": "Возникли проблемы?",
+    "contactSupport": "Свяжитесь с поддержкой:",
+
+    "writePost": "Создать пост",
+    "posts": "посты",
+    "postType": "Тип поста",
+    "lookingForHelp": "Нужна помощь",
+    "offeringHelp": "Предлагаю помощь",
+    "postContent": "Содержание поста",
+    "contentRequired": "Содержание обязательно",
+    "publishing": "Публикация",
+    "publish": "Опубликовать"
   }
 }
 
