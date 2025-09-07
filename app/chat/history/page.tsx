@@ -10,8 +10,11 @@ import { useRouter } from "next/navigation"
 import { useGetSessionListQuery } from "@/services/endpoints/chat/chat"
 import { formatRelativeDateTime } from "@/lib/utils"
 import { Skeleton } from "@/components/ui/skeleton"
+import { useEffect, useState } from "react"
 
 export default function ChatHistoryPage() {
+  const [user, setUser] = useState<any>(null);
+
   const { t } = useLanguage()
   const router = useRouter()
 
@@ -20,6 +23,11 @@ export default function ChatHistoryPage() {
     { refetchOnMountOrArgChange: true }
   );
 
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    setUser(JSON.parse(user || ""));
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -58,8 +66,8 @@ export default function ChatHistoryPage() {
                 onClick={() => router.push(`/chat/conversation?sessionId=${chat.id}`)}
               >
                 <Avatar className="w-10 h-10 flex-shrink-0">
-                  <AvatarImage src={chat.avatar || "/placeholder.svg"} />
-                  <AvatarFallback>U</AvatarFallback>
+                  <AvatarImage src={"/" + user?.avatar} />
+                  <AvatarFallback>{user?.fullName.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div className="flex-1 min-w-0">
                   <div className="text-sm font-medium text-muted-foreground mb-1">{formatRelativeDateTime(chat.lastInteraction)}</div>
