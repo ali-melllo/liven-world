@@ -30,7 +30,7 @@ export default function ProfilePage() {
     setUserId(storedId);
   }, []);
 
-  const { data } = useGetProfileQuery(
+  const { data , isLoading} = useGetProfileQuery(
     { id: userId ?? "" },
     { skip: !userId, refetchOnMountOrArgChange: true }
   );
@@ -67,98 +67,98 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        {!data ? 
-        <CardContent className="flex-1 p-4 space-y-6 overflow-y-auto">
-        {/* Profile Header */}
-        <div className="text-center space-y-3">
-          <Skeleton className="w-20 h-20 rounded-full mx-auto" /> {/* Avatar */}
-          <div className="space-y-2">
-            <Skeleton className="h-5 w-32 mx-auto" /> {/* Full name */}
-            <Skeleton className="h-4 w-40 mx-auto" /> {/* Joined date */}
-          </div>
-        </div>
-      
-        {/* Account Section */}
-        <div className="space-y-4">
-          <Skeleton className="h-5 w-24" /> {/* Account title */}
-          <div className="space-y-3">
-            {[...Array(2)].map((_, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-between p-3 rounded-lg"
-              >
-                <div className="space-y-1">
-                  <Skeleton className="h-4 w-20" /> {/* Label */}
-                  <Skeleton className="h-3 w-28" /> {/* Sub text */}
-                </div>
-                <Skeleton className="h-5 w-5 rounded-full" /> {/* Chevron */}
+        {!data ? null : (!data && isLoading) ?
+          <CardContent className="flex-1 p-4 space-y-6 overflow-y-auto">
+            {/* Profile Header */}
+            <div className="text-center space-y-3">
+              <Skeleton className="w-20 h-20 rounded-full mx-auto" /> {/* Avatar */}
+              <div className="space-y-2">
+                <Skeleton className="h-5 w-32 mx-auto" /> {/* Full name */}
+                <Skeleton className="h-4 w-40 mx-auto" /> {/* Joined date */}
               </div>
-            ))}
-          </div>
-        </div>
-      
-        {/* Settings Section */}
-        <div className="space-y-4">
-          <Skeleton className="h-5 w-24" /> {/* Settings title */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between p-3">
-              <Skeleton className="h-4 w-28" /> {/* Notifications */}
-              <Skeleton className="h-5 w-10 rounded-full" /> {/* Switch */}
             </div>
-            {[...Array(4)].map((_, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-between p-3 rounded-lg"
-              >
-                <Skeleton className="h-4 w-20" />
-                <Skeleton className="h-5 w-5 rounded-full" />
+
+            {/* Account Section */}
+            <div className="space-y-4">
+              <Skeleton className="h-5 w-24" /> {/* Account title */}
+              <div className="space-y-3">
+                {[...Array(2)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-between p-3 rounded-lg"
+                  >
+                    <div className="space-y-1">
+                      <Skeleton className="h-4 w-20" /> {/* Label */}
+                      <Skeleton className="h-3 w-28" /> {/* Sub text */}
+                    </div>
+                    <Skeleton className="h-5 w-5 rounded-full" /> {/* Chevron */}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </CardContent>
-        : <CardContent className="flex-1 p-4 space-y-6 overflow-y-auto">
-          <div className="text-center space-y-3">
-            <Avatar className="w-20 h-20 mx-auto">
-              <AvatarImage src={"/" + data?.data?.user?.avatar} />
-              <AvatarFallback>{data?.data?.user?.fullName.charAt[0]}</AvatarFallback>
-            </Avatar>
-            {data?.data &&
-              <div>
-                <h2 className="text-xl font-semibold">{data?.data?.user?.fullName}</h2>
-                <p className="text-sm text-muted-foreground">
-                  {t("joined")} {format(new Date(data?.data?.user?.createdAt), "PPP")}
-                </p>
-              </div>}
-          </div>
+            </div>
 
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">{t("account")}</h3>
-
-            <div className="space-y-3">
-              <div
-                className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer"
-                onClick={() => router.push("/profile/language")}
-              >
-                <div>
-                  <div className="font-medium">{t("language")}</div>
-                  <div className="text-sm text-muted-foreground">{getCurrentLanguageName()}</div>
+            {/* Settings Section */}
+            <div className="space-y-4">
+              <Skeleton className="h-5 w-24" /> {/* Settings title */}
+              <div className="space-y-3">
+                <div className="flex items-center justify-between p-3">
+                  <Skeleton className="h-4 w-28" /> {/* Notifications */}
+                  <Skeleton className="h-5 w-10 rounded-full" /> {/* Switch */}
                 </div>
-                <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                {[...Array(4)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-between p-3 rounded-lg"
+                  >
+                    <Skeleton className="h-4 w-20" />
+                    <Skeleton className="h-5 w-5 rounded-full" />
+                  </div>
+                ))}
               </div>
-
-              <div
-                className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer"
-                onClick={() => router.push("/profile/update-email")}
-              >
+            </div>
+          </CardContent>
+          : <CardContent className="flex-1 p-4 space-y-6 overflow-y-auto">
+            <div className="text-center space-y-3">
+              <Avatar className="w-20 h-20 mx-auto">
+                <AvatarImage src={"/" + (data?.data?.user?.avatar || "default.png")} />
+                <AvatarFallback>{data?.data?.user?.fullName.charAt[0]}</AvatarFallback>
+              </Avatar>
+              {data?.data &&
                 <div>
-                  <div className="font-medium">{t("email")}</div>
-                  <div className="text-sm text-muted-foreground">{data?.data?.user?.email}</div>
-                </div>
-                <ChevronRight className="h-5 w-5 text-muted-foreground" />
-              </div>
+                  <h2 className="text-xl font-semibold">{data?.data?.user?.fullName}</h2>
+                  <p className="text-sm text-muted-foreground">
+                    {t("joined")} {format(new Date(data?.data?.user?.createdAt), "PPP")}
+                  </p>
+                </div>}
+            </div>
 
-              {/* <div
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">{t("account")}</h3>
+
+              <div className="space-y-3">
+                <div
+                  className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer"
+                  onClick={() => router.push("/profile/language")}
+                >
+                  <div>
+                    <div className="font-medium">{t("language")}</div>
+                    <div className="text-sm text-muted-foreground">{getCurrentLanguageName()}</div>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                </div>
+
+                <div
+                  className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer"
+                  onClick={() => router.push("/profile/update-email")}
+                >
+                  <div>
+                    <div className="font-medium">{t("email")}</div>
+                    <div className="text-sm text-muted-foreground">{data?.data?.user?.email}</div>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                </div>
+
+                {/* <div
                 className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer"
                 onClick={() => router.push("/profile/update-password")}
               >
@@ -168,48 +168,51 @@ export default function ProfilePage() {
                 </div>
                 <ChevronRight className="h-5 w-5 text-muted-foreground" />
               </div> */}
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">{t("settings")}</h3>
-
-            <div className="space-y-3">
-              <div className="flex items-center justify-between p-3">
-                <div className="font-medium">{t("notifications")}</div>
-                <Switch checked={notificationsEnabled} onCheckedChange={setNotificationsEnabled} />
-              </div>
-
-              <div
-                onClick={() => router.push("/profile/privacy-policy")}
-                className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
-                <div className="font-medium">{t("privacy")}</div>
-                <ChevronRight className="h-5 w-5 text-muted-foreground" />
-              </div>
-
-              <div
-                onClick={() => router.push("/profile/help")}
-
-                className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
-                <div className="font-medium">{t("help")}</div>
-                <ChevronRight className="h-5 w-5 text-muted-foreground" />
-              </div>
-
-              <div
-                onClick={() => router.push("/profile/about")}
-
-                className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
-                <div className="font-medium">{t("about")}</div>
-                <ChevronRight className="h-5 w-5 text-muted-foreground" />
-              </div>
-
-              <div onClick={handleLogOut} className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
-                <button  className="font-medium">{t("logOut")}</button>
-                <LogOut className="h-5 w-5 text-muted-foreground" />
               </div>
             </div>
-          </div>
-        </CardContent>}
+
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">{t("settings")}</h3>
+
+              <div className="space-y-3">
+                <div className="flex items-center justify-between p-3">
+                  <div className="font-medium">{t("notifications")}</div>
+                  <Switch checked={notificationsEnabled} onCheckedChange={setNotificationsEnabled} />
+                </div>
+
+                <div
+                  onClick={() => router.push("/profile/privacy-policy")}
+                  className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+                  <div className="font-medium">{t("privacy")}</div>
+                  <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                </div>
+
+                <div
+                  onClick={() => router.push("/profile/help")}
+
+                  className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+                  <div className="font-medium">{t("help")}</div>
+                  <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                </div>
+
+                <div
+                  onClick={() => router.push("/profile/about")}
+
+                  className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+                  <div className="font-medium">{t("about")}</div>
+                  <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                </div>
+
+                <div onClick={handleLogOut} className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+                  <button className="font-medium">{t("logOut")}</button>
+                  <LogOut className="h-5 w-5 text-muted-foreground" />
+                </div>
+
+              </div>
+            </div>
+          </CardContent>}
+
+
 
         <Navigation />
       </Card>

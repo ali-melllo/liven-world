@@ -23,46 +23,46 @@ export function Navigation() {
   return (
     <div className="border-t bg-background p-4 fixed bottom-0 w-full">
       <div className="flex justify-around">
-        <Button
-          variant="ghost"
-          className={`flex flex-col items-center gap-1 ${activeTab === "home" ? "text-orange-500" : "text-muted-foreground"}`}
+        <button
+          
+          className={`flex bg-transparent :hover:bg-transparent flex-col items-center gap-1 ${activeTab === "home" ? "text-orange-500" : "text-muted-foreground"}`}
           onClick={() => router.push("/")}
         >
           <Home className="h-5 w-5" />
           <span className="text-xs">{t("home")}</span>
-        </Button>
-        <Button
-          variant="ghost"
-          className={`flex flex-col items-center gap-1 ${activeTab === "chat" ? "text-orange-500" : "text-muted-foreground"}`}
+        </button>
+        <button
+          
+          className={`flex bg-transparent :hover:bg-transparent flex-col items-center gap-1 ${activeTab === "chat" ? "text-orange-500" : "text-muted-foreground"}`}
           onClick={() => router.push("/chat")}
         >
           <MessageCircle className="h-5 w-5" />
           <span className="text-xs">{t("chat")}</span>
-        </Button>
-        <Button
-          variant="ghost"
-          className={`flex flex-col items-center gap-1 ${activeTab === "topics" ? "text-orange-500" : "text-muted-foreground"}`}
+        </button>
+        <button
+          
+          className={`flex bg-transparent :hover:bg-transparent flex-col items-center gap-1 ${activeTab === "topics" ? "text-orange-500" : "text-muted-foreground"}`}
           onClick={() => router.push("/topics")}
         >
           <Hash className="h-5 w-5" />
           <span className="text-xs">{t("topics")}</span>
-        </Button>
-        <Button
-          variant="ghost"
-          className={`flex flex-col items-center gap-1 ${activeTab === "profile" ? "text-orange-500" : "text-muted-foreground"}`}
+        </button>
+        <button
+          
+          className={`flex bg-transparent :hover:bg-transparent flex-col items-center gap-1 ${activeTab === "profile" ? "text-orange-500" : "text-muted-foreground"}`}
           onClick={() => router.push("/profile")}
         >
           <User className="h-5 w-5" />
           <span className="text-xs">{t("profile")}</span>
-        </Button>
-        <Button
-          variant="ghost"
-          className={`flex flex-col items-center gap-1 ${activeTab === "my-hero" ? "text-orange-500" : "text-muted-foreground"}`}
+        </button>
+        <button
+          
+          className={`flex bg-transparent :hover:bg-transparent flex-col items-center gap-1 ${activeTab === "my-hero" ? "text-orange-500" : "text-muted-foreground"}`}
           onClick={() => router.push("/my-hero")}
         >
           <Users className="h-5 w-5" />
           <span className="text-xs">{t("myHero")}</span>
-        </Button>
+        </button>
       </div>
     </div>
   )

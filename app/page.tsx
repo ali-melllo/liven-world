@@ -89,7 +89,6 @@ const topics = [
 export default function LandingPage() {
   const { t } = useLanguage()
   const router = useRouter()
-  const [token, setToken] = useState<string>("")
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
 
@@ -97,7 +96,6 @@ export default function LandingPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false) // For demo purposes
 
   const user = useSelector((state: RootState) => state.user || []);
-  const dispatch = useDispatch();
 
 
   useEffect(() => {
@@ -107,21 +105,6 @@ export default function LandingPage() {
       setFullName(user.fullName);
     }
   }, [user])
-
-  const handleLogOut = () => {
-    localStorage.removeItem("user")
-    dispatch(setUser({
-      id: "",
-      fullName: "",
-      email: "",
-      avatar: ""
-    }));
-    setIsAuthenticated(false)
-    setFullName("")
-    setEmail("")
-    setToken("")
-    router.replace("/")
-  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -149,7 +132,7 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="py-3 flex flex-col gap-5 md:py-20 px-4">
         <Link href={"/chat"} className="w-full flex flex-col">
-          <div className="w-full h-48 flex">
+          <div className="w-full h-44 flex">
             <Image
               src={'/hero-one.png'}
               alt={"chat"}
@@ -163,7 +146,7 @@ export default function LandingPage() {
         </Link>
 
         <Link href={"/topics"} className="w-full flex flex-col">
-          <div className="w-full h-48 flex">
+          <div className="w-full h-44 flex">
             <Image
               src={'/hero-two.png'}
               alt={"chat"}
