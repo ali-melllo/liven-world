@@ -29,7 +29,7 @@ export default function RootLayout({
             <Toaster position={"top-right"}/>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
               <LanguageProvider>
-                <div className="w-full relative flex flex-col">
+                <div className="w-full relative flex flex-col md:mx-auto md:max-w-md">
                   {children}
                 </div>
               </LanguageProvider>

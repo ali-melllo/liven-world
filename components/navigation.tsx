@@ -21,7 +21,7 @@ export function Navigation() {
   const activeTab = getActiveTab()
 
   return (
-    <div className="border-t bg-background p-4 fixed bottom-0 w-full">
+    <div className="border-t bg-background p-4 fixed md:absolute md:inset-x-0 bottom-0 w-full">
       <div className="flex justify-around">
         <button
           
