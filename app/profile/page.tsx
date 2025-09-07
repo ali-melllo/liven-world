@@ -68,10 +68,7 @@ export default function ProfilePage() {
         </div>
 
         {!data ?
-          <div onClick={handleLogOut} className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
-            <button className="font-medium">{t("logOut")}</button>
-            <LogOut className="h-5 w-5 text-muted-foreground" />
-          </div>
+          null
           : (!data && isLoading) ?
             <CardContent className="flex-1 p-4 space-y-6 overflow-y-auto">
               {/* Profile Header */}
