@@ -103,8 +103,8 @@ export default function MyHeroPage() {
 
 
     return (
-        <div className="min-h-screen flex">
-            <Card className="w-full max-w-sm bg-card h-[600px] flex flex-col">
+        <div className="h-dvh flex ">
+            <Card className="w-full bg-card flex flex-col">
                 {/* Header */}
                 <div className="flex items-center justify-between p-4 border-b">
                     <div className="flex items-center gap-4">

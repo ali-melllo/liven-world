@@ -67,8 +67,36 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        {!data ?
-          null
+        {(!data && !isLoading) ?
+          <div className="mt-auto px-4">
+            <div
+              onClick={() => router.push("/profile/privacy-policy")}
+              className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+              <div className="font-medium">{t("privacy")}</div>
+              <ChevronRight className="h-5 w-5 text-muted-foreground" />
+            </div>
+
+            <div
+              onClick={() => router.push("/profile/help")}
+
+              className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+              <div className="font-medium">{t("help")}</div>
+              <ChevronRight className="h-5 w-5 text-muted-foreground" />
+            </div>
+
+            <div
+              onClick={() => router.push("/profile/about")}
+
+              className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+              <div className="font-medium">{t("about")}</div>
+              <ChevronRight className="h-5 w-5 text-muted-foreground" />
+            </div>
+
+            <div onClick={handleLogOut} className="flex items-center justify-between p-3 hover:bg-muted rounded-lg cursor-pointer">
+              <button className="font-medium">{t("logOut")}</button>
+              <LogOut className="h-5 w-5 text-muted-foreground" />
+            </div>
+          </div>
           : (!data && isLoading) ?
             <CardContent className="flex-1 p-4 space-y-6 overflow-y-auto">
               {/* Profile Header */}
