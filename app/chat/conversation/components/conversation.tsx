@@ -268,15 +268,15 @@ export default function Conversation() {
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder="Ask me anything about life in the Netherlands..."
-                    className="pr-14 w-full py-6 text-base rounded-2xl border-border/50 bg-background backdrop-blur-sm !outline-none focus:bg-background transition-all duration-200"
+                    className="pr-5 w-full py-6 text-base rounded-2xl border-border/50 bg-background backdrop-blur-sm !outline-none focus:bg-background transition-all duration-200"
                   />
 
                   {/* Input Actions */}
-                  <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center space-x-1">
+                  {/* <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center space-x-1">
                     <Button variant="ghost" size="sm" className="w-8 h-8 p-0">
                       <Mic className="w-4 h-4" />
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Quick Service Buttons */}
